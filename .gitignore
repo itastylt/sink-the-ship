@@ -42,3 +42,15 @@ BattleshipClient/obj/BattleshipClient.csproj.nuget.dgspec.json
 .vs/Battleship/FileContentIndex/2c1a95ec-b94a-40dc-912e-89ac1186151a.vsidx
 .vs/Battleship/FileContentIndex/22e9b282-4e47-47b3-861a-a924ba102c97.vsidx
 *.cache
+BattleshipClient/obj/project.nuget.cache
+BattleshipClient/obj/project.assets.json
+BattleshipClient/obj/Debug/net7.0/BattleshipClient.GeneratedMSBuildEditorConfig.editorconfig
+BattleshipClient/obj/Debug/net7.0/BattleshipClient.assets.cache
+BattleshipClient/obj/BattleshipClient.csproj.nuget.g.props
+BattleshipClient/obj/BattleshipClient.csproj.nuget.dgspec.json
+.vs/Battleship/FileContentIndex/bc565823-0a20-4b0b-953f-e821cfb72a4b.vsidx
+.vs/Battleship/FileContentIndex/b25894cb-8622-439b-87f8-eba527b4feb4.vsidx
+.vs/Battleship/FileContentIndex/9863c957-f8a4-41fa-a985-f2fdc8de390d.vsidx
+.vs/Battleship/FileContentIndex/2c1a95ec-b94a-40dc-912e-89ac1186151a.vsidx
+.vs/Battleship/FileContentIndex/22e9b282-4e47-47b3-861a-a924ba102c97.vsidx
+.vs/Battleship/DesignTimeBuild/.dtbcache.v2
