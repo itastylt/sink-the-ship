@@ -1,0 +1,15 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+div.battleship-board { 
+    max-width: 300px;
+}
+.player-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div.board-tile {
+    border: 1px solid black;
+}
