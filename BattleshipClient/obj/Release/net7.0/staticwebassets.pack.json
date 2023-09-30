@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\BattleshipClient.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\app.js.map",
+      "PackagePath": "staticwebassets\\js\\app.js.map"
     },
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\site.js",

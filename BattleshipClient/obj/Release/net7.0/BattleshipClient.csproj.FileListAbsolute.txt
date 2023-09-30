@@ -28,3 +28,4 @@ C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Batt
 C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\obj\Release\net7.0\BattleshipClient.pdb
 C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\obj\Release\net7.0\BattleshipClient.genruntimeconfig.cache
 C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\obj\Release\net7.0\ref\BattleshipClient.dll
+C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\bin\Release\net7.0\tsconfig.json
