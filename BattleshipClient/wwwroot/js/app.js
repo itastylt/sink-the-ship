@@ -1,4 +1,5 @@
 var boardSize = [10, 10];
+var placedShips = [];
 function domReady(cb) {
     if (document.readyState === "complete" || document.readyState === "interactive") {
         cb();
@@ -16,7 +17,7 @@ function generateYourBoard() {
     for (var i = 0; i < boardSize[0]; i++) {
         rowsDom += '<div class="row">';
         for (var j = 0; j < boardSize[1]; j++) {
-            rowsDom += "<div class=\"col board-tile\" data-x='".concat(i, "' data-y='").concat(j, "' onclick=\"placeShip(").concat(i, ", ").concat(j, ");\">&nbsp;</div>");
+            rowsDom += "<div class=\"col board-tile\" data-x='".concat(j, "' data-y='").concat(i, "' onclick=\"placeShip(").concat(j, ", ").concat(i, ");\">&nbsp;</div>");
         }
         rowsDom += '</div>';
     }
@@ -28,7 +29,7 @@ function generateEnemyBoard() {
     for (var i = 0; i < boardSize[0]; i++) {
         rowsDom += '<div class="row">';
         for (var j = 0; j < boardSize[1]; j++) {
-            rowsDom += "<div class=\"col board-tile\" data-x='".concat(i, "' data-y='").concat(j, "' onclick=\"sinkShip(").concat(i, ", ").concat(j, ");\">&nbsp;</div>");
+            rowsDom += "<div class=\"col board-tile\" data-x='".concat(j, "' data-y='").concat(i, "' onclick=\"sinkShip(").concat(j, ", ").concat(i, ");\">&nbsp;</div>");
         }
         rowsDom += '</div>';
     }
@@ -47,12 +48,22 @@ var Ship = /** @class */ (function () {
         this.color = color;
     }
     Ship.prototype.getShip = function (id) {
-        if (this.selector === id) {
+        if (this.selector === id || this.type === id) {
             return this;
         }
         return null;
     };
     return Ship;
+}());
+var PlacedShip = /** @class */ (function () {
+    function PlacedShip(typeString, x1, y1, size, angle) {
+        this.type = typeString;
+        this.x_start = x1;
+        this.y_start = y1;
+        this.size = size;
+        this.angle = angle;
+    }
+    return PlacedShip;
 }());
 var boat = new Ship('Boat', 'ship_boat', 1, 'brown');
 var lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red');
@@ -93,14 +104,51 @@ function placeShip(x, y) {
         return;
     }
     console.log("Placed ship ".concat(selectedShip.type, " on: x = ").concat(x, " y = ").concat(y));
-    if (boardSize[1] > y + selectedShip.size - 1) {
+    if (boardSize[1] > x + selectedShip.size - 1) {
         for (var i = 0; i < selectedShip.size; i++) {
-            console.log("Ship coordinate:", $("#your-board .board-tile[data-x='".concat(x, "'][data-y='").concat(y + i, "']")));
-            $("#your-board .board-tile[data-x='".concat(x, "'][data-y='").concat(y + i, "']")).css("background-color", "".concat(selectedShip.color));
+            console.log("Ship coordinate:", $("#your-board .board-tile[data-x='".concat(x + i, "'][data-y='").concat(y, "']")));
+            $("#your-board .board-tile[data-x='".concat(x + i, "'][data-y='").concat(y, "']")).css("background-color", "".concat(selectedShip.color));
         }
+        placedShips.push(new PlacedShip(selectedShip.type, x, y, selectedShip.size, 90));
     }
     else {
-        console.log("NIce try :)");
+        console.log("Nice try :)");
+    }
+}
+function placedShipsAsString() {
+    var string = "[";
+    for (var i = 0; i < placedShips.length; i++) {
+        string += "{\"Type\": \"".concat(placedShips[i].type, "\", \"X\": ").concat(placedShips[i].x_start, ", \"Y\": ").concat(placedShips[i].y_start, ", \"Size\": ").concat(placedShips[i].size, ", \"Angle\": ").concat(placedShips[i].angle, "}");
+        if (i < placedShips.length - 1) {
+            string += ',';
+        }
+    }
+    string += "]";
+    return string;
+}
+function printEnemyBoard(user, json) {
+    var name = $("#name").val();
+    console.log(name);
+    if (name !== user) {
+        var objects = $.parseJSON(json);
+        console.log(objects);
+        for (var ship in objects) {
+            printEnemyShip(objects[ship]);
+        }
+    }
+}
+function printEnemyShip(enemyShip) {
+    var printedShip = null;
+    for (var ship in ships) {
+        console.log(ships[ship]);
+        if (ships[ship].type === enemyShip.Type) {
+            printedShip = ships[ship];
+            break;
+        }
+    }
+    var color = printedShip.color;
+    for (var i = enemyShip.X; i < enemyShip.X + printedShip.size; i++) {
+        $("#enemy-board .board-tile[data-x='".concat(i, "'][data-y='").concat(enemyShip.Y, "']")).css("background-color", "".concat(color));
     }
 }
 //# sourceMappingURL=app.js.map

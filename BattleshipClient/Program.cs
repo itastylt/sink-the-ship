@@ -1,8 +1,21 @@
+using BattleshipClient.Hubs;
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+//rest of adding services
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    options.JsonSerializerOptions.AllowTrailingCommas = true;
+});
+
+//rest of init code
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddSignalR();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,5 +36,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.MapHub<ShipHub>("/shiphub");
 app.Run();
