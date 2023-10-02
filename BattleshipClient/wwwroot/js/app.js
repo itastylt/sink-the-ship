@@ -41,11 +41,12 @@ domReady(function () {
     generateShipSelector();
 });
 var Ship = /** @class */ (function () {
-    function Ship(typeString, classSelector, size, color) {
+    function Ship(typeString, classSelector, size, color, cannon) {
         this.selector = classSelector;
         this.type = typeString;
         this.size = size;
         this.color = color;
+        this.cannon = cannon;
     }
     Ship.prototype.getShip = function (id) {
         if (this.selector === id || this.type === id) {
@@ -56,25 +57,26 @@ var Ship = /** @class */ (function () {
     return Ship;
 }());
 var PlacedShip = /** @class */ (function () {
-    function PlacedShip(typeString, x1, y1, size, angle) {
+    function PlacedShip(typeString, x1, y1, size, angle, cannon) {
         this.type = typeString;
         this.x_start = x1;
         this.y_start = y1;
         this.size = size;
         this.angle = angle;
+        this.cannon = cannon;
     }
     return PlacedShip;
 }());
-var boat = new Ship('Boat', 'ship_boat', 1, 'brown');
-var lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red');
-var submarine = new Ship('Submarine', 'ship_submarine', 3, 'green');
-var destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue');
+var boat = new Ship('Boat', 'ship_boat', 1, 'brown', 1);
+var lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 1);
+var submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 2);
+var destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 2);
 var ships = [boat, lavantier, submarine, destroyer];
 function generateShipSelector() {
     var shipBoard = document.getElementById('ship-board');
     var shipsDom = '';
     for (var i = 0; i < ships.length; i++) {
-        shipsDom += "<div class=\"row ship-selector\" onclick=\"selectShip('".concat(ships[i].selector, "')\">\n                        <div class=\"col ship-title\">").concat(ships[i].type, "</div>\n                            <div class=\"col ship-preview\">\n                                <div class=\"row\">");
+        shipsDom += "<div class=\"row ship-selector\" id=".concat(ships[i].type, " onclick=\"selectShip('").concat(ships[i].selector, "')\">\n                        <div class=\"col ship-title\">").concat(ships[i].type, "</div>\n                            <div class=\"col ship-preview\">\n                                <div class=\"row\">");
         for (var j = 0; j < ships[i].size; j++) {
             shipsDom += "<div class=\"col board-tile\" style=\"background-color:".concat(ships[i].color, ";\" >&nbsp;</div>");
         }
@@ -95,9 +97,6 @@ function selectShip(shipSelector) {
         console.log(selectedShip.size);
     }
 }
-function sinkShip(x, y) {
-    $("#enemy-board .board-tile[data-x='".concat(x, "'][data-y='").concat(y, "']")).css("background-color", "black");
-}
 function placeShip(x, y) {
     if (selectedShip == null) {
         console.log('Nice try :)');
@@ -108,12 +107,21 @@ function placeShip(x, y) {
         for (var i = 0; i < selectedShip.size; i++) {
             console.log("Ship coordinate:", $("#your-board .board-tile[data-x='".concat(x + i, "'][data-y='").concat(y, "']")));
             $("#your-board .board-tile[data-x='".concat(x + i, "'][data-y='").concat(y, "']")).css("background-color", "".concat(selectedShip.color));
+            $("#your-board .board-tile[data-x='".concat(x + i, "'][data-y='").concat(y, "']")).addClass('ship');
+            $("#your-board .board-tile[data-x='".concat(x + i, "'][data-y='").concat(y, "']")).attr('onClick', "selectShipCannon(".concat(selectedShip.cannon, ")"));
         }
-        placedShips.push(new PlacedShip(selectedShip.type, x, y, selectedShip.size, 90));
+        placedShips.push(new PlacedShip(selectedShip.type, x, y, selectedShip.size, 90, selectedShip.cannon));
     }
     else {
         console.log("Nice try :)");
     }
+    $("#".concat(selectedShip.type)).css('display', 'none');
+    selectedShip = null;
+}
+var selectedCannon = 1;
+function selectShipCannon(cannon) {
+    selectedCannon = cannon;
+    console.log("Selected cannon ".concat(cannon));
 }
 function placedShipsAsString() {
     var string = "[";
@@ -149,6 +157,13 @@ function printEnemyShip(enemyShip) {
     var color = printedShip.color;
     for (var i = enemyShip.X; i < enemyShip.X + printedShip.size; i++) {
         $("#enemy-board .board-tile[data-x='".concat(i, "'][data-y='").concat(enemyShip.Y, "']")).css("background-color", "".concat(color));
+    }
+}
+function sinkShip(x, y) {
+    for (var i = x; i < x + selectedCannon; i++) {
+        if (i < boardSize[0]) {
+            $("#enemy-board .board-tile[data-x='".concat(i, "'][data-y='").concat(y, "']")).css("background-color", "black");
+        }
     }
 }
 //# sourceMappingURL=app.js.map

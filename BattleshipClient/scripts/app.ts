@@ -55,6 +55,7 @@ class Ship {
     selector: String;
     size: number
     color: String;
+    cannon: number;
 
     getShip(id: string) {
         if (this.selector === id || this.type === id) {
@@ -63,11 +64,12 @@ class Ship {
         return null;
     }
     
-    constructor(typeString: string, classSelector: string, size: number, color: string) {
+    constructor(typeString: string, classSelector: string, size: number, color: string, cannon: number) {
         this.selector = classSelector;
         this.type = typeString;
         this.size = size;
         this.color = color;
+        this.cannon = cannon;
     }
 }
 
@@ -77,20 +79,22 @@ class PlacedShip {
     y_start: number;
     size: number;
     angle: number;
+    cannon: number;
 
-    constructor(typeString: string, x1: number, y1: number, size: number, angle :number) {
+    constructor(typeString: string, x1: number, y1: number, size: number, angle :number, cannon: number) {
         this.type = typeString;
         this.x_start = x1;
         this.y_start = y1;
         this.size = size;
         this.angle = angle;
+        this.cannon = cannon;
     }
 }
 
-const boat = new Ship('Boat', 'ship_boat', 1, 'brown');
-const lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red');
-const submarine = new Ship('Submarine', 'ship_submarine', 3, 'green');
-const destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue');
+const boat = new Ship('Boat', 'ship_boat', 1, 'brown', 1);
+const lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 1);
+const submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 2);
+const destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 2);
 
 let ships = [boat, lavantier, submarine, destroyer];
 
@@ -98,7 +102,7 @@ function generateShipSelector() {
     let shipBoard = document.getElementById('ship-board');
     let shipsDom = '';
     for (let i = 0; i < ships.length; i++) {
-        shipsDom += `<div class="row ship-selector" onclick="selectShip('${ships[i].selector}')">
+        shipsDom += `<div class="row ship-selector" id=${ships[i].type} onclick="selectShip('${ships[i].selector}')">
                         <div class="col ship-title">${ships[i].type}</div>
                             <div class="col ship-preview">
                                 <div class="row">`;
@@ -130,9 +134,7 @@ function selectShip(shipSelector: string) {
     }
 }
 
-function sinkShip(x: number, y: number) {
-    $(`#enemy-board .board-tile[data-x='${x}'][data-y='${y}']`).css(`background-color`, `black`);
-}
+
 function placeShip(x: number, y: number) {
     if (selectedShip == null) {
         console.log('Nice try :)');
@@ -144,15 +146,26 @@ function placeShip(x: number, y: number) {
 
         for (let i = 0; i < selectedShip.size; i++) {
             console.log("Ship coordinate:", $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y }']`));
-            $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y }']`).css(`background-color`, `${selectedShip.color}`);
+            $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y}']`).css(`background-color`, `${selectedShip.color}`);
+            $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y}']`).addClass('ship');
+            $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y}']`).attr('onClick', `selectShipCannon(${selectedShip.cannon})`);
         }
 
-        placedShips.push(new PlacedShip(selectedShip.type, x, y, selectedShip.size, 90));
+        placedShips.push(new PlacedShip(selectedShip.type, x, y, selectedShip.size, 90, selectedShip.cannon));
         
     } else {
         console.log("Nice try :)");
     }
+    $(`#${selectedShip.type}`).css('display', 'none');
+    selectedShip = null;
 
+}
+
+let selectedCannon = 1;
+
+function selectShipCannon(cannon: number) {
+    selectedCannon = cannon;
+    console.log(`Selected cannon ${cannon}`);
 }
 
 function placedShipsAsString() {
@@ -190,9 +203,17 @@ function printEnemyShip(enemyShip) {
             break;
         }
     }
+
     let color = printedShip.color;
 
     for (let i = enemyShip.X; i < enemyShip.X + printedShip.size; i++) {
         $(`#enemy-board .board-tile[data-x='${i}'][data-y='${enemyShip.Y}']`).css(`background-color`, `${color}`);
+    }
+}
+function sinkShip(x: number, y: number) {
+    for (let i = x; i < x + selectedCannon; i++) {
+        if (i < boardSize[0]) {
+            $(`#enemy-board .board-tile[data-x='${i}'][data-y='${y}']`).css(`background-color`, `black`);
+        }
     }
 }
