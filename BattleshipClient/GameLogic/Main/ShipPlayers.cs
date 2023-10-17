@@ -41,4 +41,21 @@ public static class ShipPlayers
 
         throw new InvalidOperationException("Player not found in getPlayer method");
     }
+
+    public static Player GetPlayerOpponent(string playerName) //Cia su ta ideja, jog sarase yra tik 2 zaidejai viename sarase. -Simonas
+    {
+        if (ShipPlayersList == null)
+        {
+            throw new InvalidOperationException("ShipPlayersList is not initialized");
+        }
+
+        foreach (Player player in ShipPlayersList)
+        {
+            if (player.Name != playerName)
+            {
+                return player;
+            }
+        }
+        throw new InvalidOperationException("Player not found in getPlayerOpponent method");
+    }
 }

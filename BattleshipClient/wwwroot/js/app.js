@@ -161,11 +161,11 @@ function printEnemyBoard(user, board) {
         }
     }
 }
-function sinkShip(x, y) {
-    for (var i = x; i < x + selectedCannon; i++) {
+/*function sinkShip(x: number, y: number) {
+    for (let i = x; i < x + selectedCannon; i++) {
         if (i < boardSize[0]) {
-            $("#enemy-board .board-tile[data-x='".concat(i, "'][data-y='").concat(y, "']")).css("background-color", "black");
+            $(`#enemy-board .board-tile[data-x='${i}'][data-y='${y}']`).css(`background-color`, `black`);
         }
     }
-}
+}*/ 
 //# sourceMappingURL=app.js.map

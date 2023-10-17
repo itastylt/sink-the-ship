@@ -18,6 +18,17 @@ public class ShipsBoard
         this.Board = new int[10, 10];
         allShips = new List<PlacedShip>();
     }
+    public bool isAValidTarget(int x, int y)
+    {
+        if (x >= 10 || y >= 10 || x < 0 || y < 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     public PlacedShip getShip(int cannonNumber)
     {
         foreach (PlacedShip ship in allShips)

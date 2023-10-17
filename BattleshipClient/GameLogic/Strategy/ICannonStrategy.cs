@@ -2,6 +2,6 @@
 {
     public interface ICannonStrategy
     {
-        void Fire(int x, int y);
+        void Fire(Player opponent, int x, int y);
     }
 }

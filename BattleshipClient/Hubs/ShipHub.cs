@@ -68,9 +68,17 @@ public class ShipHub : Hub
                 player1.SetSelectedShip(chosenWeaponNumber);
                 //Console.WriteLine("trying fire method:");
                 //player1.GetSelectedShip().FireWeapon();
-
                 break;
             case "fireWeapon":
+                int x_cord = int.Parse(messageArgs);
+                int y_cord = int.Parse(message.Split(';')[2]);
+
+                Player current_player = ShipPlayers.GetPlayer(user);
+                Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
+
+                //Console.WriteLine(String.Format(current_player.Name + " is firing against " + opponent_player));
+                Console.WriteLine(String.Format(x_cord+ " " +y_cord));
+                current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
 
                 break;
 

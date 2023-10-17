@@ -208,13 +208,11 @@ function printEnemyBoard(user: string, board) {
             }
         }
     }
-
-
 }
-function sinkShip(x: number, y: number) {
+/*function sinkShip(x: number, y: number) {
     for (let i = x; i < x + selectedCannon; i++) {
         if (i < boardSize[0]) {
             $(`#enemy-board .board-tile[data-x='${i}'][data-y='${y}']`).css(`background-color`, `black`);
         }
     }
-}
+}*/

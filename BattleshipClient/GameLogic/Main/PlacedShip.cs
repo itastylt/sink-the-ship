@@ -11,9 +11,9 @@ public class PlacedShip
 
     //Strategy pattern
     public ICannonStrategy Cannon { get; set; }
-    public void FireWeapon()
+    public void FireWeapon(Player opponent, int x, int y)
     {
-        Cannon.Fire(X,Y);
+        Cannon.Fire(opponent, x, y);
     }
 
 }

@@ -17,6 +17,10 @@ public class Player : IObserver
     }
     public PlacedShip GetSelectedShip()
     {
+        if (SelectedShip == null)
+        {
+            SelectedShip = this.ShipsBoard.getShip(1);
+        }
         return SelectedShip;
     }
 
