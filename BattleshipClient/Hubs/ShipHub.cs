@@ -66,6 +66,7 @@ public class ShipHub : Hub
                 //Console.WriteLine(chosenWeaponNumber);
                 Player player1 = ShipPlayers.GetPlayer(user);
                 player1.SetSelectedShip(chosenWeaponNumber);
+                ShipPlayers.UpdatePlayer(user, player1);
                 //Console.WriteLine("trying fire method:");
                 //player1.GetSelectedShip().FireWeapon();
                 break;

@@ -23,6 +23,10 @@ public class Player : IObserver
         }
         return SelectedShip;
     }
+    public void SetSelectedShip(PlacedShip shipObject)
+    {
+        SelectedShip = shipObject;
+    }
 
     public bool GetState()
     {
