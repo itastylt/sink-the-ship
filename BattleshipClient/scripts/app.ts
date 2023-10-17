@@ -204,6 +204,26 @@ function printEnemyBoard(user: string, board) {
                         $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `blue`);
                         break;
                     }
+                    case -99: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `black`);
+                        break;
+                    }
+                    case -1: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `magenta`);
+                        break;
+                    }
+                    case -2: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `olive`);
+                        break;
+                    }
+                    case -3: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `cyan`);
+                        break;
+                    }
+                    case -4: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `yellow`);
+                        break;
+                    }
                 }
             }
         }

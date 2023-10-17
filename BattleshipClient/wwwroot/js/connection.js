@@ -8,6 +8,17 @@ connection.on("StartGame", function (user, message) {
     let player = message.split(';')[0];
     let board = message.split(';')[1];
     printEnemyBoard(player, board);
+});
+
+connection.on("FireShot", function (user, message) {
+    console.log(user, message);
+    let player = message.split(';')[0];
+    let board = message.split(';')[1];
+    if (board != null) {
+        printEnemyBoard(player, board);
+    } else {
+        console.log("Nice try :)");
+    }
 
 });
 

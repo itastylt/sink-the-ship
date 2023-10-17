@@ -53,6 +53,13 @@ public class ShipHub : Hub
 
                 if (Players.Count % 2 == 0)
                 {
+                    Random random = new Random();
+                    int random_number = random.Next(Players.Count());
+                    Console.WriteLine(random_number);
+                    Player luckyPlayer = Players.ElementAt(random_number);
+                    luckyPlayer.SetState(true);
+                    ShipPlayers.UpdatePlayer(luckyPlayer.Name, luckyPlayer);
+
                     foreach (var online in Players)
                     {
                         await Clients.All.SendAsync("StartGame",online.Name, online.Name + ";" + online.GetShipsBoard().ToString());
@@ -71,15 +78,27 @@ public class ShipHub : Hub
                 //player1.GetSelectedShip().FireWeapon();
                 break;
             case "fireWeapon":
+
                 int x_cord = int.Parse(messageArgs);
                 int y_cord = int.Parse(message.Split(';')[2]);
 
                 Player current_player = ShipPlayers.GetPlayer(user);
-                Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
-
-                //Console.WriteLine(String.Format(current_player.Name + " is firing against " + opponent_player));
+                if(!current_player.GetState())
+                {
+                    Console.WriteLine("Illegal player turn");
+                } else {
+                    Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
+                    
+                    //Console.WriteLine(String.Format(current_player.Name + " is firing against " + opponent_player));
                     Console.WriteLine(String.Format(x_cord + " " + y_cord));
-                current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
+                    current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
+                    current_player.SetState(!current_player.GetState());
+                    opponent_player.SetState(!opponent_player.GetState());
+                    current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
+                    ShipPlayers.UpdatePlayer(current_player.Name, current_player);
+                    ShipPlayers.UpdatePlayer(opponent_player.Name, opponent_player);
+                    await Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString());
+                }
 
                 break;
 

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9e37i2SYLnA71zYvROy0DMqQVKzu561QEsKGCvgAZ/myX9Us7l9jA2yFFl1+szHMeLAwz63KD14RCwMDihwzBA==",
+  "dgSpecHash": "zp76cf5bgKqa/xqwY3E8fb+0p3tEBuUMAeBkPr+UpgsHkYtGJMhMFVtqoKXlZozrudWwjU4JEdw4GVKnJJYNKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ssims\\OneDrive\\Documents\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
+  "projectFilePath": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\BattleshipClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ssims\\.nuget\\packages\\microsoft.typescript.msbuild\\5.2.2\\microsoft.typescript.msbuild.5.2.2.nupkg.sha512"
+    "C:\\Users\\andri\\.nuget\\packages\\microsoft.typescript.msbuild\\5.2.2\\microsoft.typescript.msbuild.5.2.2.nupkg.sha512"
   ],
   "logs": []
 }
