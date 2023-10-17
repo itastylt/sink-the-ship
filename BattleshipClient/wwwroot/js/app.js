@@ -68,9 +68,9 @@ var PlacedShip = /** @class */ (function () {
     return PlacedShip;
 }());
 var boat = new Ship('Boat', 'ship_boat', 1, 'brown', 1);
-var lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 1);
-var submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 2);
-var destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 2);
+var lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 2);
+var submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 3);
+var destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 4);
 var ships = [boat, lavantier, submarine, destroyer];
 function generateShipSelector() {
     var shipBoard = document.getElementById('ship-board');

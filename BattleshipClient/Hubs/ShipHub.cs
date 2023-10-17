@@ -27,10 +27,10 @@ public class ShipHub : Hub
                             ship.Cannon = new HorizontalShot();
                             break;
                         case "Submarine":
-                            ship.Cannon = new SingleShot();
+                            ship.Cannon = new VerticalShot();
                             break;
                         case "Destroyer":
-                            ship.Cannon = new HorizontalShot();
+                            ship.Cannon = new DiagonalShot();
                             break;
                     }
                 }
@@ -60,16 +60,13 @@ public class ShipHub : Hub
 
                 }
                 break;
+
             case "selectWeapon":
                 int chosenWeaponNumber = int.Parse(messageArgs);
-                //Console.WriteLine("Selected weapon ");
-                //Console.WriteLine(chosenWeaponNumber);
                 Player player1 = ShipPlayers.GetPlayer(user);
                 player1.SetSelectedShip(chosenWeaponNumber);
-                ShipPlayers.UpdatePlayer(user, player1);
-                //Console.WriteLine("trying fire method:");
-                //player1.GetSelectedShip().FireWeapon();
                 break;
+
             case "fireWeapon":
                 int x_cord = int.Parse(messageArgs);
                 int y_cord = int.Parse(message.Split(';')[2]);
@@ -77,10 +74,7 @@ public class ShipHub : Hub
                 Player current_player = ShipPlayers.GetPlayer(user);
                 Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
 
-                //Console.WriteLine(String.Format(current_player.Name + " is firing against " + opponent_player));
-                Console.WriteLine(String.Format(x_cord+ " " +y_cord));
                 current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
-
                 break;
 
             default:

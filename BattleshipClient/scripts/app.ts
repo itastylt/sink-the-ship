@@ -92,9 +92,9 @@ class PlacedShip {
 }
 
 const boat = new Ship('Boat', 'ship_boat', 1, 'brown', 1);
-const lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 1);
-const submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 2);
-const destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 2);
+const lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 2);
+const submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 3);
+const destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 4);
 
 let ships = [boat, lavantier, submarine, destroyer];
 
