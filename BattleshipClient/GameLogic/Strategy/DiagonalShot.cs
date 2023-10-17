@@ -1,15 +1,15 @@
 ﻿namespace BattleshipClient.GameLogic.Strategy
 {
-    public class HorizontalShot : ICannonStrategy
+    public class DiagonalShot : ICannonStrategy
     {
         public void Fire(Player opponent, int x, int y)
         {
-            Console.WriteLine("Firing with Horizontal Shot");
+            Console.WriteLine("Firing with Diagonal Shot");
 
             ShipsBoard opponent_board = opponent.GetShipsBoard();
-            //opponent_board.PrintBoard();
-            
-            if (opponent_board.isAValidTarget(y,x)) {
+
+            if (opponent_board.isAValidTarget(y, x))
+            {
                 if (opponent_board.Board[y, x] > 0)
                 {
                     Console.WriteLine("Hit a ship");
@@ -22,17 +22,17 @@
                 }
             }
 
-            if (opponent_board.isAValidTarget(y, x + 1))
+            if (opponent_board.isAValidTarget(y + 1, x + 1))
             {
-                if (opponent_board.Board[y, x + 1] > 0)
+                if (opponent_board.Board[y + 1, x + 1] > 0)
                 {
                     Console.WriteLine("Hit a ship");
-                    opponent_board.Board[y, x + 1] = -(opponent_board.Board[y, x + 1]);
+                    opponent_board.Board[y + 1, x + 1] = -(opponent_board.Board[y + 1, x + 1]);
                 }
                 else
                 {
                     Console.WriteLine("Missed a shot");
-                    opponent_board.Board[y, x + 1] = -99;
+                    opponent_board.Board[y + 1, x + 1] = -99;
                 }
             }
         }

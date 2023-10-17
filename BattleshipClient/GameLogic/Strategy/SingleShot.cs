@@ -7,21 +7,17 @@
             Console.WriteLine("Firing with Single Shot");
 
             ShipsBoard opponent_board = opponent.GetShipsBoard();
-            opponent_board.PrintBoard();
+            //opponent_board.PrintBoard();
 
-            if (opponent_board.Board[x, y] >= 1)
+            if (opponent_board.Board[y, x] >= 1)
             {
                 Console.WriteLine("Hit a ship");
-                opponent_board.Board[x, y] = -(opponent_board.Board[x, y]);
+                opponent_board.Board[y, x] = -(opponent_board.Board[y, x]);
             }
-            else if (opponent_board.Board[x, y] == 0)
+            else if (opponent_board.Board[y, x] == 0)
             {
                 Console.WriteLine("Missed a shot");
-                opponent_board.Board[x, y] = -99;
-            }
-            else if (opponent_board.Board[x, y] < 0)
-            {
-                Console.WriteLine("Hit already hit target");
+                opponent_board.Board[y, x] = -99;
             }
         }
     }
