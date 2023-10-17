@@ -134,29 +134,35 @@ function placedShipsAsString() {
     string += "]";
     return string;
 }
-function printEnemyBoard(user, json) {
+function printEnemyBoard(user, board) {
     var name = $("#name").val();
-    console.log(name);
-    if (name !== user) {
-        var objects = $.parseJSON(json);
-        console.log(objects);
-        for (var ship in objects) {
-            printEnemyShip(objects[ship]);
+    var array = eval(board);
+    console.log(array);
+    if (name != user) {
+        console.log('testas');
+        for (var i = 0; i < array.length; i++) {
+            for (var j = 0; j < array[0].length; j++) {
+                console.log(array[i][j]);
+                switch (array[i][j]) {
+                    case 1: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "brown");
+                        break;
+                    }
+                    case 2: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "red");
+                        break;
+                    }
+                    case 3: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "green");
+                        break;
+                    }
+                    case 4: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "blue");
+                        break;
+                    }
+                }
+            }
         }
-    }
-}
-function printEnemyShip(enemyShip) {
-    var printedShip = null;
-    for (var ship in ships) {
-        console.log(ships[ship]);
-        if (ships[ship].type === enemyShip.Type) {
-            printedShip = ships[ship];
-            break;
-        }
-    }
-    var color = printedShip.color;
-    for (var i = enemyShip.X; i < enemyShip.X + printedShip.size; i++) {
-        $("#enemy-board .board-tile[data-x='".concat(i, "'][data-y='").concat(enemyShip.Y, "']")).css("background-color", "".concat(color));
     }
 }
 function sinkShip(x, y) {

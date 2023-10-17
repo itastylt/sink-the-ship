@@ -29,10 +29,6 @@
       "PackagePath": "staticwebassets\\js\\connection.js"
     },
     {
-      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\connection.js.map",
-      "PackagePath": "staticwebassets\\js\\connection.js.map"
-    },
-    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
       "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
     },

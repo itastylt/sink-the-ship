@@ -3,9 +3,12 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/shiphub").build();
 
 document.getElementById("startButton").disabled = true;
 
-connection.on("EnemyBoard", function (user, message) {
+connection.on("StartGame", function (user, message) {
     console.log(user, message);
-    printEnemyBoard(user, message);
+    let player = message.split(';')[0];
+    let board = message.split(';')[1];
+    printEnemyBoard(player, board);
+
 });
 
 connection.start().then(function () {

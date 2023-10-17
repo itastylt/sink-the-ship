@@ -181,34 +181,40 @@ function placedShipsAsString() {
     return string;
 }
 
-function printEnemyBoard(user: string, json: string) {
+function printEnemyBoard(user: string, board) {
     let name = $("#name").val();
-    console.log(name);
-    if (name !== user) {
-        var objects = $.parseJSON(json);
-        console.log(objects);
-        for (var ship in objects) {
-            printEnemyShip(objects[ship]);
+
+    let array = eval(board);
+    console.log(array);
+
+    if (name != user) {
+        console.log('testas');
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[0].length; j++) {
+                console.log(array[i][j]);
+                switch (array[i][j]) {
+                    case 1: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `brown`);
+                        break;
+                    }
+                    case 2: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `red`);
+                        break;
+                    }
+                    case 3: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `green`);
+                        break;
+                    }
+                    case 4: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `blue`);
+                        break;
+                    }
+                }
+            }
         }
     }
-}
 
-function printEnemyShip(enemyShip) {
-    let printedShip = null;
 
-    for (let ship in ships) {
-        console.log(ships[ship]);
-        if (ships[ship].type === enemyShip.Type) {
-            printedShip = ships[ship];
-            break;
-        }
-    }
-
-    let color = printedShip.color;
-
-    for (let i = enemyShip.X; i < enemyShip.X + printedShip.size; i++) {
-        $(`#enemy-board .board-tile[data-x='${i}'][data-y='${enemyShip.Y}']`).css(`background-color`, `${color}`);
-    }
 }
 function sinkShip(x: number, y: number) {
     for (let i = x; i < x + selectedCannon; i++) {

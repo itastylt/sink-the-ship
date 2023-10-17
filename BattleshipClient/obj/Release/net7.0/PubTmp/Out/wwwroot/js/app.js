@@ -76,7 +76,7 @@ function generateShipSelector() {
     var shipBoard = document.getElementById('ship-board');
     var shipsDom = '';
     for (var i = 0; i < ships.length; i++) {
-        shipsDom += "<div class=\"row ship-selector\" onclick=\"selectShip('".concat(ships[i].selector, "')\">\n                        <div class=\"col ship-title\">").concat(ships[i].type, "</div>\n                            <div class=\"col ship-preview\">\n                                <div class=\"row\">");
+        shipsDom += "<div class=\"row ship-selector\" id=".concat(ships[i].type, " onclick=\"selectShip('").concat(ships[i].selector, "')\">\n                        <div class=\"col ship-title\">").concat(ships[i].type, "</div>\n                            <div class=\"col ship-preview\">\n                                <div class=\"row\">");
         for (var j = 0; j < ships[i].size; j++) {
             shipsDom += "<div class=\"col board-tile\" style=\"background-color:".concat(ships[i].color, ";\" >&nbsp;</div>");
         }
@@ -115,6 +115,8 @@ function placeShip(x, y) {
     else {
         console.log("Nice try :)");
     }
+    $("#".concat(selectedShip.type)).css('display', 'none');
+    selectedShip = null;
 }
 var selectedCannon = 1;
 function selectShipCannon(cannon) {

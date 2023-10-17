@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vChgeHh8dVc0TiBC2iwN9/Un2h64pYy8ZmJTiMLMUnY=",
+  "Hash": "I31bG+aDMwLfFqj820koPlgOMfPoutORMtRS+yB4iek=",
   "Source": "BattleshipClient",
   "BasePath": "_content/BattleshipClient",
   "Mode": "Default",
@@ -151,23 +151,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\connection.js"
-    },
-    {
-      "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\connection.js.map",
-      "SourceId": "BattleshipClient",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\",
-      "BasePath": "_content/BattleshipClient",
-      "RelativePath": "js/connection.js.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\connection.js.map"
     },
     {
       "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",

@@ -1,32 +1,48 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using System.Text.Json;
 
-namespace BattleshipClient.Hubs
+public class ShipHub : Hub
 {
-    public class ShipHub : Hub
+    public async Task SendMessage(string user, string message)
     {
-        public async Task SendMessage(string user, string message)
+        string messageType = message.Split(';')[0];
+        string messageArgs = message.Split(';')[1];
+
+        switch (messageType)
         {
-            string messageType = message.Split(';')[0];
-            string messageArgs = message.Split(';')[1];
+            case "ready":
+                ShipsBoard userBoard = new ShipsBoard();
 
-            switch (messageType)
-            {
-                case "ready":
-                    ShipsBoard userBoard = new ShipsBoard(user);
+                List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(messageArgs);
 
-                    List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(messageArgs);
-                    foreach(PlacedShip ship in ships)
+                foreach (PlacedShip ship in ships)
+                {
+                    userBoard.PlaceShip(ship);
+                }
+
+
+                Player player = new Player(user);
+                player.SetShipsBoard(userBoard);
+
+                List<Player> Players = ShipPlayers.AddPlayer(player);
+
+                foreach (var online in Players)
+                {
+                    Console.WriteLine(online.Name);
+                }
+
+                if (Players.Count % 2 == 0)
+                {
+                    foreach (var online in Players)
                     {
-                        userBoard.PlaceShip(ship);
+                        await Clients.All.SendAsync("StartGame",online.Name, online.Name + ";" + online.GetShipsBoard().ToString());
                     }
-                    userBoard.PrintBoard();
-                    await Clients.All.SendAsync("EnemyBoard", user, messageArgs);
-                    break;
-                default:
-                    Console.WriteLine("testas2");
-                    break;
-            }
+
+                }
+                break;
+
+            default:
+                break;
         }
     }
 }
