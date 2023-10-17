@@ -78,7 +78,7 @@ public class ShipHub : Hub
                 Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
 
                 //Console.WriteLine(String.Format(current_player.Name + " is firing against " + opponent_player));
-                Console.WriteLine(String.Format(x_cord+ " " +y_cord));
+                    Console.WriteLine(String.Format(x_cord + " " + y_cord));
                 current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
 
                 break;
