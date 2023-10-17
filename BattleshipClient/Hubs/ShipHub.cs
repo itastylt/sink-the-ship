@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using BattleshipClient.GameLogic.Strategy;
+using Microsoft.AspNetCore.SignalR;
 using System.Text.Json;
 
 public class ShipHub : Hub
@@ -14,6 +15,25 @@ public class ShipHub : Hub
                 ShipsBoard userBoard = new ShipsBoard();
 
                 List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(messageArgs);
+
+                foreach (PlacedShip ship in ships) //Adding different cannon strategies to different weapons
+                {
+                    switch (ship.Type)
+                    {
+                        case "Boat":
+                            ship.Cannon = new SingleShot();
+                            break;
+                        case "Lavantier":
+                            ship.Cannon = new HorizontalShot();
+                            break;
+                        case "Submarine":
+                            ship.Cannon = new SingleShot();
+                            break;
+                        case "Destroyer":
+                            ship.Cannon = new HorizontalShot();
+                            break;
+                    }
+                }
 
                 foreach (PlacedShip ship in ships)
                 {
@@ -39,6 +59,19 @@ public class ShipHub : Hub
                     }
 
                 }
+                break;
+            case "selectWeapon":
+                int chosenWeaponNumber = int.Parse(messageArgs);
+                //Console.WriteLine("Selected weapon ");
+                //Console.WriteLine(chosenWeaponNumber);
+                Player player1 = ShipPlayers.GetPlayer(user);
+                player1.SetSelectedShip(chosenWeaponNumber);
+                //Console.WriteLine("trying fire method:");
+                //player1.GetSelectedShip().FireWeapon();
+
+                break;
+            case "fireWeapon":
+
                 break;
 
             default:

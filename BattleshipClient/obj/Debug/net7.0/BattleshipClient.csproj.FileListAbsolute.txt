@@ -30,3 +30,35 @@ C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Batt
 C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.genruntimeconfig.cache
 C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\obj\Debug\net7.0\ref\BattleshipClient.dll
 C:\Users\andri\OneDrive - Kaunas University of Technology\Dokumentai\GitHub\Battleship69\Battleship\BattleshipClient\bin\Debug\net7.0\libman.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\appsettings.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\libman.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\tsconfig.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\BattleshipClient.staticwebassets.runtime.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\BattleshipClient.exe
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\BattleshipClient.deps.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\BattleshipClient.runtimeconfig.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\BattleshipClient.dll
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\bin\Debug\net7.0\BattleshipClient.pdb
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.AssemblyInfoInputs.cache
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.AssemblyInfo.cs
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.csproj.CoreCompileInputs.cache
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.RazorAssemblyInfo.cache
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.RazorAssemblyInfo.cs
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets\msbuild.BattleshipClient.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets\msbuild.build.BattleshipClient.props
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.BattleshipClient.props
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.BattleshipClient.props
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\scopedcss\bundle\BattleshipClient.styles.css
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\scopedcss\projectbundle\BattleshipClient.bundle.scp.css
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.dll
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\refint\BattleshipClient.dll
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.pdb
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.genruntimeconfig.cache
+C:\Users\ssims\OneDrive\Documents\sink-the-ship\BattleshipClient\obj\Debug\net7.0\ref\BattleshipClient.dll

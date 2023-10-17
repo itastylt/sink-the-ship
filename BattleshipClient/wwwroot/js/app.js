@@ -119,10 +119,6 @@ function placeShip(x, y) {
     selectedShip = null;
 }
 var selectedCannon = 1;
-function selectShipCannon(cannon) {
-    selectedCannon = cannon;
-    console.log("Selected cannon ".concat(cannon));
-}
 function placedShipsAsString() {
     var string = "[";
     for (var i = 0; i < placedShips.length; i++) {

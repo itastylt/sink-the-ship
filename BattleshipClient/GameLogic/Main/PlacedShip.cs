@@ -1,4 +1,6 @@
 ﻿
+using BattleshipClient.GameLogic.Strategy;
+
 public class PlacedShip
 {
     public string Type { get; set; }
@@ -6,5 +8,13 @@ public class PlacedShip
     public int Y { get; set; }
     public int Size {  get; set; } 
     public int Angle { get; set; }
+
+    //Strategy pattern
+    public ICannonStrategy Cannon { get; set; }
+    public void FireWeapon()
+    {
+        Cannon.Fire(X,Y);
+    }
+
 }
 

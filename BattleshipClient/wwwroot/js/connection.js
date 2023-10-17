@@ -31,3 +31,14 @@ document.getElementById("startButton").addEventListener("click", function (event
 
     event.preventDefault();
 });
+
+function selectShipCannon(cannon) {
+    var user = document.getElementById("nameText").value;
+    selectedCannon = cannon;
+
+
+    console.log(`Selected cannon ${cannon}`);
+    connection.invoke("SendMessage", user, `selectWeapon;${cannon}`).catch(function (err) {
+        return console.error(err.toString());
+    });
+}

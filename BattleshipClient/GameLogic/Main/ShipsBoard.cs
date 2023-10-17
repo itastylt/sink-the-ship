@@ -10,11 +10,24 @@ public enum Ship
 
 public class ShipsBoard
 {
+    List<PlacedShip> allShips { get; set; }
     public int[,] Board { get; set; }
 
     public ShipsBoard()
     {
         this.Board = new int[10, 10];
+        allShips = new List<PlacedShip>();
+    }
+    public PlacedShip getShip(int cannonNumber)
+    {
+        foreach (PlacedShip ship in allShips)
+        {
+            if (cannonNumber == (int)(Ship)Enum.Parse(typeof(Ship), ship.Type))
+            {
+                return ship;
+            }
+        }
+        throw new InvalidOperationException("Ship not found in getShip method");
     }
 
     public void PlaceShip(PlacedShip ship)
@@ -26,6 +39,7 @@ public class ShipsBoard
                 Board[i, j] = (int)(Ship)Enum.Parse(typeof(Ship), ship.Type);
             }
         }
+        allShips.Add(ship);
     }
     override public string ToString()
     {

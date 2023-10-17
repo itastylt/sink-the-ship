@@ -9,6 +9,17 @@ public class Player : IObserver
 
     private bool State = false;
 
+    private PlacedShip SelectedShip { get; set; }
+
+    public void SetSelectedShip(int cannonNumber)
+    {
+        SelectedShip = this.ShipsBoard.getShip(cannonNumber);
+    }
+    public PlacedShip GetSelectedShip()
+    {
+        return SelectedShip;
+    }
+
     public bool GetState()
     {
         return this.State;

@@ -163,11 +163,6 @@ function placeShip(x: number, y: number) {
 
 let selectedCannon = 1;
 
-function selectShipCannon(cannon: number) {
-    selectedCannon = cannon;
-    console.log(`Selected cannon ${cannon}`);
-}
-
 function placedShipsAsString() {
     let string = "[";
     for (let i = 0; i < placedShips.length; i++) {
