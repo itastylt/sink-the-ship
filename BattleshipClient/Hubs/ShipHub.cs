@@ -27,10 +27,10 @@ public class ShipHub : Hub
                             ship.Cannon = new HorizontalShot();
                             break;
                         case "Submarine":
-                            ship.Cannon = new SingleShot();
+                            ship.Cannon = new VerticalShot();
                             break;
                         case "Destroyer":
-                            ship.Cannon = new HorizontalShot();
+                            ship.Cannon = new DiagonalShot();
                             break;
                     }
                 }
@@ -94,7 +94,6 @@ public class ShipHub : Hub
                     current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
                     current_player.SetState(!current_player.GetState());
                     opponent_player.SetState(!opponent_player.GetState());
-                    current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
                     ShipPlayers.UpdatePlayer(current_player.Name, current_player);
                     ShipPlayers.UpdatePlayer(opponent_player.Name, opponent_player);
                     await Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString());

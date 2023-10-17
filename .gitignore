@@ -74,3 +74,6 @@ BattleshipClient/obj/Debug/net7.0/BattleshipClient.GeneratedMSBuildEditorConfig.
 BattleshipClient/obj/Debug/net7.0/BattleshipClient.pdb
 BattleshipClient/obj/Debug/net7.0/ref/BattleshipClient.dll
 BattleshipClient/obj/Debug/net7.0/refint/BattleshipClient.dll
+*.dll
+*.pdb
+*.vsidx
