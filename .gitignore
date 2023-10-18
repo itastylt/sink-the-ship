@@ -77,3 +77,4 @@ BattleshipClient/obj/Debug/net7.0/refint/BattleshipClient.dll
 *.dll
 *.pdb
 *.vsidx
+*.editorconfig
