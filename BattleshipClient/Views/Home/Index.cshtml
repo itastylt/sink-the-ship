@@ -1,14 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="text-center">
-    <div class="form-row">
+
+
+<div class="text-center hide-on-join">
+    <div class="form-row ">
         <input type="text" id="nameText" class="form-input" placeholder="Enter your name" />
         <input type="hidden" id="name" value="" />
     </div>
 
 </div>
 <div class="text-center">
+    <h1 style="margin-bottom: 30px;" class="turn-screen-title"></h1>
     <h1 class="display-4">Battleships</h1>
     <div class="row">
         <div class="col">
@@ -24,12 +27,12 @@
             </div>
         </div>
     </div>
-    <div style="margin-top: 30px;">
+    <div class="hide-on-join" style="margin-top: 30px;">
         <h1>Select your ship:</h1>
         <div id="ship-board">&nbsp;</div>
     </div>
 
-    <div style="margin-top: 30px;">
-        <input type="button" class="button btn-primary" id="startButton" value="Start Game" />
+    <div style="margin-top: 30px;" class="hide-on-join">
+        <input type="button" class="button btn-primary" id="startButton" onclick="handleSplashScreen()" value="Start Game" />
     </div>
 </div>

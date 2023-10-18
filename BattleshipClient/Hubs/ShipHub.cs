@@ -62,7 +62,7 @@ public class ShipHub : Hub
 
                     foreach (var online in Players)
                     {
-                        await Clients.All.SendAsync("StartGame",online.Name, online.Name + ";" + online.GetShipsBoard().ToString());
+                        await Clients.All.SendAsync("StartGame",online.Name, online.Name + ";" + online.GetShipsBoard().ToString() + ";" + luckyPlayer.Name);
                     }
 
                 }
@@ -96,7 +96,7 @@ public class ShipHub : Hub
                     opponent_player.SetState(!opponent_player.GetState());
                     ShipPlayers.UpdatePlayer(current_player.Name, current_player);
                     ShipPlayers.UpdatePlayer(opponent_player.Name, opponent_player);
-                    await Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString());
+                    await Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString() + ";" + opponent_player.Name);
                 }
 
                 break;

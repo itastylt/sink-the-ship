@@ -15,6 +15,7 @@ div.board-tile {
     outline: 1px solid black;
     max-width: 10px;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 div.ship-preview {
@@ -31,3 +32,88 @@ div.ship-selector:hover {
     outline: 1px solid #8080805F;
     transition: all ease-in-out 1s;
 }
+
+.ready-screen-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    display: -webkit-flex;
+    -webkit-align-items: flex-end;
+    -webkit-justify-content: center;
+}
+
+.ready-screen-logo {
+    width: 80px;
+    height: 80px;
+    background: #000;
+    border-radius: 100%;
+    animation-name: splashscreen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-top: 10px;
+    -webkit-animation-name: splashscreen;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes splashscreen {
+    0% {
+        transform: scale(1);
+        background: #000;
+    }
+
+    25% {
+        background-color: #686868;
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1);
+        background: #000;
+    }
+
+    75% {
+        background-color: #686868;
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+.ready-screen-wrapper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background: #FFF;
+}
+
+.turn-screen-wrapper {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    position: fixed;
+    transform: translateX(100%);
+    transition: all ease-in-out 1s;
+    display: flex;
+    opacity: 0.6;
+}
+
+.turn-screen-wrapper.turn-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.turn-screen-wrapper.turn-hide {
+    display: none;
+}
+
+

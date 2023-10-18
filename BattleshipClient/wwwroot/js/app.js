@@ -130,15 +130,31 @@ function placedShipsAsString() {
     string += "]";
     return string;
 }
-function printEnemyBoard(user, board) {
+function handleSplashScreen() {
+    $('.hide-on-join').fadeOut("slow");
+    $('.ready-screen-wrapper').slideToggle("slow");
+}
+function handleTurnScreen(player) {
+    var name = $("#name").val();
+    if (name == player) {
+        $('.turn-screen-title').text("Your turn");
+    }
+    else {
+        $('.turn-screen-title').text("Enemies turn");
+    }
+    var wrapper = $('.turn-screen-wrapper');
+    if (wrapper.is('.turn-hide')) {
+        wrapper.removeClass('turn-hide');
+    }
+    wrapper.toggleClass('turn-show');
+    setTimeout(function () { wrapper.toggleClass('turn-show'); }, 2000);
+}
+function printBoards(user, board) {
     var name = $("#name").val();
     var array = eval(board);
-    console.log(array);
     if (name != user) {
-        console.log('testas');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
-                console.log(array[i][j]);
                 switch (array[i][j]) {
                     case 1: {
                         $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "brown");
@@ -157,23 +173,67 @@ function printEnemyBoard(user, board) {
                         break;
                     }
                     case -99: {
-                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "black");
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#938F92");
                         break;
                     }
                     case -1: {
-                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "magenta");
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#7A5C56");
                         break;
                     }
                     case -2: {
-                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "olive");
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#FF947D");
                         break;
                     }
                     case -3: {
-                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "cyan");
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#C6FFC4");
                         break;
                     }
                     case -4: {
-                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "yellow");
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#C4F4FF");
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    else {
+        for (var i = 0; i < array.length; i++) {
+            for (var j = 0; j < array[0].length; j++) {
+                switch (array[i][j]) {
+                    case 1: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "brown");
+                        break;
+                    }
+                    case 2: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "red");
+                        break;
+                    }
+                    case 3: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "green");
+                        break;
+                    }
+                    case 4: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "blue");
+                        break;
+                    }
+                    case -99: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#938F92");
+                        break;
+                    }
+                    case -1: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#7A5C56");
+                        break;
+                    }
+                    case -2: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#FF947D");
+                        break;
+                    }
+                    case -3: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#C6FFC4");
+                        break;
+                    }
+                    case -4: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#C4F4FF");
                         break;
                     }
                 }
@@ -187,5 +247,5 @@ function printEnemyBoard(user, board) {
             $(`#enemy-board .board-tile[data-x='${i}'][data-y='${y}']`).css(`background-color`, `black`);
         }
     }
-}*/ 
+}*/
 //# sourceMappingURL=app.js.map

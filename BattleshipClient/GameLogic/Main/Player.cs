@@ -15,6 +15,7 @@ public class Player : IObserver
     {
         SelectedShip = this.ShipsBoard.getShip(cannonNumber);
     }
+
     public PlacedShip GetSelectedShip()
     {
         if (SelectedShip == null)

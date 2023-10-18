@@ -5,17 +5,26 @@ document.getElementById("startButton").disabled = true;
 
 connection.on("StartGame", function (user, message) {
     console.log(user, message);
+    let currUser = document.getElementById("nameText").value;
     let player = message.split(';')[0];
     let board = message.split(';')[1];
-    printEnemyBoard(player, board);
+    let turn = message.split(';')[2];
+    printBoards(player, board);
+    handleTurnScreen(turn);
+    if (currUser == player) {
+        handleSplashScreen();
+    }
+
 });
 
 connection.on("FireShot", function (user, message) {
     console.log(user, message);
     let player = message.split(';')[0];
     let board = message.split(';')[1];
+    let turn = message.split(';')[2];
+    handleTurnScreen(turn);
     if (board != null) {
-        printEnemyBoard(player, board);
+        printBoards(player, board);
     } else {
         console.log("Nice try :)");
     }
