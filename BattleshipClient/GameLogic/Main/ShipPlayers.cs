@@ -1,16 +1,42 @@
 ﻿using System.Security.AccessControl;
 
-public static class ShipPlayers
+/// <summary>
+/// Singleton class
+/// Used for storing object properties in private fashion, only exposing static methods for gathering and manipulating data.
+/// </summary>
+public class ShipPlayers
 {
-    private static List<Player> ShipPlayersList;
-    
+    // Create a list of players. List should contain two values, because there's only two players at one board at the time.  
+    private static List<Player> ShipPlayersList = new List<Player>();
+
+    // Define a lock, for locking instance. Relevant, when instance is used parallel code.
+    private static object _lock = new object();
+
+    // Define private object instance of singleton and contructor 
+    private static ShipPlayers _instance;
+    private ShipPlayers() { }
+
+    // Method for getting object instance
+    public static ShipPlayers Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                lock (_lock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new ShipPlayers() { };
+                    }
+                }
+            }
+            return _instance;
+        }
+    }
+
     public static void UpdatePlayer(string updateName, Player update)
     {
-        if (ShipPlayersList == null)
-        {
-            throw new InvalidOperationException("ShipPlayersList is not initialized");
-        }
-
         var result = (from pred in ShipPlayersList where pred.Equals(updateName) select pred) ?? throw new InvalidOperationException("Player not found in UpdatePlayer method");
         result.First().Name = update.Name;
         result.First().SetSelectedShip(update.GetSelectedShip());
@@ -23,26 +49,14 @@ public static class ShipPlayers
             {
                 player.SetSelectedShip(1);
             }
-
-            // Console.WriteLine(player.Name + " || " + player.GetSelectedShip().Type);
         }
     }
 
     public static List<Player> AddPlayer(Player player)
     {
-        if (ShipPlayersList == null)
+        if (!ShipPlayersList.Contains(player))
         {
-            ShipPlayersList = new List<Player>
-            {
-                player
-            };
-        } 
-        else
-        {
-            if (!ShipPlayersList.Contains(player))
-            {
-                ShipPlayersList.Add(player);
-            }
+            ShipPlayersList.Add(player);
         }
 
         return ShipPlayersList;
@@ -50,36 +64,39 @@ public static class ShipPlayers
 
     public static Player GetPlayer(string playerName)
     {
-        if(ShipPlayersList == null)
+        if (ShipPlayersList.Count != 0)
         {
-            throw new InvalidOperationException("ShipPlayersList is not initialized");
-        }
-
-        foreach (Player player in ShipPlayersList)
-        {
-            if (player.Name == playerName)
+            foreach (Player player in ShipPlayersList)
             {
-                return player;
+                if (player.Name == playerName)
+                {
+                    return player;
+                }
             }
+            throw new InvalidOperationException("Player not found in getPlayer method");
         }
-
-        throw new InvalidOperationException("Player not found in getPlayer method");
+        else
+        {
+            throw new InvalidOperationException("Player list is empty!");
+        }
     }
 
     public static Player GetPlayerOpponent(string playerName) //Cia su ta ideja, jog sarase yra tik 2 zaidejai viename sarase. -Simonas
     {
-        if (ShipPlayersList == null)
+        if (ShipPlayersList.Count != 0)
         {
-            throw new InvalidOperationException("ShipPlayersList is not initialized");
-        }
-
-        foreach (Player player in ShipPlayersList)
-        {
-            if (player.Name != playerName)
+            foreach (Player player in ShipPlayersList)
             {
-                return player;
+                if (player.Name != playerName)
+                {
+                    return player;
+                }
             }
+            throw new InvalidOperationException("Player not found in GetPlayerOpponent method");
         }
-        throw new InvalidOperationException("Player not found in getPlayerOpponent method");
+        else
+        {
+            throw new InvalidOperationException("Player list is empty!");
+        }
     }
 }
