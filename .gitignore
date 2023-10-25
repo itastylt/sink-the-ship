@@ -82,3 +82,5 @@ BattleshipClient/obj/Debug/net7.0/refint/BattleshipClient.dll
 *.pdb
 *.json
 *.cache
+*.v2
+*.bin
