@@ -48,6 +48,7 @@ domReady(() => {
     generateYourBoard();
     generateEnemyBoard();
     generateShipSelector();
+    generateCannonSelector();
 });
 
 class Ship {
@@ -56,6 +57,7 @@ class Ship {
     size: number
     color: String;
     cannon: number;
+    cannonPreview: String;
 
     getShip(id: string) {
         if (this.selector === id || this.type === id) {
@@ -64,12 +66,13 @@ class Ship {
         return null;
     }
     
-    constructor(typeString: string, classSelector: string, size: number, color: string, cannon: number) {
+    constructor(typeString: string, classSelector: string, size: number, color: string, cannon: number, preview: string) {
         this.selector = classSelector;
         this.type = typeString;
         this.size = size;
         this.color = color;
         this.cannon = cannon;
+        this.cannonPreview = preview;
     }
 }
 
@@ -90,11 +93,46 @@ class PlacedShip {
         this.cannon = cannon;
     }
 }
+const boatDOM = `<div class="row">
+                    <div class="col board-tile" style="color:red;">X</div>
+                    <div class="col board-tile">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col board-tile" style="background-color: #C4F4FF;">&nbsp;</div>
+                    <div class="col board-tile" style="background-color: blue;">&nbsp;</div>
+                </div>`;
 
-const boat = new Ship('Boat', 'ship_boat', 1, 'brown', 1);
-const lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 2);
-const submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 3);
-const destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 4);
+const lavantierDOM = `<div class="row">
+                        <div class="col board-tile" style="background-color: #938F92; color: red;">X</div>
+                        <div class="col board-tile" style="background-color: #938F92;">&nbsp;</div>
+                     </div>
+                     <div class="row">
+                        <div class="col board-tile">&nbsp;</div>
+                        <div class="col board-tile">&nbsp;</div>
+                     </div>`;
+
+const submarineDOM = `<div class="row">
+                        <div class="col board-tile" style="background-color: #938F92; color: red;">X</div>
+                        <div class="col board-tile">&nbsp;</div>
+                     </div>
+                     <div class="row">
+                        <div class="col board-tile" style="background-color: #938F92;">&nbsp;</div>
+                        <div class="col board-tile">&nbsp;</div>
+                     </div>`;
+
+const destroyerDOM = `<div class="row">
+                        <div class="col board-tile" style="background-color: #938F92; color: red;">X</div>
+                        <div class="col board-tile">&nbsp;</div>
+                     </div>
+                     <div class="row">
+                        <div class="col board-tile">&nbsp;</div>
+                        <div class="col board-tile" style="background-color: #938F92;">&nbsp;</div>
+                     </div>`;
+
+const boat = new Ship('Boat', 'ship_boat', 1, 'brown', 1, boatDOM);
+const lavantier = new Ship('Lavantier', 'ship_lavantier', 2, 'red', 2, lavantierDOM);
+const submarine = new Ship('Submarine', 'ship_submarine', 3, 'green', 3, submarineDOM);
+const destroyer = new Ship('Destroyer', 'ship_destroyer', 4, 'blue', 4, destroyerDOM);
 
 let ships = [boat, lavantier, submarine, destroyer];
 
@@ -120,6 +158,7 @@ function generateShipSelector() {
 }
 
 let selectedShip = null;
+
 
 function selectShip(shipSelector: string) {
     for (let i = 0; i < ships.length; i++) {
@@ -148,7 +187,6 @@ function placeShip(x: number, y: number) {
             console.log("Ship coordinate:", $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y }']`));
             $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y}']`).css(`background-color`, `${selectedShip.color}`);
             $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y}']`).addClass('ship');
-            $(`#your-board .board-tile[data-x='${x + i}'][data-y='${y}']`).attr('onClick', `selectShipCannon(${selectedShip.cannon})`);
         }
 
         placedShips.push(new PlacedShip(selectedShip.type, x, y, selectedShip.size, 90, selectedShip.cannon));
@@ -180,6 +218,8 @@ function handleSplashScreen() {
     $('.ready-screen-wrapper').slideToggle("slow");
 
 }
+
+
 function handleTurnScreen(player: string) {
     let name = $("#name").val();
 
@@ -202,7 +242,7 @@ function printBoards(user: string, board) {
     let name = $("#name").val();
 
     let array = eval(board);
-
+    $('.power-up-panel').addClass('show');
     if (name != user) {
         for (let i = 0; i < array.length; i++) {
             for (let j = 0; j < array[0].length; j++) {
@@ -292,11 +332,43 @@ function printBoards(user: string, board) {
         }
     }
 }
-/*function sinkShip(x: number, y: number) {
-    for (let i = x; i < x + selectedCannon; i++) {
-        if (i < boardSize[0]) {
-            $(`#enemy-board .board-tile[data-x='${i}'][data-y='${y}']`).css(`background-color`, `black`);
-        }
-    }
-}*/
+function handleClonePowerUp(player: string) {
+    var name = $("#name").val();
 
+    if (name == player) {
+        $(".power-up-clone").addClass("disabled");
+    }
+}
+function handleShowOnStart() {
+    $('.show-on-join').addClass('show');
+}
+function generateCannonSelector() {
+    let shipBoard = document.getElementById('cannon-board');
+    let shipsDom = '';
+
+    for (let i = 0; i < ships.length; i++) {
+        if (i == 0) {
+            shipsDom += `<div class="row ship-selector cannon-active" id="cannon-${ships[i].cannon}" onclick="selectShipCannon(${ships[i].cannon})">
+                            <div class="col ship-title">${ships[i].type}</div>
+                            <div class="col cannon-preview">
+                            ${ships[i].cannonPreview}
+                        </div>
+                     </div>`;
+        } else {
+            shipsDom += `<div class="row ship-selector" id="cannon-${ships[i].cannon}" onclick="selectShipCannon(${ships[i].cannon})">
+                            <div class="col ship-title">${ships[i].type}</div>
+                            <div class="col cannon-preview">
+                            ${ships[i].cannonPreview}
+                        </div>
+                     </div>`;
+        }
+
+    }
+
+    shipBoard.innerHTML = shipsDom;
+}
+
+function handleCannonBoard() {
+    $(".ship-selector").removeClass('cannon-active');
+    $(`#cannon-${selectedCannon}`).addClass('cannon-active');
+}

@@ -7,8 +7,10 @@ div.battleship-board {
 }
 .player-col {
     display: flex;
+    display: -webkit-flex;
     flex-wrap: wrap;
     justify-content: center;
+    -webkit-justify-content: center;
 }
 div.board-tile {
     border-collapse: collapse;
@@ -26,11 +28,12 @@ div.ship-selector {
     outline: 1px solid #808080FF;
     padding: 10px;
     cursor: pointer;
+    transition: all ease-in-out .5s;
 }
 
 div.ship-selector:hover {
     outline: 1px solid #8080805F;
-    transition: all ease-in-out 1s;
+    transform: scale(1.01);
 }
 
 .ready-screen-title {
@@ -55,28 +58,39 @@ div.ship-selector:hover {
     -webkit-animation-name: splashscreen;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: splashscreen;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
 }
 
 @keyframes splashscreen {
     0% {
         transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
         background: #000;
     }
 
     25% {
         background-color: #686868;
         transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
         opacity: 0.8;
     }
 
     50% {
         transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
         background: #000;
     }
 
     75% {
         background-color: #686868;
         transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
         opacity: 0.8;
     }
 }
@@ -90,7 +104,6 @@ div.ship-selector:hover {
 }
 
 .turn-screen-wrapper {
-    display: flex;
     z-index: 1;
     width: 100%;
     background: #FFF;
@@ -102,13 +115,17 @@ div.ship-selector:hover {
     -webkit-align-items: center;
     position: fixed;
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
     transition: all ease-in-out 1s;
     display: flex;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 .turn-screen-wrapper.turn-show {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
     opacity: 1;
 }
 
@@ -117,3 +134,169 @@ div.ship-selector:hover {
 }
 
 
+.power-up.panel.row {
+    width: 100%;
+}
+.power-up-panel {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.power-up-panel-col {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    transition: .5s all ease-in-out;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.power-up-panel-col:hover, .power-up-clone.disabled {
+    opacity: 0.5;
+}
+
+.power-up-clone.disabled:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+}
+
+.power-up-panel-col:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.power-up-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+.power-up-panel .row {
+    width: 100%;
+}
+.cannon-preview {
+    max-width: 54px;
+}
+
+
+.panel-col {
+    display: flex;
+    width: 50%;
+    border: 1px solid black;
+    padding: 0;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    display: -webkit-flex;
+0}
+
+.footer {
+    display: none;
+}
+
+.panel-title {
+    display: flex;
+    display: -webkit-flex;
+    border-bottom: 1px solid black;
+    height: 60px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+#cannon-board {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+#cannon-board .ship-selector {
+    padding: 10px !important;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    display: -webkit-flex;
+}
+
+#cannon-board .cannon-active {
+    opacity: 0.6;
+    outline: 1px solid #8080805F;
+    background-color: lightgray;
+}
+
+#cannon-board .cannon-active:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+} 
+
+.hide-on-join .panel-col {
+    width: 100%;
+}
+
+.hide-on-join #ship-board {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hide-on-join #ship-board .ship-selector {
+    width: 100%;
+    margin: 0;
+}
+
+.show-on-join.show {
+    display: flex;
+    display: -webkit-flex;
+}
+.show-on-join {
+    display: none;
+}
+
+.button {
+    box-shadow: unset !important;
+    border: 0 !important;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    transition: all ease-in .3s;
+    -webkit-transition: all ease-in .3s;
+}
+
+.button:hover {
+    opacity: 0.95;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.show-on-join {
+    margin-top: 30px;
+}
+
+.turn-screen-title {
+    font-weight: 700;
+    border-bottom: 1px solid lightgray;
+    padding: 3px;
+}

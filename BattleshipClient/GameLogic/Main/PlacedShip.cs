@@ -1,7 +1,7 @@
 ﻿
 using BattleshipClient.GameLogic.Strategy;
 
-public class PlacedShip
+public class PlacedShip : ICloneable
 {
     public string Type { get; set; }
     public int X { get; set; }
@@ -11,10 +11,16 @@ public class PlacedShip
 
     //Strategy pattern
     public ICannonStrategy Cannon { get; set; }
+
     public void FireWeapon(Player opponent, int x, int y)
     {
         Cannon.Fire(opponent, x, y);
     }
 
+    // Prototype pattern
+    public object Clone()
+    {
+        return (PlacedShip)this.MemberwiseClone();
+    }
 }
 

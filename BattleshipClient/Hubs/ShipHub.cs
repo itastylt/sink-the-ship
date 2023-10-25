@@ -61,11 +61,11 @@ public class ShipHub : Hub
                     Player luckyPlayer = Players.ElementAt(random_number);
                     luckyPlayer.SetState(true);
                     ShipPlayers.UpdatePlayer(luckyPlayer.Name, luckyPlayer);
-
-                    foreach (var online in Players)
+                    foreach(var online in Players)
                     {
-                        await Clients.All.SendAsync("StartGame",online.Name, online.Name + ";" + online.GetShipsBoard().ToString() + ";" + luckyPlayer.Name);
+                        await Clients.All.SendAsync("StartGame", luckyPlayer.Name, online.Name + ";" + online.GetShipsBoard().ToString() + ";" + luckyPlayer.Name);
                     }
+
 
                 }
                 break;
@@ -98,7 +98,30 @@ public class ShipHub : Hub
                 }
 
                 break;
+            case "cloneShip":
 
+                Player cloner = ShipPlayers.GetPlayer(user);
+                Player oppenent = ShipPlayers.GetPlayerOpponent(user);
+                if(!cloner.GetState() || !cloner.GetClonePowerup())
+                {
+                    Console.WriteLine("Illegal player turn");
+                } else {
+                    cloner.DisableClonePowerup();
+                    PlacedShip cloneableShip = cloner.GetShipsBoard().getShip(1);
+                    PlacedShip clone = (PlacedShip)cloneableShip.Clone();
+                    
+                    int[] coords = cloner.GetShipsBoard().GetAvailableCoordinate();
+                    clone.X = coords[1];
+                    clone.Y = coords[0];
+                    Console.WriteLine(string.Format("Cloned Y is {0}, X is {1}", coords[0], coords[1]));
+                    cloner.SetState(!cloner.GetState());
+                    oppenent.SetState(!oppenent.GetState());
+                    cloner.GetShipsBoard().PlaceShip(clone);
+                    ShipPlayers.UpdatePlayer(user, cloner);
+                    ShipPlayers.UpdatePlayer(oppenent.Name, oppenent);
+                    await Clients.All.SendAsync("ClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);
+                }
+                break;
             default:
                 break;
         }

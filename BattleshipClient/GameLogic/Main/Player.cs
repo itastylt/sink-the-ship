@@ -10,6 +10,18 @@ public class Player : IObserver
     private bool State = false;
 
     private PlacedShip SelectedShip { get; set; }
+    
+    private bool CanClone = true;
+
+    public bool GetClonePowerup()
+    {
+        return this.CanClone;
+    }
+
+    public void DisableClonePowerup()
+    {
+        this.CanClone = false;
+    }
 
     public void SetSelectedShip(int cannonNumber)
     {

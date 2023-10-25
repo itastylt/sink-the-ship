@@ -41,6 +41,30 @@ public class ShipsBoard
         throw new InvalidOperationException("Ship not found in getShip method");
     }
 
+    public int[] GetAvailableCoordinate()
+    {
+        int[] coordinates = new int[2];
+        int maxX = this.Board.GetLength(1);
+        int maxY = this.Board.GetLength(0);
+
+        Random random = new Random();
+        int luckyX = random.Next(maxX);
+        int luckyY = random.Next(maxY);
+        int tile = this.Board[luckyY, luckyX];
+
+        while (tile != 0 && tile != -99)
+        {
+            Console.WriteLine(string.Format("y: {0} ; x : {1}", luckyY, luckyX));
+            luckyX = random.Next(maxX);
+            luckyY = random.Next(maxY);
+            tile = this.Board[luckyY, luckyX];
+        }
+
+        coordinates[0] = luckyY;
+        coordinates[1] = luckyX;
+        return coordinates;
+    }
+
     public void PlaceShip(PlacedShip ship)
     {
         for (int i = ship.Y; i <= ship.Y; i++)

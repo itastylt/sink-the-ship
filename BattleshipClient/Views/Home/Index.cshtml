@@ -11,8 +11,7 @@
 
 </div>
 <div class="text-center">
-    <h1 style="margin-bottom: 30px;" class="turn-screen-title"></h1>
-    <h1 class="display-4">Battleships</h1>
+    <h5 style="margin-bottom: 20px;" class="turn-screen-title"></h5>
     <div class="row">
         <div class="col">
             <div class="player-col">
@@ -20,19 +19,48 @@
                 <div id="your-board" class="battleship-board"></div>
             </div>
         </div>
+
         <div class="col">
-            <div class="player-col">
+            <div class="player-col w-100">
                 <h3 style="width: 100%;">Player 2 (Enemy)</h3>
                 <div id="enemy-board" class="battleship-board">&nbsp;</div>
             </div>
         </div>
     </div>
     <div class="hide-on-join" style="margin-top: 30px;">
-        <h1>Select your ship:</h1>
-        <div id="ship-board">&nbsp;</div>
+        <div class="panel-col">
+            <div class="panel-title">
+                <h5>Select your ship:</h5>
+            </div>
+
+            <div id="ship-board">&nbsp;</div>
+        </div>
+
     </div>
 
     <div style="margin-top: 30px;" class="hide-on-join">
-        <input type="button" class="button btn-primary" id="startButton" onclick="handleSplashScreen()" value="Start Game" />
+        <input type="button" class="button btn-success" id="startButton" onclick="handleSplashScreen()" value="Ready!" />
     </div>
 </div>
+
+<div class="show-on-join row">
+    <div class="panel-col">
+        <div class="panel-title">
+            <h5>Available cannons:</h5>
+        </div>
+        <div id="cannon-board"></div>
+    </div>
+    <div class="panel-col">
+        <div class="panel-title">
+            <h5>Available power ups:</h5>
+        </div>
+        <div class="power-up-panel text-center">
+            <div class="row">
+                <div class="power-up-panel-col power-up-clone">
+                    <div class="power-up-icon" id="powerUpClone" onclick="cloneShip()"><img src="img/clone.png" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
