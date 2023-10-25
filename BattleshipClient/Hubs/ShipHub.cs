@@ -1,4 +1,5 @@
 ﻿using BattleshipClient.GameLogic.Strategy;
+using BattleshipClient.GameLogic.Strategy.Decorator;
 using Microsoft.AspNetCore.SignalR;
 using System.Text.Json;
 
@@ -21,7 +22,8 @@ public class ShipHub : Hub
                     switch (ship.Type)
                     {
                         case "Boat":
-                            ship.Cannon = new SingleShot();
+                            ship.Cannon = new SingleShot(); //Applying Strategy
+                            ship.Cannon = new EnhancedSingleShot(ship.Cannon); //Applying Decorator
                             break;
                         case "Lavantier":
                             ship.Cannon = new HorizontalShot();
@@ -69,13 +71,11 @@ public class ShipHub : Hub
                 break;
             case "selectWeapon":
                 int chosenWeaponNumber = int.Parse(messageArgs);
-                //Console.WriteLine("Selected weapon ");
-                //Console.WriteLine(chosenWeaponNumber);
                 Player player1 = ShipPlayers.GetPlayer(user);
+
                 player1.SetSelectedShip(chosenWeaponNumber);
                 ShipPlayers.UpdatePlayer(user, player1);
-                //Console.WriteLine("trying fire method:");
-                //player1.GetSelectedShip().FireWeapon();
+
                 break;
             case "fireWeapon":
 
@@ -88,8 +88,6 @@ public class ShipHub : Hub
                     Console.WriteLine("Illegal player turn");
                 } else {
                     Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
-                    
-                    //Console.WriteLine(String.Format(current_player.Name + " is firing against " + opponent_player));
                     Console.WriteLine(String.Format(x_cord + " " + y_cord));
                     current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
                     current_player.SetState(!current_player.GetState());
