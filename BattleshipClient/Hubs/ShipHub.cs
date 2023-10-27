@@ -1,4 +1,5 @@
-﻿using BattleshipClient.GameLogic.Strategy;
+﻿using BattleshipClient.GameLogic.Invokers;
+using BattleshipClient.GameLogic.Strategy;
 using BattleshipClient.GameLogic.Strategy.Decorator;
 using Microsoft.AspNetCore.SignalR;
 using System.Text.Json;
@@ -10,117 +11,25 @@ public class ShipHub : Hub
         string messageType = message.Split(';')[0];
         string messageArgs = message.Split(';')[1];
 
+        // Create commands
+        Ready readyCommand = new Ready(user, messageArgs,this);
+        SelectWeapon selectWeaponCommand = new SelectWeapon(messageArgs,user);
+        FireWeapon fireWeaponCommand = new FireWeapon(messageArgs, message, user,this);
+        CloneShip cloneShipCommand = new CloneShip(user,this);
+
         switch (messageType)
         {
             case "ready":
-                ShipsBoard userBoard = new ShipsBoard();
-
-                List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(messageArgs);
-
-                foreach (PlacedShip ship in ships) //Adding different cannon strategies to different weapons
-                {
-                    switch (ship.Type)
-                    {
-                        case "Boat":
-                            ship.Cannon = new SingleShot(); //Applying Strategy
-                            ship.Cannon = new EnhancedSingleShot(ship.Cannon); //Applying Decorator
-                            break;
-                        case "Lavantier":
-                            ship.Cannon = new HorizontalShot();
-                            break;
-                        case "Submarine":
-                            ship.Cannon = new VerticalShot();
-                            break;
-                        case "Destroyer":
-                            ship.Cannon = new DiagonalShot();
-                            break;
-                    }
-                }
-
-                foreach (PlacedShip ship in ships)
-                {
-                    userBoard.PlaceShip(ship);
-                }
-
-
-                Player player = new Player(user);
-                player.SetShipsBoard(userBoard);
-
-                List<Player> Players = ShipPlayers.AddPlayer(player);
-
-                foreach (var online in Players)
-                {
-                    Console.WriteLine(online.Name);
-                }
-
-                if (Players.Count % 2 == 0)
-                {
-                    Random random = new Random();
-                    int random_number = random.Next(Players.Count());
-                    Console.WriteLine(random_number);
-                    Player luckyPlayer = Players.ElementAt(random_number);
-                    luckyPlayer.SetState(true);
-                    ShipPlayers.UpdatePlayer(luckyPlayer.Name, luckyPlayer);
-                    foreach(var online in Players)
-                    {
-                        await Clients.All.SendAsync("StartGame", luckyPlayer.Name, online.Name + ";" + online.GetShipsBoard().ToString() + ";" + luckyPlayer.Name);
-                    }
-
-
-                }
+                readyCommand.execute();
                 break;
             case "selectWeapon":
-                int chosenWeaponNumber = int.Parse(messageArgs);
-                Player player1 = ShipPlayers.GetPlayer(user);
-
-                player1.SetSelectedShip(chosenWeaponNumber);
-                ShipPlayers.UpdatePlayer(user, player1);
-
+                selectWeaponCommand.execute();
                 break;
             case "fireWeapon":
-
-                int x_cord = int.Parse(messageArgs);
-                int y_cord = int.Parse(message.Split(';')[2]);
-
-                Player current_player = ShipPlayers.GetPlayer(user);
-                if(!current_player.GetState())
-                {
-                    Console.WriteLine("Illegal player turn");
-                } else {
-                    Player opponent_player = ShipPlayers.GetPlayerOpponent(user);
-                    Console.WriteLine(String.Format(x_cord + " " + y_cord));
-                    current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
-                    current_player.SetState(!current_player.GetState());
-                    opponent_player.SetState(!opponent_player.GetState());
-                    ShipPlayers.UpdatePlayer(current_player.Name, current_player);
-                    ShipPlayers.UpdatePlayer(opponent_player.Name, opponent_player);
-                    await Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString() + ";" + opponent_player.Name);
-                }
-
+                fireWeaponCommand.execute();
                 break;
             case "cloneShip":
-
-                Player cloner = ShipPlayers.GetPlayer(user);
-                Player oppenent = ShipPlayers.GetPlayerOpponent(user);
-                if(!cloner.GetState() || !cloner.GetClonePowerup())
-                {
-                    Console.WriteLine("Illegal player turn");
-                } else {
-                    cloner.DisableClonePowerup();
-                    PlacedShip cloneableShip = cloner.GetShipsBoard().getShip(1);
-                    PlacedShip clone = (PlacedShip)cloneableShip.Clone();
-                    
-                    int[] coords = cloner.GetShipsBoard().GetAvailableCoordinate();
-                    clone.X = coords[1];
-                    clone.Y = coords[0];
-                    Console.WriteLine(string.Format("Cloned Y is {0}, X is {1}", coords[0], coords[1]));
-                    cloner.SetState(!cloner.GetState());
-                    oppenent.SetState(!oppenent.GetState());
-                    cloner.GetShipsBoard().PlaceShip(clone);
-                    ShipPlayers.UpdatePlayer(user, cloner);
-                    ShipPlayers.UpdatePlayer(oppenent.Name, oppenent);
-                    await Clients.All.SendAsync("ClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);
-                }
+                cloneShipCommand.execute();
                 break;
             default:
                 break;
