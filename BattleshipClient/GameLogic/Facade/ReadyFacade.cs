@@ -6,6 +6,7 @@ public class ReadyFacade
 {
     private ShipsBoard Board;
     private ShipHub Hub;
+    private Player Player;
 
     public ReadyFacade (ShipHub hub)
     {
@@ -44,10 +45,10 @@ public class ReadyFacade
 
     public List<Player> CreatePlayer(string name)
     {
-        Player player = new Player(name);
-        player.SetShipsBoard(this.Board);
+        this.Player = new Player(name);
+        this.Player.SetShipsBoard(this.Board);
 
-        List<Player> Players = ShipPlayers.AddPlayer(player);
+        List<Player> Players = ShipPlayers.AddPlayer(this.Player);
         return Players;
     }
 
@@ -57,7 +58,6 @@ public class ReadyFacade
         {
             Random random = new Random();
             int random_number = random.Next(players.Count());
-            Console.WriteLine(random_number);
             Player luckyPlayer = players.ElementAt(random_number);
             luckyPlayer.SetState(true);
             ShipPlayers.UpdatePlayer(luckyPlayer.Name, luckyPlayer);
@@ -69,6 +69,10 @@ public class ReadyFacade
     }
 
     public void UnreadyPlayer(string message)
+    {
+        throw new Exception("todo");
+    }
+    public void RestorePlayer()
     {
         throw new Exception("todo");
     }

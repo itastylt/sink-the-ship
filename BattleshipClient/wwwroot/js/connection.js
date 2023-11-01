@@ -27,7 +27,7 @@ connection.on("StartGame", function (user, message) {
     handleShowOnStart();
 
     if (currUser == player) {
-        handleSplashScreen();
+        handleSplashScreen(true);
     }
 
 });
