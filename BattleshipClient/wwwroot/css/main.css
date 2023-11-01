@@ -65,9 +65,9 @@ div.ship-selector:hover {
 
 @keyframes splashscreen {
     0% {
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
+        transform: scale(0.2);
+        -webkit-transform: scale(0.2);
+        -moz-transform: scale(0.2);
         background: #000;
     }
 
@@ -76,13 +76,13 @@ div.ship-selector:hover {
         transform: scale(1.2);
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
-        opacity: 0.8;
+        opacity: 0.95;
     }
 
     50% {
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
+        transform: scale(0.2);
+        -webkit-transform: scale(0.2);
+        -moz-transform: scale(0.2);
         background: #000;
     }
 
@@ -91,7 +91,13 @@ div.ship-selector:hover {
         transform: scale(1.2);
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
-        opacity: 0.8;
+        opacity: 0.95;
+    }
+    100% {
+        transform: scale(0.2);
+        -webkit-transform: scale(0.2);
+        -moz-transform: scale(0.2);
+        background: #000;
     }
 }
 .ready-screen-wrapper {
@@ -299,4 +305,17 @@ div.ship-selector:hover {
     font-weight: 700;
     border-bottom: 1px solid lightgray;
     padding: 3px;
+}
+
+.ready-screen-button {
+    display: flex;
+    width: 100%;
+    bottom: 30vh;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    position: absolute;
+}
+.ready-screen-title {
+    margin-bottom: 30px !important;
 }

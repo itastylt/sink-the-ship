@@ -136,7 +136,7 @@ function placedShipsAsString() {
     return string;
 }
 function handleSplashScreen() {
-    $('.hide-on-join').fadeOut("slow");
+    $('.hide-on-join').toggleClass('d-none');
     $('.ready-screen-wrapper').slideToggle("slow");
 }
 function handleTurnScreen(player) {

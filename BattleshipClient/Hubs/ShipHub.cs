@@ -12,10 +12,11 @@ public class ShipHub : Hub
         string messageArgs = message.Split(';')[1];
 
         // Create commands
-        Ready readyCommand = new Ready(user, messageArgs,this);
+        Ready readyCommand = new Ready(messageArgs, user,this);
         SelectWeapon selectWeaponCommand = new SelectWeapon(messageArgs,user);
         FireWeapon fireWeaponCommand = new FireWeapon(messageArgs, message, user,this);
         CloneShip cloneShipCommand = new CloneShip(user,this);
+
 
         switch (messageType)
         {

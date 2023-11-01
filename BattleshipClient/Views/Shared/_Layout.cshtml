@@ -33,8 +33,13 @@
     </header>
     <div class="ready-screen-wrapper">
         <div class="ready-screen d-flex w-100 h-100 flex-wrap justify-content-center">
-            <div class="ready-screen-title"><h5>Waiting for other player to join...</h5></div>
+            <div class="ready-screen-title"><h5>Waiting for other player to join</h5></div>
+
             <div class="ready-screen-logo"></div>
+            <div class="ready-screen-button">
+                <input type="button" class="button btn-danger" id="cancelButton" onclick="handleSplashScreen()" value="Cancel" />
+            </div>
+
         </div>
     </div>
     <div class="turn-screen-wrapper turn-hide">
