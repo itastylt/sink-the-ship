@@ -41,6 +41,19 @@ namespace BattleshipClient.GameLogic.Invokers
 
             this.Facade.StartPlayers(players);
         }
+        public async void executeRandomPlayer()
+        {
+            ShipsBoard board = new ShipsBoard();
+            ShipBuilder shipBuilder = new ShipBuilder(board);
+            shipBuilder.BuildRandomShips();
+
+            PlayerBuilder playerBuilder = new PlayerBuilder(board);
+            Player randomPlayer = playerBuilder.CreateRandomPlayer(this._user);
+
+            this.Facade = new ReadyFacade(this._hub, board);
+            List<Player> players = this.Facade.CreateRandomPlayer(randomPlayer);
+            this.Facade.StartPlayers(players);
+        }
 
         public void undo()
         {

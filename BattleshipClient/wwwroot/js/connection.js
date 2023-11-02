@@ -52,6 +52,12 @@ connection.start().then(function () {
     return console.error(err.toString());
 });
 
+function randomizeShips() {
+    connection.invoke("SendMessage", '' , `randomize;`).catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+
 document.getElementById("cancelButton").addEventListener("click", function (event) {
     event.preventDefault();
     var user = document.getElementById("nameText").value;
