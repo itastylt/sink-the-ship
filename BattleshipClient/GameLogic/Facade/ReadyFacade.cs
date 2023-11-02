@@ -14,6 +14,11 @@ public class ReadyFacade
         this.Board = new ShipsBoard();
         this.Hub = hub;
     }
+    public ReadyFacade(ShipHub hub,  ShipsBoard board)
+    {
+        this.Board = board;
+        this.Hub = hub;
+    }
 
     public void FormBoard(List<PlacedShip> shipList)
     {
@@ -61,6 +66,14 @@ public class ReadyFacade
     public List<Player> CreatePlayer(string name)
     {
         this.Player = new Player(name);
+        this.Player.SetShipsBoard(this.Board);
+
+        List<Player> Players = ShipPlayers.AddPlayer(this.Player);
+        return Players;
+    }
+    public List<Player> CreateRandomPlayer(Player player)
+    {
+        this.Player = player;
         this.Player.SetShipsBoard(this.Board);
 
         List<Player> Players = ShipPlayers.AddPlayer(this.Player);
