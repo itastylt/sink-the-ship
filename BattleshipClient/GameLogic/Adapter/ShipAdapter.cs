@@ -4,13 +4,15 @@ using System.Runtime.ConstrainedExecution;
 
 namespace BattleshipClient.GameLogic.Adapter
 {
-    public class ShipAdapter : ShipTarget
+    public class ShipAdapter : ICannonStrategy
     {
 
+        private SplashStrategy splashStrategy;
 
-        public void unFire()
+        public void Fire(Player opponent, int x, int y, int flag)
         {
-            throw new NotImplementedException();
+            splashStrategy.Splash();
         }
+
     }
 }
