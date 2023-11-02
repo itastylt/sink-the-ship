@@ -78,7 +78,7 @@ public class ShipsBoard
         allShips.Add(ship);
     }
 
-    public void UnPlaceShip(PlacedShip ship)
+    public void UnPlaceShip(IShip ship)
     {
         for (int i = ship.Y; i <= ship.Y; i++)
         {

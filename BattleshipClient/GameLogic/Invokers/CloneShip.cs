@@ -29,14 +29,10 @@ namespace BattleshipClient.GameLogic.Invokers
             else
             {
                 cloner.DisableClonePowerup();
-<<<<<<< Updated upstream
-                PlacedShip cloneableShip = cloner.GetShipsBoard().getShip(1);
-                this.Clone = (PlacedShip)cloneableShip.Clone();
-=======
+
                 IShip cloneableShip = cloner.GetShipsBoard().getShip(1);
                 this.Clone = (IShip)cloneableShip.Clone();
 
->>>>>>> Stashed changes
                 int[] coords = cloner.GetShipsBoard().GetAvailableCoordinate();
                 this.Clone.X = coords[1];
                 this.Clone.Y = coords[0];

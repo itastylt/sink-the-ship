@@ -29,16 +29,8 @@ public class Player : IObserver
         SelectedShip = this.ShipsBoard.getShip(cannonNumber);
     }
 
-<<<<<<< Updated upstream
-    public void CleanSelectedShip()
-    {
-        SelectedShip = null;
-    }
 
-    public PlacedShip GetSelectedShip()
-=======
     public IShip GetSelectedShip()
->>>>>>> Stashed changes
     {
         if (SelectedShip == null)
         {
@@ -49,6 +41,10 @@ public class Player : IObserver
     public void SetSelectedShip(IShip shipObject)
     {
         SelectedShip = shipObject;
+    }
+    public void CleanSelectedShip()
+    {
+        SelectedShip = null;
     }
 
     public bool GetState()

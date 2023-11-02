@@ -1,23 +1,11 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "x6oc60LGVpWBhlEaHQ2dJPbyVfjLTmm1zRMTSXkir6cKdZ2LBUmosstGiwME69AGO4KroBnhRSN8PNCpn1iolg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Paulius\\.nuget\\packages\\microsoft.typescript.msbuild\\5.2.2\\microsoft.typescript.msbuild.5.2.2.nupkg.sha512",
-    "C:\\Users\\Paulius\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.9\\microsoft.windowsdesktop.app.ref.7.0.9.nupkg.sha512",
-    "C:\\Users\\Paulius\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.9\\microsoft.netcore.app.ref.7.0.9.nupkg.sha512",
-    "C:\\Users\\Paulius\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.9\\microsoft.aspnetcore.app.ref.7.0.9.nupkg.sha512",
-    "C:\\Users\\Paulius\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.9\\microsoft.netcore.app.host.win-x64.7.0.9.nupkg.sha512"
-=======
   "dgSpecHash": "wgMumqD5u5YKGhz2UqC3du8SybYdPLQ1FKGKTW8nKYoenwGtrXvMW83kdZQ7+Nn49Kg6yZTBbLxkU5mEQUTsYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arman\\.nuget\\packages\\dotliquid\\2.2.692\\dotliquid.2.2.692.nupkg.sha512",
     "C:\\Users\\arman\\.nuget\\packages\\microsoft.typescript.msbuild\\5.2.2\\microsoft.typescript.msbuild.5.2.2.nupkg.sha512"
->>>>>>> Stashed changes
   ],
   "logs": []
 }
