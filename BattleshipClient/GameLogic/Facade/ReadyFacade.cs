@@ -14,11 +14,6 @@ public class ReadyFacade
         this.Board = new ShipsBoard();
         this.Hub = hub;
     }
-    public ReadyFacade(ShipHub hub,  ShipsBoard board)
-    {
-        this.Board = board;
-        this.Hub = hub;
-    }
 
     public void FormBoard(List<PlacedShip> shipList)
     {
@@ -78,6 +73,10 @@ public class ReadyFacade
 
         List<Player> Players = ShipPlayers.AddPlayer(this.Player);
         return Players;
+    }
+    public void SetBoard(ShipsBoard board)
+    {
+        this.Board = board;
     }
 
     public async void StartPlayers(List<Player> players)

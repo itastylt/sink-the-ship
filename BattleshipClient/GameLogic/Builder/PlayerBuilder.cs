@@ -18,15 +18,4 @@ public class PlayerBuilder
         player.SetShipsBoard(shipsBoard);
         return player;
     }
-
-    private string GenerateRandomPlayerName()
-    {
-        List<string> names = new List<string>
-        {
-            "Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Helen", "Ivan", "Jack", "Karen", "Liam", "Mia", "Noah", "Olivia"
-        };
-
-        int randomIndex = random.Next(names.Count);
-        return names[randomIndex];
-    }
 }

@@ -53,7 +53,9 @@ connection.start().then(function () {
 });
 
 function randomizeShips() {
-    connection.invoke("SendMessage", '' , `randomize;`).catch(function (err) {
+    var user = document.getElementById("nameText").value;
+    $('#name').val(user);
+    connection.invoke("SendMessage", user , `randomize;`).catch(function (err) {
         return console.error(err.toString());
     });
 }

@@ -2,6 +2,7 @@
 using BattleshipClient.GameLogic.Strategy;
 using System;
 using System.Collections.Generic;
+using BattleshipClient.GameLogic.Factory;
 
 public class ShipBuilder
 {
@@ -12,6 +13,11 @@ public class ShipBuilder
     {
         this.board = board;
     }
+    public class ConcreteShip : IShip
+    {
+        public ConcreteShip() { }
+    }
+
 
     public void BuildRandomShips()
     {
@@ -20,19 +26,20 @@ public class ShipBuilder
         foreach (Ship shipType in shipTypes)
         {
             int size = (int)shipType;
-            PlacedShip ship = BuildRandomShip(shipType.ToString(), size);
+            ConcreteShip ship = (ConcreteShip)BuildRandomShip(shipType.ToString(), size);
             PlaceShipOnBoard(ship);
         }
     }
 
-    private PlacedShip BuildRandomShip(string type, int size)
+    private IShip BuildRandomShip(string type, int size)
     {
-        PlacedShip ship = new PlacedShip
+        IShip ship = new ConcreteShip
         {
             Type = type,
             Size = size,
             Angle = 0 // Set the angle as needed
         };
+
         Random random = new Random();
         bool isValidPlacement = false;
 
@@ -74,7 +81,7 @@ public class ShipBuilder
         return ship;
     }
 
-    private void PlaceShipOnBoard(PlacedShip ship)
+    private void PlaceShipOnBoard(IShip ship)
     {
         board.PlaceShip(ship);
     }

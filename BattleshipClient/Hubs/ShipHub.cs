@@ -26,6 +26,9 @@ public class ShipHub : Hub
             case "undoReady":
                 readyCommand.undo();
                 break;
+            case "randomize":
+                readyCommand.executeRandomPlayer();
+                break;
             case "selectWeapon":
                 selectWeaponCommand.execute();
                 break;

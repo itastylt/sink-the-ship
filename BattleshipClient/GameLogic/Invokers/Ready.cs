@@ -24,8 +24,6 @@ namespace BattleshipClient.GameLogic.Invokers
 
         public async void execute()
         {
-            
-            
             List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(_messageArgs);
             
             if (ships != null)
@@ -50,7 +48,8 @@ namespace BattleshipClient.GameLogic.Invokers
             PlayerBuilder playerBuilder = new PlayerBuilder(board);
             Player randomPlayer = playerBuilder.CreateRandomPlayer(this._user);
 
-            this.Facade = new ReadyFacade(this._hub, board);
+            this.Facade = new ReadyFacade(this._hub);
+            this.Facade.SetBoard(board);
             List<Player> players = this.Facade.CreateRandomPlayer(randomPlayer);
             this.Facade.StartPlayers(players);
         }
