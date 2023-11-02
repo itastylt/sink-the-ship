@@ -255,10 +255,15 @@ function printBoards(user, board) {
         }
     }
 }
+function handleUnclonePowerUp(player) {
+    var name = $("#name").val();
+    $(".power-up-unclone").addClass("disable");
+}
 function handleClonePowerUp(player) {
     var name = $("#name").val();
     if (name == player) {
-        $(".power-up-clone").addClass("disabled");
+        $(".power-up-clone").addClass("d-none");
+        $(".power-up-unclone").removeClass("d-none");
     }
 }
 function handleShowOnStart() {

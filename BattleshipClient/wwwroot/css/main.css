@@ -165,6 +165,7 @@ div.ship-selector:hover {
     -moz-transition: .5s all ease-in-out;
     cursor: pointer;
     border: 1px solid;
+    margin: 0 10px 0 10px;
 }
 
 .power-up-panel-col:hover, .power-up-clone.disabled {
