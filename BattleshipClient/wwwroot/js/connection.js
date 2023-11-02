@@ -3,9 +3,28 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/shiphub").build();
 
 document.getElementById("startButton").disabled = true;
 
+connection.on("UnScope", function (user, message) {
+    console.log(user, message);
+
+    var player = document.getElementById("nameText").value;
+    if (user == player) {
+        $('#cannon-1').trigger();
+    }
+});
+connection.on("UnClonedBoard", function (user, message) {
+    console.log(user, message);
+
+    let player = message.split(';')[0];
+    let board = message.split(';')[1];
+    let turn = message.split(';')[2];
+    printBoards(player, board);
+    handleTurnScreen(turn);
+    handleUnClonePowerUp(player);
+});
+
 connection.on("ClonedBoard", function (user, message) {
     console.log(user, message);
-    let currUser = document.getElementById("nameText").value;
+
 
     let player = message.split(';')[0];
     let board = message.split(';')[1];
@@ -54,7 +73,10 @@ connection.start().then(function () {
 
 function randomizeShips() {
     var user = document.getElementById("nameText").value;
+
     $('#name').val(user);
+    handleSplashScreen(true);
+
     connection.invoke("SendMessage", user , `randomize;`).catch(function (err) {
         return console.error(err.toString());
     });
@@ -117,6 +139,7 @@ function cloneShip() {
 function unCloneShip() {
     var user = document.getElementById("nameText").value;
     $('.power-up-unclone').addClass("disabled");
+
     connection.invoke("SendMessage", user, 'unCloneShip; ').catch(function (err) {
         return console.error(err.toString());
     });
@@ -133,11 +156,8 @@ function unFire() {
 function unScope() {
     var user = document.getElementById("nameText").value;
     $('.power-up-scope').addClass("disabled");
+    $('#cannon-1').trigger("click");
     connection.invoke("SendMessage", user, 'unselectWeapon; ').catch(function (err) {
         return console.error(err.toString());
     });
-}
-
-function unCloneShip() {
-    $('.power-up-unclone').addClass("disabled");
 }

@@ -47,7 +47,7 @@ namespace BattleshipClient.GameLogic.Invokers
             }
         }
 
-        public async void undo()
+        public async void undoAsync()
         {
             Player cloner = ShipPlayers.GetPlayer(_user);
             Player oppenent = ShipPlayers.GetPlayerOpponent(_user);
