@@ -23,14 +23,28 @@ public class ShipHub : Hub
             case "ready":
                 readyCommand.execute();
                 break;
+            case "undoReady":
+                readyCommand.undo();
+                break;
             case "selectWeapon":
                 selectWeaponCommand.execute();
+                break;
+            case "unselectWeapon":
+                selectWeaponCommand.undo();
                 break;
             case "fireWeapon":
                 fireWeaponCommand.execute();
                 break;
+            //Daryt
+            case "unFireWeapon":
+                fireWeaponCommand.undo();
+                break;
             case "cloneShip":
                 cloneShipCommand.execute();
+                break;
+            //Daryt
+            case "unCloneShip":
+                cloneShipCommand.undo();
                 break;
             default:
                 break;

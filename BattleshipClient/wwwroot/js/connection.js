@@ -54,7 +54,10 @@ connection.start().then(function () {
 
 document.getElementById("cancelButton").addEventListener("click", function (event) {
     event.preventDefault();
-    console.log("TODO: ready undo");
+    var user = document.getElementById("nameText").value;
+    connection.invoke("SendMessage", user, `undoReady; `).catch(function (err) {
+        return console.error(err.toString());
+    });
 });
 
 document.getElementById("startButton").addEventListener("click", function (event) {

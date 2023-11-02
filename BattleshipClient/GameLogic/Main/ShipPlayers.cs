@@ -52,6 +52,11 @@ public class ShipPlayers
         }
     }
 
+    public static void RemovePlayer(string playerName)
+    {
+        ShipPlayersList.RemoveAll(x => x.Name == playerName);
+    }
+
     public static List<Player> AddPlayer(Player player)
     {
         if (!ShipPlayersList.Contains(player))

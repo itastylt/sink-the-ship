@@ -30,7 +30,6 @@ namespace BattleshipClient.GameLogic.Invokers
                 cloner.DisableClonePowerup();
                 PlacedShip cloneableShip = cloner.GetShipsBoard().getShip(1);
                 this.Clone = (PlacedShip)cloneableShip.Clone();
-
                 int[] coords = cloner.GetShipsBoard().GetAvailableCoordinate();
                 this.Clone.X = coords[1];
                 this.Clone.Y = coords[0];
@@ -44,9 +43,24 @@ namespace BattleshipClient.GameLogic.Invokers
             }
         }
 
-        public void undo()
+        public async void undo()
         {
-            throw new NotImplementedException();
+            Player cloner = ShipPlayers.GetPlayer(_user);
+            Player oppenent = ShipPlayers.GetPlayerOpponent(_user);
+            if (!cloner.GetState() || !cloner.GetClonePowerup())
+            {
+                Console.WriteLine("Illegal player turn");
+            }
+            else
+            {
+                cloner.SetState(!cloner.GetState());
+                oppenent.SetState(!oppenent.GetState());
+                cloner.GetShipsBoard().UnPlaceShip(this.Clone);
+                ShipPlayers.UpdatePlayer(_user, cloner);
+                ShipPlayers.UpdatePlayer(oppenent.Name, oppenent);
+                await _hub.Clients.All.SendAsync("UnClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);
+
+            }
         }
     }
 }

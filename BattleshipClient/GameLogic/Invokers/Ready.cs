@@ -24,7 +24,6 @@ namespace BattleshipClient.GameLogic.Invokers
         public async void execute()
         {
             this.Facade = new ReadyFacade(this._hub);
-
             
             List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(_messageArgs);
             

@@ -24,7 +24,9 @@ namespace BattleshipClient.GameLogic.Invokers
 
         public void undo()
         {
-            throw new NotImplementedException();
+            Player player1 = ShipPlayers.GetPlayer(_user);
+            player1.CleanSelectedShip();
+            ShipPlayers.UpdatePlayer(_user, player1);
         }
     }
 }

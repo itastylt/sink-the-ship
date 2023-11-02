@@ -42,9 +42,22 @@ namespace BattleshipClient.GameLogic.Invokers
             }
         }
 
-        public void undo()
+        public async void undo()
         {
-            throw new NotImplementedException();
+            int x_cord = int.Parse(_messageArgs);
+            int y_cord = int.Parse(_message.Split(';')[2]);
+
+            Player current_player = ShipPlayers.GetPlayer(_user);
+
+            Player opponent_player = ShipPlayers.GetPlayerOpponent(_user);
+            current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
+            current_player.SetState(!current_player.GetState());
+            opponent_player.SetState(!opponent_player.GetState());
+            ShipPlayers.UpdatePlayer(current_player.Name, current_player);
+            ShipPlayers.UpdatePlayer(opponent_player.Name, opponent_player);
+            await _hub.Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString() + ";" + opponent_player.Name);
+
+
         }
     }
 }

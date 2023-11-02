@@ -68,9 +68,9 @@ public class ReadyFacade
         }
     }
 
-    public void UnreadyPlayer(string message)
+    public void UnreadyPlayer(string player)
     {
-        throw new Exception("todo");
+        ShipPlayers.RemovePlayer(player);
     }
     public void RestorePlayer()
     {

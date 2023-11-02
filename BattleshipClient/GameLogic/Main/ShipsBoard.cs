@@ -76,6 +76,19 @@ public class ShipsBoard
         }
         allShips.Add(ship);
     }
+
+    public void UnPlaceShip(PlacedShip ship)
+    {
+        for (int i = ship.Y; i <= ship.Y; i++)
+        {
+            for (int j = ship.X; j <= ship.X + ship.Size - 1; j++)
+            {
+                Board[i, j] = 0;
+            }
+        }
+        allShips.RemoveAll(x => x == ship);
+    }
+
     override public string ToString()
     {
         string boardAsString = "[";
