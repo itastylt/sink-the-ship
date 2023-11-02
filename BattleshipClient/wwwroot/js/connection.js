@@ -105,8 +105,13 @@ function sinkShip(x, y) {
 function cloneShip() {
     var user = document.getElementById("nameText").value;
     console.log(`Cloned ship ${selectedCannon}`);
-
+    $('#powerUpClone').addClass("d-none");
+    $('.power-up-unclone').removeClass("d-none");
     connection.invoke("SendMessage", user, `cloneShip;`).catch(function (err) {
         return console.error(err.toString());
     });
+}
+
+function unCloneShip() {
+    $('.power-up-unclone').addClass("disabled");
 }
