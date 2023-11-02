@@ -19,11 +19,12 @@ namespace BattleshipClient.GameLogic.Invokers
             _hub = hub;
             _messageArgs = messageArgs;
             _user = user;
+            this.Facade = new ReadyFacade(this._hub);
         }
 
         public async void execute()
         {
-            this.Facade = new ReadyFacade(this._hub);
+            
             
             List<PlacedShip> ships = JsonSerializer.Deserialize<List<PlacedShip>>(_messageArgs);
             
@@ -43,7 +44,8 @@ namespace BattleshipClient.GameLogic.Invokers
 
         public void undo()
         {
-            this.Facade.UnreadyPlayer(this._user);
+            string temp = this._user;
+            this.Facade.UnreadyPlayer(temp);
         }
     }
 }
