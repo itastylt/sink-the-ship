@@ -12,9 +12,9 @@ public class PlacedShip : ICloneable
     //Strategy pattern
     public ICannonStrategy Cannon { get; set; }
 
-    public void FireWeapon(Player opponent, int x, int y)
+    public void FireWeapon(Player opponent, int x, int y, int flag)
     {
-        Cannon.Fire(opponent, x, y);
+        Cannon.Fire(opponent, x, y, flag);
     }
 
     // Prototype pattern

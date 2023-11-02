@@ -1,4 +1,5 @@
 ﻿using BattleshipClient.GameLogic.Command;
+using BattleshipClient.GameLogic.Factory;
 using Microsoft.AspNetCore.SignalR;
 
 namespace BattleshipClient.GameLogic.Invokers
@@ -33,7 +34,11 @@ namespace BattleshipClient.GameLogic.Invokers
             {
                 Player opponent_player = ShipPlayers.GetPlayerOpponent(_user);
                 Console.WriteLine(String.Format(x_cord + " " + y_cord));
-                current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
+                current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord, 0);
+                current_player.setLastShot(new List<int>() { x_cord,y_cord});
+                current_player.setLastShotType((int)(Ship)Enum.Parse(typeof(Ship), current_player.GetSelectedShip().Type));
+                int temp = current_player.getLastShotType();
+                List<int> test = current_player.getLastShot(); 
                 current_player.SetState(!current_player.GetState());
                 opponent_player.SetState(!opponent_player.GetState());
                 ShipPlayers.UpdatePlayer(current_player.Name, current_player);
@@ -44,13 +49,16 @@ namespace BattleshipClient.GameLogic.Invokers
 
         public async void undo()
         {
-            int x_cord = int.Parse(_messageArgs);
-            int y_cord = int.Parse(_message.Split(';')[2]);
 
             Player current_player = ShipPlayers.GetPlayer(_user);
 
             Player opponent_player = ShipPlayers.GetPlayerOpponent(_user);
-            current_player.GetSelectedShip().FireWeapon(opponent_player, x_cord, y_cord);
+
+            List<int> coordinates = current_player.getLastShot();
+            int lastShotType = current_player.getLastShotType();
+
+            current_player.GetSelectedShip().FireWeapon(opponent_player, coordinates[0], coordinates[1], 1);
+            opponent_player.GetShipsBoard().PrintBoard();
             current_player.SetState(!current_player.GetState());
             opponent_player.SetState(!opponent_player.GetState());
             ShipPlayers.UpdatePlayer(current_player.Name, current_player);

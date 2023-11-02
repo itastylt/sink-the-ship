@@ -2,7 +2,7 @@
 {
     public class DiagonalShot : ICannonStrategy
     {
-        public void Fire(Player opponent, int x, int y)
+        public void Fire(Player opponent, int x, int y, int flag)
         {
             Console.WriteLine("Firing with Diagonal Shot");
 
@@ -14,6 +14,15 @@
                 {
                     Console.WriteLine("Hit a ship");
                     opponent_board.Board[y, x] = -(opponent_board.Board[y, x]);
+                } else if (flag == 1) {
+                    if (opponent_board.Board[y, x] < 0 && opponent_board.Board[y, x] != -99)
+                    {
+                        opponent_board.Board[y, x] = -(opponent_board.Board[y, x]);
+                    }
+                    else
+                    {
+                        opponent_board.Board[y, x] = 0;
+                    }
                 }
                 else
                 {
@@ -28,6 +37,17 @@
                 {
                     Console.WriteLine("Hit a ship");
                     opponent_board.Board[y + 1, x + 1] = -(opponent_board.Board[y + 1, x + 1]);
+                }
+                else if (flag == 1)
+                {
+                    if (opponent_board.Board[y + 1, x + 1] < 0 && opponent_board.Board[y + 1, x +1] != -99)
+                    {
+                        opponent_board.Board[y + 1, x + 1] = -(opponent_board.Board[y + 1, x + 1]);
+                    }
+                    else
+                    {
+                        opponent_board.Board[y + 1, x + 1] = 0;
+                    }
                 }
                 else
                 {

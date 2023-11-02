@@ -27,13 +27,13 @@
         {
             this.baseStrategy = baseStrategy;
         }
-        public void Fire(Player opponent, int x, int y)
+        public void Fire(Player opponent, int x, int y, int flag)
         {
             Console.WriteLine("Firing with Enhanced Single Shot");
 
-            Coordinates Coordinates = HomingShot(opponent, x, y);
+            Coordinates Coordinates = HomingShot(opponent, x, y);  
 
-            baseStrategy.Fire(opponent, Coordinates.getX(), Coordinates.getY());
+            baseStrategy.Fire(opponent, Coordinates.getX(), Coordinates.getY(), flag);
         }
         private Coordinates HomingShot(Player opponent, int x, int y) //x=2, y=2
         {
@@ -56,6 +56,7 @@
                         if (opponent_board.Board[newY, newX] > 0)
                         {
                             //Console.WriteLine("Retargeted ship");
+                            opponent.setLastShot(new List<int>() { newX, newY });
                             return new Coordinates(newY, newX);
                         }
                     }
