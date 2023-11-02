@@ -27,14 +27,14 @@
         {
             this.baseStrategy = baseStrategy;
         }
-        public void Fire(Player opponent, int x, int y)
+        public void Fire(Player opponent, int x, int y , int flag)
         {
             Console.WriteLine("Firing with Second Shot");
 
             Coordinates Coordinates = GetNewTargetCordinates(opponent, x, y);
 
-            baseStrategy.Fire(opponent, Coordinates.getX(), Coordinates.getY());
-            baseStrategy.Fire(opponent, x, y);
+            baseStrategy.Fire(opponent, Coordinates.getX(), Coordinates.getY(),flag );
+            baseStrategy.Fire(opponent, x, y,flag);
         }
         private Coordinates GetNewTargetCordinates(Player opponent, int x, int y) //x=2, y=2
         {

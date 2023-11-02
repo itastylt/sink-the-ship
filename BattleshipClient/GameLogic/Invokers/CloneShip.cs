@@ -40,6 +40,7 @@ namespace BattleshipClient.GameLogic.Invokers
                 cloner.SetState(!cloner.GetState());
                 oppenent.SetState(!oppenent.GetState());
                 cloner.GetShipsBoard().PlaceShip(this.Clone);
+                cloner.setClone(this.Clone);
                 ShipPlayers.UpdatePlayer(_user, cloner);
                 ShipPlayers.UpdatePlayer(oppenent.Name, oppenent);
                 await _hub.Clients.All.SendAsync("ClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);
@@ -50,7 +51,7 @@ namespace BattleshipClient.GameLogic.Invokers
         {
             Player cloner = ShipPlayers.GetPlayer(_user);
             Player oppenent = ShipPlayers.GetPlayerOpponent(_user);
-            if (!cloner.GetState() || !cloner.GetClonePowerup())
+            if (!cloner.GetState())
             {
                 Console.WriteLine("Illegal player turn");
             }
@@ -58,7 +59,8 @@ namespace BattleshipClient.GameLogic.Invokers
             {
                 cloner.SetState(!cloner.GetState());
                 oppenent.SetState(!oppenent.GetState());
-                cloner.GetShipsBoard().UnPlaceShip(this.Clone);
+                cloner.GetShipsBoard().UnPlaceShip(cloner.getClone());
+                cloner.GetShipsBoard().PrintBoard();
                 ShipPlayers.UpdatePlayer(_user, cloner);
                 ShipPlayers.UpdatePlayer(oppenent.Name, oppenent);
                 await _hub.Clients.All.SendAsync("UnClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);

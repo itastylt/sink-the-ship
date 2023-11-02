@@ -1,4 +1,5 @@
 ﻿
+using BattleshipClient.GameLogic.Adapter;
 using BattleshipClient.GameLogic.Factory;
 /// <summary>
 /// Player's class
@@ -14,6 +15,12 @@ public class Player : IObserver
     
     private bool CanClone = true;
 
+    private IShip ClonedShip { get; set; }
+
+    private List<int> lastShot { get; set; }
+
+    private int lastShotType { get; set; }
+
     public bool GetClonePowerup()
     {
         return this.CanClone;
@@ -24,11 +31,38 @@ public class Player : IObserver
         this.CanClone = false;
     }
 
+    public void setLastShot(List<int> last)
+    { 
+        this.lastShot = last;
+    }
+    public void setLastShotType(int type)
+    { 
+        this.lastShotType = type;
+    }
+    public List<int> getLastShot()
+    { 
+        return lastShot;
+    }
+
+    public int getLastShotType()
+    {
+        return lastShotType;
+    }
+
+    public void setClone(IShip clone)
+    { 
+        ClonedShip = clone;
+    }
+
+    public IShip getClone()
+    {
+        return ClonedShip;
+    }
+
     public void SetSelectedShip(int cannonNumber)
     {
         SelectedShip = this.ShipsBoard.getShip(cannonNumber);
     }
-
 
     public IShip GetSelectedShip()
     {

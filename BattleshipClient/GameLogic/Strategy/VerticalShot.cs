@@ -2,7 +2,7 @@
 {
     public class VerticalShot : ICannonStrategy
     {
-        public void Fire(Player opponent, int x, int y)
+        public void Fire(Player opponent, int x, int y, int flag)
         {
             Console.WriteLine("Firing with Vertical Shot");
 
@@ -14,6 +14,17 @@
                 {
                     Console.WriteLine("Hit a ship");
                     opponent_board.Board[y, x] = -(opponent_board.Board[y, x]);
+                }
+                else if (flag == 1)
+                {
+                    if (opponent_board.Board[y, x] < 0 && opponent_board.Board[y, x] != -99)
+                    {
+                        opponent_board.Board[y, x] = -(opponent_board.Board[y, x]);
+                    }
+                    else
+                    {
+                        opponent_board.Board[y, x] = 0;
+                    }
                 }
                 else
                 {
@@ -28,6 +39,17 @@
                 {
                     Console.WriteLine("Hit a ship");
                     opponent_board.Board[y + 1, x] = -(opponent_board.Board[y + 1, x]);
+                }
+                else if (flag == 1)
+                {
+                    if (opponent_board.Board[y + 1 , x] < 0 && opponent_board.Board[y + 1, x] != -99)
+                    {
+                        opponent_board.Board[y+1, x] = -(opponent_board.Board[y + 1, x]);
+                    }
+                    else
+                    {
+                        opponent_board.Board[y+1, x] = 0;
+                    }
                 }
                 else
                 {

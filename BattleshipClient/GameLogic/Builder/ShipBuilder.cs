@@ -1,4 +1,4 @@
-﻿/*using BattleshipClient.GameLogic.Strategy.Decorator;
+﻿using BattleshipClient.GameLogic.Strategy.Decorator;
 using BattleshipClient.GameLogic.Strategy;
 using System;
 using System.Collections.Generic;
@@ -87,7 +87,7 @@ public class ShipBuilder
     }
     private bool isAGoodPlace(int sizeOfShip, int x, int y)
     {
-        if (x < 0 || x + sizeOfShip > 10 || y < 0 || y >= 10) 
+        if (x < 0 || x + sizeOfShip > 10 || y < 0 || y >= 10)
             return false; //ship outside the boundary
 
         for (int i = x; i < x + sizeOfShip; i++)
@@ -98,4 +98,4 @@ public class ShipBuilder
     }
 
 
-}*/
+}

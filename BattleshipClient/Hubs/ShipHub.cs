@@ -38,14 +38,12 @@ public class ShipHub : Hub
             case "fireWeapon":
                 fireWeaponCommand.execute();
                 break;
-            //Daryt
             case "unFireWeapon":
                 fireWeaponCommand.undo();
                 break;
             case "cloneShip":
                 cloneShipCommand.execute();
                 break;
-            //Daryt
             case "unCloneShip":
                 cloneShipCommand.undo();
                 break;

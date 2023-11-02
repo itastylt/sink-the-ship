@@ -102,11 +102,42 @@ function sinkShip(x, y) {
     });
 }
 
+
+
 function cloneShip() {
     var user = document.getElementById("nameText").value;
-    console.log(`Cloned ship ${selectedCannon}`);
 
-    connection.invoke("SendMessage", user, `cloneShip;`).catch(function (err) {
+    $('#powerUpClone').addClass("d-none");
+    $('#powerUpUnclone').removeClass("d-none");
+    connection.invoke("SendMessage", user, 'cloneShip; ').catch (function (err) {
         return console.error(err.toString());
     });
+}
+
+function unCloneShip() {
+    var user = document.getElementById("nameText").value;
+    $('.power-up-unclone').addClass("disabled");
+    connection.invoke("SendMessage", user, 'unCloneShip; ').catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+
+function unFire() {
+    var user = document.getElementById("nameText").value;
+    $('.power-up-fire').addClass("disabled");
+    connection.invoke("SendMessage", user, 'unFireWeapon; ').catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+
+function unScope() {
+    var user = document.getElementById("nameText").value;
+    $('.power-up-scope').addClass("disabled");
+    connection.invoke("SendMessage", user, 'unselectWeapon; ').catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+
+function unCloneShip() {
+    $('.power-up-unclone').addClass("disabled");
 }
