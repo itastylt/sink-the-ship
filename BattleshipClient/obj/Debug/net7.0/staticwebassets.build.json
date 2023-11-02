@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "Hash": "4Pjt8txyfltYtgsLBthmD45Nc4Wr+anRa0rNtLuC6nk=",
+=======
+  "Hash": "3vdr1zIbh6rxbDiozNINhfY2UqUZIDvpojId6PsDxEg=",
+>>>>>>> Stashed changes
   "Source": "BattleshipClient",
   "BasePath": "_content/BattleshipClient",
   "Mode": "Default",
@@ -10,17 +14,28 @@
     {
       "Name": "BattleshipClient\\wwwroot",
       "Source": "BattleshipClient",
+<<<<<<< Updated upstream
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BattleshipClient.styles.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BattleshipClient.styles.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "BattleshipClient.styles.css",
       "AssetKind": "All",
@@ -33,6 +48,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< Updated upstream
       "OriginalItemSpec": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BattleshipClient.styles.css"
     },
     {
@@ -40,6 +56,15 @@
       "SourceId": "BattleshipClient",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BattleshipClient.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BattleshipClient.bundle.scp.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "BattleshipClient.bundle.scp.css",
       "AssetKind": "All",
@@ -52,6 +77,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< Updated upstream
       "OriginalItemSpec": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BattleshipClient.bundle.scp.css"
     },
     {
@@ -59,6 +85,15 @@
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "OriginalItemSpec": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BattleshipClient.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\css\\main.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
@@ -74,10 +109,17 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\css\\site.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\css\\site.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -93,10 +135,17 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\favicon.ico",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\favicon.ico",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -112,10 +161,17 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\img\\clone.png",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\img\\clone.png",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "img/clone.png",
       "AssetKind": "All",
@@ -131,10 +187,17 @@
       "OriginalItemSpec": "wwwroot\\img\\clone.png"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\app.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\app.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "js/app.js",
       "AssetKind": "All",
@@ -150,10 +213,17 @@
       "OriginalItemSpec": "wwwroot\\js\\app.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\app.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\app.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "js/app.js.map",
       "AssetKind": "All",
@@ -169,10 +239,17 @@
       "OriginalItemSpec": "wwwroot\\js\\app.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\connection.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\connection.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "js/connection.js",
       "AssetKind": "All",
@@ -188,10 +265,17 @@
       "OriginalItemSpec": "wwwroot\\js\\connection.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "js/signalr/dist/browser/signalr.js",
       "AssetKind": "All",
@@ -207,10 +291,17 @@
       "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "js/signalr/dist/browser/signalr.min.js",
       "AssetKind": "All",
@@ -226,10 +317,17 @@
       "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\site.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\js\\site.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -245,10 +343,17 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -264,10 +369,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -283,10 +395,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -302,10 +421,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -321,10 +447,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -340,10 +473,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -359,10 +499,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -378,10 +525,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -397,10 +551,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -416,10 +577,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -435,10 +603,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -454,10 +629,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -473,10 +655,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -492,10 +681,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -511,10 +707,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -530,10 +733,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -549,10 +759,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -568,10 +785,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -587,10 +811,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -606,10 +837,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -625,10 +863,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -644,10 +889,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -663,10 +915,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -682,10 +941,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -701,10 +967,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -720,10 +993,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -739,10 +1019,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -758,10 +1045,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -777,10 +1071,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -796,10 +1097,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -815,10 +1123,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -834,10 +1149,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -853,10 +1175,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -872,10 +1201,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -891,10 +1227,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -910,10 +1253,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -929,10 +1279,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -948,10 +1305,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -967,10 +1331,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -986,10 +1357,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1005,10 +1383,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1024,10 +1409,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1043,10 +1435,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1062,10 +1461,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1081,10 +1487,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1100,10 +1513,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1119,10 +1539,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1138,10 +1565,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1157,10 +1591,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1176,10 +1617,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1195,10 +1643,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1214,10 +1669,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1233,10 +1695,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1252,10 +1721,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1271,10 +1747,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1290,10 +1773,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1309,10 +1799,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< Updated upstream
       "Identity": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\wwwroot\\",
+>>>>>>> Stashed changes
       "BasePath": "_content/BattleshipClient",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

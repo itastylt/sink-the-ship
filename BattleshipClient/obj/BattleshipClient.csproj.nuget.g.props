@@ -5,17 +5,29 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+<<<<<<< Updated upstream
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Paulius\.nuget\packages\</NuGetPackageFolders>
+=======
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\arman\.nuget\packages\</NuGetPackageFolders>
+>>>>>>> Stashed changes
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.7.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.6.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+<<<<<<< Updated upstream
     <SourceRoot Include="C:\Users\Paulius\.nuget\packages\" />
+=======
+    <SourceRoot Include="C:\Users\arman\.nuget\packages\" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.typescript.msbuild\5.2.2\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('$(NuGetPackageRoot)microsoft.typescript.msbuild\5.2.2\build\Microsoft.TypeScript.MSBuild.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+<<<<<<< Updated upstream
     <PkgMicrosoft_TypeScript_MSBuild Condition=" '$(PkgMicrosoft_TypeScript_MSBuild)' == '' ">C:\Users\Paulius\.nuget\packages\microsoft.typescript.msbuild\5.2.2</PkgMicrosoft_TypeScript_MSBuild>
+=======
+    <PkgMicrosoft_TypeScript_MSBuild Condition=" '$(PkgMicrosoft_TypeScript_MSBuild)' == '' ">C:\Users\arman\.nuget\packages\microsoft.typescript.msbuild\5.2.2</PkgMicrosoft_TypeScript_MSBuild>
+>>>>>>> Stashed changes
   </PropertyGroup>
 </Project>

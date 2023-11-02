@@ -1,6 +1,7 @@
 ﻿using BattleshipClient.GameLogic.Strategy.Decorator;
 using BattleshipClient.GameLogic.Strategy;
 using Microsoft.AspNetCore.SignalR;
+using BattleshipClient.GameLogic.Factory;
 
 public class ReadyFacade
 {
@@ -16,31 +17,45 @@ public class ReadyFacade
 
     public void FormBoard(List<PlacedShip> shipList)
     {
+        ShipFactory teamFactory = null;
+        if (ShipPlayers.PlayerCount() == 0)
+        {
+            teamFactory = new BlueTeam().GetFactory();
+        }
+        else
+        {
+            teamFactory = new RedTeam().GetFactory();
+        }
+        if (teamFactory == null){ throw new Exception("Shipfactory team problem "); }
+
         foreach (PlacedShip ship in shipList) //Adding different cannon strategies to different weapons
         {
             switch (ship.Type)
             {
                 case "Boat":
-                    ship.Cannon = new SingleShot(); //Applying Strategy
-                    ship.Cannon = new EnhancedSingleShot(ship.Cannon); //Applying Decorator
-                    this.Board.PlaceShip(ship);
+                    IShip newShipB = teamFactory.CreateBoat(ship.X, ship.Y);
+                    this.Board.PlaceShip(newShipB);
                     break;
                 case "Lavantier":
-                    ship.Cannon = new HorizontalShot();
-                    this.Board.PlaceShip(ship);
+
+                    IShip newShipL = teamFactory.CreateLavantier(ship.X, ship.Y);
+                    this.Board.PlaceShip(newShipL);
                     break;
                 case "Submarine":
-                    ship.Cannon = new VerticalShot();
-                    this.Board.PlaceShip(ship);
+
+                    IShip newShipS = teamFactory.CreateSubmarine(ship.X, ship.Y);
+                    this.Board.PlaceShip(newShipS);
                     break;
                 case "Destroyer":
-                    ship.Cannon = new DiagonalShot();
-                    this.Board.PlaceShip(ship);
+
+                    IShip newShipD = teamFactory.CreateDestroyer(ship.X, ship.Y);
+                    this.Board.PlaceShip(newShipD);
                     break;
                 default:
                     throw new Exception("Invalid Ship type!");
             }
         }
+        this.Board.PrintBoard();
     }
 
     public List<Player> CreatePlayer(string name)
@@ -54,7 +69,7 @@ public class ReadyFacade
 
     public async void StartPlayers(List<Player> players)
     {
-        if(players.Count % 2 == 0)
+        if (players.Count % 2 == 0)
         {
             Random random = new Random();
             int random_number = random.Next(players.Count());
@@ -77,4 +92,5 @@ public class ReadyFacade
         throw new Exception("todo");
     }
 }
+
 

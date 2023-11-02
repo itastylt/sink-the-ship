@@ -1,4 +1,5 @@
 ﻿
+using BattleshipClient.GameLogic.Factory;
 /// <summary>
 /// Player's class
 /// </summary>
@@ -9,7 +10,7 @@ public class Player : IObserver
 
     private bool State = false;
 
-    private PlacedShip SelectedShip { get; set; }
+    private IShip SelectedShip { get; set; }
     
     private bool CanClone = true;
 
@@ -28,12 +29,16 @@ public class Player : IObserver
         SelectedShip = this.ShipsBoard.getShip(cannonNumber);
     }
 
+<<<<<<< Updated upstream
     public void CleanSelectedShip()
     {
         SelectedShip = null;
     }
 
     public PlacedShip GetSelectedShip()
+=======
+    public IShip GetSelectedShip()
+>>>>>>> Stashed changes
     {
         if (SelectedShip == null)
         {
@@ -41,7 +46,7 @@ public class Player : IObserver
         }
         return SelectedShip;
     }
-    public void SetSelectedShip(PlacedShip shipObject)
+    public void SetSelectedShip(IShip shipObject)
     {
         SelectedShip = shipObject;
     }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Paulius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
+        "projectName": "BattleshipClient",
+        "projectPath": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
+        "packagesPath": "C:\\Users\\arman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arman\\OneDrive\\Stalinis kompiuteris\\Paternai\\sink-the-ship\\BattleshipClient\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +39,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +61,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "DotLiquid": {
+              "target": "Package",
+              "version": "[2.2.692, )"
+            },
             "Microsoft.TypeScript.MSBuild": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -87,7 +109,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     }

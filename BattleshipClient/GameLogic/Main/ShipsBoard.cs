@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BattleshipClient.GameLogic.Factory;
+using System;
 
 public enum Ship
 {
@@ -10,13 +11,13 @@ public enum Ship
 
 public class ShipsBoard
 {
-    List<PlacedShip> allShips { get; set; }
+    List<IShip> allShips { get; set; }
     public int[,] Board { get; set; }
 
     public ShipsBoard()
     {
         this.Board = new int[10, 10];
-        allShips = new List<PlacedShip>();
+        allShips = new List<IShip>();
     }
     public bool isAValidTarget(int x, int y)
     {
@@ -29,9 +30,9 @@ public class ShipsBoard
             return true;
         }
     }
-    public PlacedShip getShip(int cannonNumber)
+    public IShip getShip(int cannonNumber)
     {
-        foreach (PlacedShip ship in allShips)
+        foreach (IShip ship in allShips)
         {
             if (cannonNumber == (int)(Ship)Enum.Parse(typeof(Ship), ship.Type))
             {
@@ -65,7 +66,7 @@ public class ShipsBoard
         return coordinates;
     }
 
-    public void PlaceShip(PlacedShip ship)
+    public void PlaceShip(IShip ship)
     {
         for (int i = ship.Y; i <= ship.Y; i++)
         {

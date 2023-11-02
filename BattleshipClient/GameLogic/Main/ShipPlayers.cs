@@ -104,4 +104,5 @@ public class ShipPlayers
             throw new InvalidOperationException("Player list is empty!");
         }
     }
+    public static int PlayerCount() { return ShipPlayersList.Count; }
 }
