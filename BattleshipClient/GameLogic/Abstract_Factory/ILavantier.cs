@@ -1,4 +1,5 @@
-﻿using BattleshipClient.GameLogic.Strategy;
+﻿using BattleshipClient.GameLogic.Bridge;
+using BattleshipClient.GameLogic.Strategy;
 
 namespace BattleshipClient.GameLogic.Factory
 {
@@ -12,6 +13,7 @@ namespace BattleshipClient.GameLogic.Factory
             this.Type = "Lavantier";
             this.Angle = 90;
             this.Size = 2;
+            this.engine = new GasEngine();
         }
     }
 }

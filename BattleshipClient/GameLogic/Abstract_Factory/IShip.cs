@@ -1,4 +1,5 @@
-﻿using BattleshipClient.GameLogic.Strategy;
+﻿using BattleshipClient.GameLogic.Bridge;
+using BattleshipClient.GameLogic.Strategy;
 
 namespace BattleshipClient.GameLogic.Factory
 {
@@ -9,6 +10,7 @@ namespace BattleshipClient.GameLogic.Factory
         public int Y { get; set; }
         public int Size { get; set; }
         public int Angle { get; set; }
+        public IEngine engine { get; set; }
 
         //Strategy pattern
         public ICannonStrategy Cannon { get; set; }

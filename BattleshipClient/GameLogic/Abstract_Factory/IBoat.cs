@@ -1,6 +1,7 @@
 ﻿using BattleshipClient.GameLogic.Strategy.Decorator;
 using BattleshipClient.GameLogic.Strategy;
 using System.Runtime.CompilerServices;
+using BattleshipClient.GameLogic.Bridge;
 
 namespace BattleshipClient.GameLogic.Factory
 {
@@ -15,6 +16,7 @@ namespace BattleshipClient.GameLogic.Factory
             this.Type = "Boat";
             this.Angle = 90;
             this.Size = 1;
+            this.engine = new GasEngine();
 
         }
 
