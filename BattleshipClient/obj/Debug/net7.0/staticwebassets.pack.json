@@ -25,6 +25,18 @@
       "PackagePath": "staticwebassets\\img\\randomize.png"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unclone.png",
+      "PackagePath": "staticwebassets\\img\\unclone.png"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unfire.png",
+      "PackagePath": "staticwebassets\\img\\unfire.png"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unscope.png",
+      "PackagePath": "staticwebassets\\img\\unscope.png"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\app.js",
       "PackagePath": "staticwebassets\\js\\app.js"
     },
