@@ -137,3 +137,7 @@ function unScope() {
         return console.error(err.toString());
     });
 }
+
+function unCloneShip() {
+    $('.power-up-unclone').addClass("disabled");
+}
