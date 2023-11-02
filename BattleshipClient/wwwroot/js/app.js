@@ -135,8 +135,16 @@ function placedShipsAsString() {
     string += "]";
     return string;
 }
-function handleSplashScreen() {
-    $('.hide-on-join').fadeOut("slow");
+function handleSplashScreen(state) {
+    console.log(state);
+    if (state == true) {
+        console.log(state);
+        $(".hide-on-join").addClass("d-none");
+    }
+    else {
+        $(".hide-on-join").removeClass("d-none");
+    }
+    console.log($('.hide-on-join'));
     $('.ready-screen-wrapper').slideToggle("slow");
 }
 function handleTurnScreen(player) {

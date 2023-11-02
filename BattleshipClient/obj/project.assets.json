@@ -152,19 +152,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Paulius\\.nuget\\packages\\": {}
+    "C:\\Users\\andri\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
+      "projectUniqueName": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\BattleshipClient.csproj",
       "projectName": "BattleshipClient",
-      "projectPath": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
-      "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paulius\\Desktop\\KTU\\sink-the-ship\\BattleshipClient\\obj\\",
+      "projectPath": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\BattleshipClient.csproj",
+      "packagesPath": "C:\\Users\\andri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Paulius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -184,9 +191,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "default"
       }
     },
     "frameworks": {
@@ -211,24 +215,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.9, 7.0.9]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.9, 7.0.9]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.9, 7.0.9]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.9, 7.0.9]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -237,7 +223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.7.23376.3\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

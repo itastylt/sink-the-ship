@@ -27,7 +27,7 @@ connection.on("StartGame", function (user, message) {
     handleShowOnStart();
 
     if (currUser == player) {
-        handleSplashScreen();
+        handleSplashScreen(true);
     }
 
 });
@@ -52,6 +52,10 @@ connection.start().then(function () {
     return console.error(err.toString());
 });
 
+document.getElementById("cancelButton").addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("TODO: ready undo");
+});
 
 document.getElementById("startButton").addEventListener("click", function (event) {
     var user = document.getElementById("nameText").value;
