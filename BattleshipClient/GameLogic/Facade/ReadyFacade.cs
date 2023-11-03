@@ -17,14 +17,16 @@ public class ReadyFacade
 
     public void FormBoard(List<PlacedShip> shipList)
     {
+        ITeamFactory iTeamFactory = new ITeamFactory();
         ShipFactory teamFactory = null;
         if (ShipPlayers.PlayerCount() == 0)
         {
-            teamFactory = new BlueTeam().GetFactory();
+            teamFactory = iTeamFactory.GetTeam("B").GetFactory();
+
         }
         else
         {
-            teamFactory = new RedTeam().GetFactory();
+            teamFactory = iTeamFactory.GetTeam("R").GetFactory();
         }
         if (teamFactory == null){ throw new Exception("Shipfactory team problem "); }
 

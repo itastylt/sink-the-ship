@@ -2,7 +2,7 @@
 
 namespace BattleshipClient.GameLogic.Factory
 {
-    public class NoTeam : ITeamFactory
+    public class NoTeam : ITeam
     {
         public override ShipFactory GetFactory()
         {
