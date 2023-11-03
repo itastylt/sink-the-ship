@@ -1,26 +1,8 @@
 ﻿namespace BattleshipClient.GameLogic.Strategy.Decorator
 {
+    using BattleshipClient.Models;
     public class EnhancedSingleShot : ICannonStrategy
     {
-        private class Coordinates
-        {
-            int x { get; set; }
-            int y { get; set; }
-            public Coordinates(int y, int x)
-            {
-                this.x = x;
-                this.y = y;
-            }
-            public int getX()
-            {
-                return x;
-            }
-            public int getY()
-            {
-                return y;
-            }
-        }
-
         private ICannonStrategy baseStrategy;
 
         public EnhancedSingleShot(ICannonStrategy baseStrategy)

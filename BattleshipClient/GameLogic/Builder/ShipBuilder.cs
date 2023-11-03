@@ -3,6 +3,7 @@ using BattleshipClient.GameLogic.Strategy;
 using System;
 using System.Collections.Generic;
 using BattleshipClient.GameLogic.Factory;
+using BattleshipClient.GameLogic.Builder;
 
 public class ShipBuilder
 {
@@ -13,12 +14,6 @@ public class ShipBuilder
     {
         this.board = board;
     }
-    public class ConcreteShip : IShip
-    {
-        public ConcreteShip() { }
-    }
-
-
     public void BuildRandomShips()
     {
         List<Ship> shipTypes = Enum.GetValues(typeof(Ship)).OfType<Ship>().ToList();
