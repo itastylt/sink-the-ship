@@ -167,6 +167,9 @@ function printBoards(user, board) {
     var array = eval(board);
     $('.power-up-panel').addClass('show');
     if (name != user) {
+        console.log("zjbala");
+        console.log(array);
+        $("#enemy-board .board-tile").css('background-color', '');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
                 switch (array[i][j]) {
@@ -211,8 +214,12 @@ function printBoards(user, board) {
         }
     }
     else {
+        console.log("veikzasine");
+        console.log(array);
+        $("#your-board .board-tile").css('background-color', '');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
+                $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css('background-color', '');
                 switch (array[i][j]) {
                     case 1: {
                         $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "brown");
@@ -262,7 +269,7 @@ function handleUnclonePowerUp(player) {
 function handleClonePowerUp(player) {
     var name = $("#name").val();
     if (name == player) {
-        $(".power-up-clone").addClass("d-none");
+        $("#powerUpClone").addClass("d-none");
         $(".power-up-unclone").removeClass("d-none");
     }
 }

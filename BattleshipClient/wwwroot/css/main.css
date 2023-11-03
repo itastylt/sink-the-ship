@@ -168,15 +168,15 @@ div.ship-selector:hover {
     margin: 0 10px 0 10px;
 }
 
-.power-up-panel-col:hover, .power-up-clone.disabled {
-    opacity: 0.5;
-}
+    .power-up-panel-col:hover, .power-up-icon.disabled {
+        opacity: 0.5;
+    }
 
-.power-up-clone.disabled:hover {
+   .power-up-icon.disabled:hover {
     transform: scale(1);
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
-}
+    }
 
 .power-up-panel-col:hover {
     transform: scale(1.1);

@@ -47,7 +47,7 @@ namespace BattleshipClient.GameLogic.Invokers
             }
         }
 
-        public async void undo()
+        public async void undoAsync()
         {
 
             Player current_player = ShipPlayers.GetPlayer(_user);

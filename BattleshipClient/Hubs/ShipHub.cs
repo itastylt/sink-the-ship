@@ -13,7 +13,7 @@ public class ShipHub : Hub
 
         // Create commands
         Ready readyCommand = new Ready(messageArgs, user,this);
-        SelectWeapon selectWeaponCommand = new SelectWeapon(messageArgs,user);
+        SelectWeapon selectWeaponCommand = new SelectWeapon(messageArgs,user, this);
         FireWeapon fireWeaponCommand = new FireWeapon(messageArgs, message, user,this);
         CloneShip cloneShipCommand = new CloneShip(user,this);
 
@@ -24,7 +24,7 @@ public class ShipHub : Hub
                 readyCommand.execute();
                 break;
             case "undoReady":
-                readyCommand.undo();
+                readyCommand.undoAsync();
                 break;
             case "randomize":
                 readyCommand.executeRandomPlayer();
@@ -33,19 +33,19 @@ public class ShipHub : Hub
                 selectWeaponCommand.execute();
                 break;
             case "unselectWeapon":
-                selectWeaponCommand.undo();
+                selectWeaponCommand.undoAsync();
                 break;
             case "fireWeapon":
                 fireWeaponCommand.execute();
                 break;
             case "unFireWeapon":
-                fireWeaponCommand.undo();
+                fireWeaponCommand.undoAsync();
                 break;
             case "cloneShip":
                 cloneShipCommand.execute();
                 break;
             case "unCloneShip":
-                cloneShipCommand.undo();
+                cloneShipCommand.undoAsync();
                 break;
             default:
                 break;

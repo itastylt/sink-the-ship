@@ -54,7 +54,7 @@ namespace BattleshipClient.GameLogic.Invokers
             this.Facade.StartPlayers(players);
         }
 
-        public void undo()
+        public void undoAsync()
         {
             string temp = this._user;
             this.Facade.UnreadyPlayer(temp);
