@@ -2,6 +2,7 @@
 using BattleshipClient.GameLogic.Strategy;
 using BattleshipClient.GameLogic.Strategy.Decorator;
 using Microsoft.AspNetCore.SignalR;
+using System.Runtime.InteropServices;
 using System.Text.Json;
 
 public class ShipHub : Hub
@@ -50,5 +51,7 @@ public class ShipHub : Hub
             default:
                 break;
         }
+
+
     }
 }

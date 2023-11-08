@@ -21,6 +21,20 @@ public class Player : IObserver
 
     private int lastShotType { get; set; }
 
+    private int Round = 0;
+
+    private bool GameEnded = false;
+
+    public bool GetEnd()
+    {
+        return this.GameEnded;
+    }
+
+    public void SetEnd(bool end)
+    {
+        this.GameEnded = end;
+    }
+
     public bool GetClonePowerup()
     {
         return this.CanClone;

@@ -11,6 +11,14 @@ connection.on("UnScope", function (user, message) {
         $('#cannon-1').trigger();
     }
 });
+
+connection.on("WinnerGame", function (user, message) {
+    console.log("GameEnd", user);
+
+    var player = document.getElementById("nameText").value;
+    handleWinningScreen(user);
+
+});
 connection.on("UnClonedBoard", function (user, message) {
     console.log(user, message);
 

@@ -1,20 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "RgYkix/rywpwI59Nu8iazSMl8TU8/HzDdoVY5ToNdEeBVPin3c4HkmPm96cXtoEJ8Mc8+i95x1axMvl5lrIWXA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\ssims\\OneDrive\\Documents\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ssims\\.nuget\\packages\\dotliquid\\2.2.692\\dotliquid.2.2.692.nupkg.sha512",
-    "C:\\Users\\ssims\\.nuget\\packages\\microsoft.typescript.msbuild\\5.2.2\\microsoft.typescript.msbuild.5.2.2.nupkg.sha512"
-=======
   "dgSpecHash": "HkMxwEJbwcLNBaW/qpopCbNezrTTmmWexNlLhH2FEGiiLF8hmkTQ3MXxcyli2ZYeuN+pyYGTNrq5DNxLMD+mNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\BattleshipClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andri\\.nuget\\packages\\dotliquid\\2.2.692\\dotliquid.2.2.692.nupkg.sha512",
     "C:\\Users\\andri\\.nuget\\packages\\microsoft.typescript.msbuild\\5.2.2\\microsoft.typescript.msbuild.5.2.2.nupkg.sha512"
->>>>>>> 704b8f0a1ba7bdf74133ecd319d67f9f7f9aa0b4
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

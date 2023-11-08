@@ -193,42 +193,26 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\ssims\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\andri\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
->>>>>>> 704b8f0a1ba7bdf74133ecd319d67f9f7f9aa0b4
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\ssims\\OneDrive\\Documents\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
-      "projectName": "BattleshipClient",
-      "projectPath": "C:\\Users\\ssims\\OneDrive\\Documents\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
-      "packagesPath": "C:\\Users\\ssims\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ssims\\OneDrive\\Documents\\sink-the-ship\\BattleshipClient\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\BattleshipClient.csproj",
       "projectName": "BattleshipClient",
       "projectPath": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\BattleshipClient.csproj",
       "packagesPath": "C:\\Users\\andri\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\obj\\",
->>>>>>> 704b8f0a1ba7bdf74133ecd319d67f9f7f9aa0b4
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\ssims\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\andri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 704b8f0a1ba7bdf74133ecd319d67f9f7f9aa0b4
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -284,12 +268,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
->>>>>>> 704b8f0a1ba7bdf74133ecd319d67f9f7f9aa0b4
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

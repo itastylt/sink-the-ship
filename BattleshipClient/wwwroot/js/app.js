@@ -293,4 +293,24 @@ function handleCannonBoard() {
     $(".ship-selector").removeClass('cannon-active');
     $("#cannon-".concat(selectedCannon)).addClass('cannon-active');
 }
+function handleWinningScreen(user) {
+    var name = $("#name").val();
+    if (name != user) {
+        $(".turn-screen-title").text("Enemy (".concat(user, ") wins!"));
+        var wrapper = $('.turn-screen-wrapper');
+        if (wrapper.is('.turn-hide')) {
+            wrapper.removeClass('turn-hide');
+        }
+        wrapper.toggleClass('turn-show');
+    }
+    else {
+        $(".turn-screen-title").text("You (".concat(user, ") win!"));
+        var wrapper = $('.turn-screen-wrapper');
+        if (wrapper.is('.turn-hide')) {
+            wrapper.removeClass('turn-hide');
+        }
+        wrapper.toggleClass('turn-show');
+    }
+    console.log(name, user);
+}
 //# sourceMappingURL=app.js.map

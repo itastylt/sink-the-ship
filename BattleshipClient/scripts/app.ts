@@ -395,3 +395,27 @@ function handleCannonBoard() {
     $(".ship-selector").removeClass('cannon-active');
     $(`#cannon-${selectedCannon}`).addClass('cannon-active');
 }
+
+function handleWinningScreen(user: string) {
+    let name = $("#name").val();
+
+    if (name != user) {
+        $(".turn-screen-title").text(`Enemy (${user}) wins!`);
+        let wrapper = $('.turn-screen-wrapper');
+
+        if (wrapper.is('.turn-hide')) {
+            wrapper.removeClass('turn-hide');
+        }
+        wrapper.toggleClass('turn-show');
+    } else {
+        $(".turn-screen-title").text(`You (${user}) win!`);
+        let wrapper = $('.turn-screen-wrapper');
+
+        if (wrapper.is('.turn-hide')) {
+            wrapper.removeClass('turn-hide');
+        }
+        wrapper.toggleClass('turn-show');
+    }
+
+    console.log(name, user);
+}

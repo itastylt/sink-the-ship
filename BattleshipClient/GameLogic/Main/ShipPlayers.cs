@@ -52,6 +52,26 @@ public class ShipPlayers
         }
     }
 
+    public static void Clear()
+    {
+        ShipPlayersList = new List<Player>();
+    }
+
+    public static Player EndPlayer()
+    {
+        Player gameEnd = null;
+        foreach (Player player in ShipPlayersList)
+        {
+            if(player.GetShipsBoard().BoardEnd())
+            {
+                gameEnd = player;
+                break;
+            }
+        }
+        return gameEnd;
+    }
+
+
     public static void RemovePlayer(string playerName)
     {
         ShipPlayersList.RemoveAll(x => x.Name == playerName);

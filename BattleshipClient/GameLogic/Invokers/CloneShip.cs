@@ -63,7 +63,14 @@ namespace BattleshipClient.GameLogic.Invokers
                 cloner.GetShipsBoard().PrintBoard();
                 ShipPlayers.UpdatePlayer(_user, cloner);
                 ShipPlayers.UpdatePlayer(oppenent.Name, oppenent);
-                await _hub.Clients.All.SendAsync("UnClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);
+                if(cloner.GetShipsBoard().BoardEnd())
+                {
+                    await _hub.Clients.All.SendAsync("WinnerGame", oppenent.Name, oppenent.Name + ";");
+                }
+                else
+                {
+                    await _hub.Clients.All.SendAsync("UnClonedBoard", cloner.Name, cloner.Name + ";" + cloner.GetShipsBoard().ToString() + ";" + oppenent.Name);
+                }
 
             }
         }

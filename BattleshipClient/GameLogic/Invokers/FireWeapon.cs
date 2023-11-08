@@ -1,6 +1,7 @@
 ﻿using BattleshipClient.GameLogic.Command;
 using BattleshipClient.GameLogic.Factory;
 using Microsoft.AspNetCore.SignalR;
+using System.Reflection;
 
 namespace BattleshipClient.GameLogic.Invokers
 {
@@ -43,7 +44,14 @@ namespace BattleshipClient.GameLogic.Invokers
                 opponent_player.SetState(!opponent_player.GetState());
                 ShipPlayers.UpdatePlayer(current_player.Name, current_player);
                 ShipPlayers.UpdatePlayer(opponent_player.Name, opponent_player);
-                await _hub.Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString() + ";" + opponent_player.Name);
+                if(opponent_player.GetShipsBoard().BoardEnd())
+                {
+                    await _hub.Clients.All.SendAsync("WinnerGame", current_player.Name, current_player.Name + ";");
+                }
+                else
+                {
+                    await _hub.Clients.All.SendAsync("FireShot", current_player.Name, opponent_player.Name + ";" + opponent_player.GetShipsBoard().ToString() + ";" + opponent_player.Name);
+                }
             }
         }
 

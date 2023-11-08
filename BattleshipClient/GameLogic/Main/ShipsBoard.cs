@@ -1,4 +1,5 @@
 ﻿using BattleshipClient.GameLogic.Factory;
+using DotLiquid.Util;
 using System;
 
 public enum Ship
@@ -30,6 +31,26 @@ public class ShipsBoard
             return true;
         }
     }
+
+    public bool BoardEnd()
+    {
+        bool noBiggerThanZero = true;
+        for(int i = 0; i <this.Board.GetLength(0); i++)
+        {
+            for(int j = 0; j < this.Board.GetLength(1); j++)
+            {
+                Console.Write(this.Board[i, j]);
+                if (this.Board[i,j] > 0)
+                {
+                    noBiggerThanZero = false;
+                    i = this.Board.GetLength(0) - 1;
+                }
+            }
+        }
+
+        return noBiggerThanZero;
+    }
+
     public IShip getShip(int cannonNumber)
     {
         foreach (IShip ship in allShips)
