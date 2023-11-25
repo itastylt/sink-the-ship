@@ -33,5 +33,4 @@ staticwebassets.runtime.json
 
 # Ignore other generated folders
 DesignTimeBuild/.dtbcache.v2
-# Ignore other generated folders except the specified file
 /BattleshipClient/obj/*
