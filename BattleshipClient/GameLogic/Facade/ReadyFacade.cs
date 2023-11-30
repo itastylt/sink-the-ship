@@ -2,23 +2,39 @@
 using BattleshipClient.GameLogic.Strategy;
 using Microsoft.AspNetCore.SignalR;
 using BattleshipClient.GameLogic.Factory;
+using System.Collections;
 
 public class ReadyFacade
 {
     private ShipsBoard Board;
-    private ShipHub Hub;
-    private Player Player;
+    private ShipHub? Hub;
+    private Player? Player;
 
     public ReadyFacade (ShipHub hub)
     {
         this.Board = new ShipsBoard();
         this.Hub = hub;
     }
+    public ReadyFacade()
+    {
+        this.Board = new ShipsBoard();
+    }
 
-    public void FormBoard(List<PlacedShip> shipList)
+    public Player GetPlayer ()
+    {
+        return this.Player;
+    }
+
+    public ShipsBoard GetBoard()
+    {
+        return this.Board;
+    }
+    public void FormBoard(IEnumerable<PlacedShip> shipList)
     {
         ITeamFactory iTeamFactory = new ITeamFactory();
+
         ShipFactory teamFactory = null;
+
         if (ShipPlayers.PlayerCount() == 0)
         {
             teamFactory = iTeamFactory.GetTeam("B").GetFactory();

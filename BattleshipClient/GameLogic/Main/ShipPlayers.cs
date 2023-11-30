@@ -102,7 +102,7 @@ public class ShipPlayers
         }
         else
         {
-            throw new InvalidOperationException("Player list is empty!");
+            throw  new InvalidOperationException("Player list is empty!");
         }
     }
 

@@ -26,6 +26,11 @@ public class ShipBuilder
         }
     }
 
+    public ShipsBoard GetBoard()
+    {
+        return board;
+    }
+
     private IShip BuildRandomShip(string type, int size)
     {
         IShip ship = new ConcreteShip

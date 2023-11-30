@@ -20,6 +20,22 @@ public class ShipsBoard
         this.Board = new int[10, 10];
         allShips = new List<IShip>();
     }
+
+    public bool ContainsGreaterThan(int value)
+    {
+        for(int i = 0; i < Board.GetLength(0); i++)
+        {
+            for(int j = 0; j < this.Board.GetLength(1); j++)
+            {
+                if (this.Board[i, j] > value)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
     public bool isAValidTarget(int x, int y)
     {
         if (x >= 10 || y >= 10 || x < 0 || y < 0)

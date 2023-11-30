@@ -22,5 +22,16 @@ public class PlacedShip : ICloneable
     {
         return (PlacedShip)this.MemberwiseClone();
     }
+
+    public PlacedShip(string type, int x, int y, int size, int angle, ICannonStrategy cannon)
+    {
+        Type = type;
+        X = x;
+        Y = y;
+        Size = size;
+        Angle = angle;
+        Cannon = cannon;
+    } 
+
 }
 
