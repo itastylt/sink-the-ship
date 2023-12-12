@@ -55,7 +55,5 @@ public class ShipHub : Hub
             default:
                 break;
         }
-
-
     }
 }

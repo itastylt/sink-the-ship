@@ -1,4 +1,6 @@
-﻿namespace BattleshipClient.GameLogic.Composite
+﻿using BattleshipClient.GameLogic.Visitor;
+
+namespace BattleshipClient.GameLogic.Composite
 {
     public class ShipGroup : IShipComponent
     {
@@ -17,6 +19,17 @@
             foreach (var ship in ships)
             {
                 ship.FireWeapon(opponent, x, y, flag); 
+            }
+        }
+        public void Accept(IShipVisitor visitor)
+        {
+            visitor.VisitShipGroup(this);
+        }
+        public IEnumerable<IShipComponent> GetShips()
+        {
+            foreach (var ship in ships)
+            {
+                yield return ship;
             }
         }
     }
