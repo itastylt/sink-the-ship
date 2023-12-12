@@ -169,3 +169,12 @@ function unScope() {
         return console.error(err.toString());
     });
 }
+function fireGroup() {
+    var user = document.getElementById("nameText").value;
+    let x_cord = x;
+    let y_cord = y;
+    console.log(`Selected cordinate ${x_cord} and ${y_cord}`);
+    connection.invoke("SendMessage", user, `fireGroup;${x_cord};${y_cord}`).catch(function (err) {
+        return console.error(err.toString());
+    });
+}

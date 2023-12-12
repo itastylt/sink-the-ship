@@ -1,9 +1,10 @@
 ﻿using BattleshipClient.GameLogic.Bridge;
+using BattleshipClient.GameLogic.Composite;
 using BattleshipClient.GameLogic.Strategy;
 
 namespace BattleshipClient.GameLogic.Factory
 {
-    public abstract class IShip : ICloneable
+    public abstract class IShip : ICloneable, IShipComponent
     {
         public string Type { get; set; }
         public int X { get; set; }

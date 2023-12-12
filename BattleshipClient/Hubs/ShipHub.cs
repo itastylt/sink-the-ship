@@ -16,6 +16,7 @@ public class ShipHub : Hub
         Ready readyCommand = new Ready(messageArgs, user,this);
         SelectWeapon selectWeaponCommand = new SelectWeapon(messageArgs,user, this);
         FireWeapon fireWeaponCommand = new FireWeapon(messageArgs, message, user,this);
+        FireGroup fireGroupCommand = new FireGroup(messageArgs, message, user, this);
         CloneShip cloneShipCommand = new CloneShip(user,this);
 
 
@@ -38,6 +39,9 @@ public class ShipHub : Hub
                 break;
             case "fireWeapon":
                 fireWeaponCommand.execute();
+                break;
+            case "fireGroup":
+                fireGroupCommand.execute();
                 break;
             case "unFireWeapon":
                 fireWeaponCommand.undoAsync();

@@ -385,7 +385,6 @@ function generateCannonSelector() {
                         </div>
                      </div>`;
         }
-
     }
 
     shipBoard.innerHTML = shipsDom;

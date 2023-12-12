@@ -1,4 +1,5 @@
-﻿using BattleshipClient.GameLogic.Factory;
+﻿using BattleshipClient.GameLogic.Composite;
+using BattleshipClient.GameLogic.Factory;
 using DotLiquid.Util;
 using System;
 
@@ -12,6 +13,7 @@ public enum Ship
 
 public class ShipsBoard
 {
+    ShipGroup shipGroup { get; set; }
     List<IShip> allShips { get; set; }
     public int[,] Board { get; set; }
 
@@ -19,6 +21,7 @@ public class ShipsBoard
     {
         this.Board = new int[10, 10];
         allShips = new List<IShip>();
+        shipGroup = new ShipGroup();
     }
     public bool isAValidTarget(int x, int y)
     {
@@ -62,6 +65,10 @@ public class ShipsBoard
         }
         throw new InvalidOperationException("Ship not found in getShip method");
     }
+    public ShipGroup getShipGroup()
+    {
+        return shipGroup;
+    }
 
     public int[] GetAvailableCoordinate()
     {
@@ -97,6 +104,7 @@ public class ShipsBoard
             }
         }
         allShips.Add(ship);
+        shipGroup.Add(ship);
     }
 
     public void UnPlaceShip(IShip ship)
@@ -109,6 +117,7 @@ public class ShipsBoard
             }
         }
         allShips.RemoveAll(x => x == ship);
+        shipGroup.Remove(ship);
     }
 
     override public string ToString()

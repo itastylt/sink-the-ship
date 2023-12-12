@@ -34,3 +34,5 @@ staticwebassets.runtime.json
 # Ignore other generated folders
 DesignTimeBuild/.dtbcache.v2
 /BattleshipClient/obj/*
+node_modules/
+BattleshipClient/scripts/
