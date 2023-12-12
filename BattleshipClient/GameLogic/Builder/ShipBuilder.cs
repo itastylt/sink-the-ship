@@ -22,7 +22,6 @@ public class ShipBuilder
         {
             int size = (int)shipType;
             ConcreteShip ship = (ConcreteShip)BuildRandomShip(shipType.ToString(), size);
-            PlaceShipOnBoard(ship);
         }
     }
 
@@ -81,10 +80,10 @@ public class ShipBuilder
         return ship;
     }
 
-    private void PlaceShipOnBoard(IShip ship)
+    /*private void PlaceShipOnBoard(IShip ship)
     {
         board.PlaceShip(ship);
-    }
+    }*/
     private bool isAGoodPlace(int sizeOfShip, int x, int y)
     {
         if (x < 0 || x + sizeOfShip > 10 || y < 0 || y >= 10)

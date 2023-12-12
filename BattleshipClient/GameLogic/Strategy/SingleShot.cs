@@ -1,4 +1,6 @@
-﻿namespace BattleshipClient.GameLogic.Strategy
+﻿using BattleshipClient.GameLogic.Visitor;
+
+namespace BattleshipClient.GameLogic.Strategy
 {
     public class SingleShot : ICannonStrategy
     {
@@ -23,8 +25,6 @@
                     opponent_board.Board[y, x] = -99;
                 }
             }
-
-            
         }
     }
 }

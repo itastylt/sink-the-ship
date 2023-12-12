@@ -1,4 +1,4 @@
-﻿let boardSize = [10, 10];
+﻿let boardSize = [8, 8];
 let placedShips = [];
 
 function domReady(cb: Function): void {
@@ -417,4 +417,10 @@ function handleWinningScreen(user: string) {
     }
 
     console.log(name, user);
+}
+function handleDamageCount(damageCount: string) {
+    $('#shotCount').text(damageCount);
+}
+function handleCurrentDamageCount(currentDamageCount) {
+    $('#currentShotCount').text(currentDamageCount);
 }

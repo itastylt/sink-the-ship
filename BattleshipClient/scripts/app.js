@@ -1,4 +1,4 @@
-var boardSize = [10, 10];
+var boardSize = [8, 8];
 var placedShips = [];
 function domReady(cb) {
     if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -312,5 +312,11 @@ function handleWinningScreen(user) {
         wrapper.toggleClass('turn-show');
     }
     console.log(name, user);
+}
+function handleDamageCount(damageCount) {
+    $('#shotCount').text(damageCount);
+}
+function handleCurrentDamageCount(currentDamageCount) {
+    $('#currentShotCount').text(currentDamageCount);
 }
 //# sourceMappingURL=app.js.map

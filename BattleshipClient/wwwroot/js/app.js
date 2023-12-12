@@ -313,4 +313,10 @@ function handleWinningScreen(user) {
     }
     console.log(name, user);
 }
+function handleDamageCount(damageCount) {
+    $('#shotCount').text(damageCount);
+}
+function handleCurrentDamageCount(currentDamageCount) {
+    $('#currentShotCount').text(currentDamageCount);
+}
 //# sourceMappingURL=app.js.map

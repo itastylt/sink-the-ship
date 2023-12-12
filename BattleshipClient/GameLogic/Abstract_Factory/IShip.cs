@@ -1,6 +1,7 @@
 ﻿using BattleshipClient.GameLogic.Bridge;
 using BattleshipClient.GameLogic.Composite;
 using BattleshipClient.GameLogic.Strategy;
+using BattleshipClient.GameLogic.Visitor;
 
 namespace BattleshipClient.GameLogic.Factory
 {
@@ -25,6 +26,10 @@ namespace BattleshipClient.GameLogic.Factory
         public object Clone()
         {
             return (IShip)this.MemberwiseClone();
+        }
+        public void Accept(IShipVisitor visitor)
+        {
+            visitor.VisitShip(this);
         }
     }
 }
