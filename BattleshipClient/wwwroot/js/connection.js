@@ -1,6 +1,8 @@
 "use strict";
 var connection = new signalR.HubConnectionBuilder().withUrl("/shiphub").build();
 
+let group = false;
+
 document.getElementById("startButton").disabled = true;
 
 connection.on("UnScope", function (user, message) {
@@ -127,9 +129,19 @@ function sinkShip(x, y) {
     let y_cord = y;
 
     console.log(`Selected cordinate ${x_cord} and ${y_cord}`);
-    connection.invoke("SendMessage", user, `fireWeapon;${x_cord};${y_cord}`).catch(function (err) {
-        return console.error(err.toString());
-    });
+
+    if (group) {
+        unDemolish();
+        connection.invoke("SendMessage", user, `fireGroup;${x_cord};${y_cord}`).catch(function (err) {
+            return console.error(err.toString());
+        });
+        $("#powerUpDemolish").addClass("disabled");
+    } else {
+        connection.invoke("SendMessage", user, `fireWeapon;${x_cord};${y_cord}`).catch(function (err) {
+            return console.error(err.toString());
+        });
+    }
+
 }
 
 
@@ -169,12 +181,21 @@ function unScope() {
         return console.error(err.toString());
     });
 }
-function fireGroup() {
-    var user = document.getElementById("nameText").value;
-    let x_cord = x;
-    let y_cord = y;
-    console.log(`Selected cordinate ${x_cord} and ${y_cord}`);
-    connection.invoke("SendMessage", user, `fireGroup;${x_cord};${y_cord}`).catch(function (err) {
-        return console.error(err.toString());
-    });
+
+function demolish() {
+    let demolish = $("#powerUpDemolish");
+    if (!demolish.is(".disabled")) {
+        $("#powerUpDemolish").addClass("d-none");
+        $("#powerUpUnDemolish").removeClass("d-none");
+        $(".ship-selector").addClass("cannon-active");
+        group = true;
+    }
+}
+
+function unDemolish() {
+    $("#powerUpDemolish").removeClass("d-none");
+    $("#powerUpUnDemolish").addClass("d-none");
+    $(".ship-selector").removeClass("cannon-active");
+    $("#cannon-1").trigger("click");
+    group = false;
 }
