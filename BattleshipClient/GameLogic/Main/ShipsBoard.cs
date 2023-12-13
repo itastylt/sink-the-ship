@@ -1,5 +1,6 @@
 ﻿using BattleshipClient.GameLogic.Composite;
 using BattleshipClient.GameLogic.Factory;
+using BattleshipClient.GameLogic.Main;
 using DotLiquid.Util;
 using System;
 
@@ -24,6 +25,23 @@ public class ShipsBoard
         shipGroup = new ShipGroup();
     }
 
+    public ShipBoardsMemento SaveState()
+    {
+        return new ShipBoardsMemento(Board, allShips);
+    }
+
+    public void RestoreState(ShipBoardsMemento memento)
+    {
+        Board = memento.GetBoard();
+        allShips = memento.GetAllShips();
+    }
+    //// Save the state
+    //ShipBoardsMemento memento = Board.SaveState();
+
+    //// ... continue modifying the board ...
+
+    //// Restore the state
+    //Board.RestoreState(memento);
     public bool ContainsGreaterThan(int value)
     {
         for(int i = 0; i < Board.GetLength(0); i++)
