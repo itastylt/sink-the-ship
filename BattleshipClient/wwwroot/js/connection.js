@@ -61,23 +61,13 @@ connection.on("StartGame", function (user, message) {
 
 });
 connection.on("FireShot", function (user, message) {
-    var playerUser = document.getElementById("nameText").value;
-
     console.log(user, message);
-    let arr = message.split(';');
-    console.log(arr);
-    let player = arr[0];
-    let board = arr[1];
-    let turn = arr[2];
-    let damageCount = arr[3];
-
+    let player = message.split(';')[0];
+    let board = message.split(';')[1];
+    let turn = message.split(';')[2];
     handleTurnScreen(turn);
-    if (playerUser == user) {
-        handleDamageCount(damageCount);
-    }
     if (board != null) {
         printBoards(player, board);
-
     } else {
         console.log("Nice try :)");
     }
@@ -87,6 +77,7 @@ connection.on("FireShot", function (user, message) {
 connection.start().then(function () {
     document.getElementById("startButton").disabled = false;
     console.log("Connection established");
+    consoleWrite("Connection established");
 }).catch(function (err) {
     return console.error(err.toString());
 });
@@ -110,6 +101,7 @@ document.getElementById("cancelButton").addEventListener("click", function (even
     });
 });
 
+
 document.getElementById("startButton").addEventListener("click", function (event) {
     var user = document.getElementById("nameText").value;
     $('#name').val(user);
@@ -128,6 +120,7 @@ function selectShipCannon(cannon) {
     selectedCannon = cannon;
     handleCannonBoard();
     console.log(`Selected cannon ${cannon}`);
+    consoleWrite(`Selected cannon ${cannon}`);
     connection.invoke("SendMessage", user, `selectWeapon;${cannon}`).catch(function (err) {
         return console.error(err.toString());
     });
@@ -139,7 +132,7 @@ function sinkShip(x, y) {
     let y_cord = y;
 
     console.log(`Selected cordinate ${x_cord} and ${y_cord}`);
-
+    consoleWrite(`Selected cordinate ${x_cord} and ${y_cord}`);
     if (group) {
         unDemolish();
         connection.invoke("SendMessage", user, `fireGroup;${x_cord};${y_cord}`).catch(function (err) {
@@ -208,4 +201,18 @@ function unDemolish() {
     $(".ship-selector").removeClass("cannon-active");
     $("#cannon-1").trigger("click");
     group = false;
+}
+
+function openConsole() {
+    let modal = $('.console-modal');
+    if (modal.is('.d-none')) {
+        modal.removeClass('d-none');
+    }
+}
+
+function closeConsole() {
+    let modal = $('.console-modal');
+    if (!modal.is('d-none')) {
+        modal.addClass('d-none');
+    }
 }

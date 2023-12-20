@@ -1,10 +1,6 @@
 ﻿using BattleshipClient.GameLogic.Composite;
 using BattleshipClient.GameLogic.Factory;
-<<<<<<< Updated upstream
-using BattleshipClient.GameLogic.Main;
 using BattleshipClient.GameLogic.Template;
-=======
->>>>>>> Stashed changes
 using DotLiquid.Util;
 using System;
 using System.Runtime.InteropServices;

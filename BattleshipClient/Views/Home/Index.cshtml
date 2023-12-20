@@ -1,9 +1,23 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="power-up-panel-col">
-    <div class="power-up-icon console-button">
+<div class="power-up-panel-col console-container">
+    <div class="power-up-icon console-button" onclick="openConsole();">
         <img src="/img/console.png" />
+    </div>
+</div>
+<div class="console-modal d-none">
+    <div class="power-up-panel-col console-container">
+        <div class="power-up-icon console-close" onclick="closeConsole();">
+            <img src="/img/console_close.png" />
+        </div>
+    </div>
+    <div class="console-wrapper">
+        <div class="console-content">&nbsp;</div>
+        <div class="console-input">
+            <input type="text" class="console-text" name="console-text" placeholder="Enter command" />
+            <input type="button" class="console-submit" value="Submit" name="submit" />
+        </div>
     </div>
 </div>
 
@@ -52,12 +66,6 @@
 </div>
 
 <div class="show-on-join row">
-    <div class="panel-col w-100">
-        <div class="panel-title">
-            Total damage done:&nbsp;
-            <span id="shotCount">0</span>
-        </div>
-    </div>
     <div class="panel-col">
         <div class="panel-title">
             <h5>Available cannons:</h5>
