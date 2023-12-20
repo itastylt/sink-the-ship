@@ -1,4 +1,5 @@
-﻿using System.Security.AccessControl;
+﻿using BattleshipClient.GameLogic.Memento;
+using System.Security.AccessControl;
 
 /// <summary>
 /// Singleton class
@@ -15,6 +16,8 @@ public class ShipPlayers
     // Define private object instance of singleton and contructor 
     private static ShipPlayers _instance;
     private ShipPlayers() { }
+
+    private static Stack<ShipPlayersMemento> mementoStack = new Stack<ShipPlayersMemento>();
 
     // Method for getting object instance
     public static ShipPlayers Instance
@@ -50,11 +53,19 @@ public class ShipPlayers
                 player.SetSelectedShip(1);
             }
         }
+        SaveState();
+    }
+
+    private static void SaveState()
+    {
+        var memento = new ShipPlayersMemento(ShipPlayersList);
+        mementoStack.Push(memento);
     }
 
     public static void Clear()
     {
         ShipPlayersList = new List<Player>();
+        SaveState(); // Save state after clearing the players
     }
 
     public static Player EndPlayer()
@@ -75,6 +86,7 @@ public class ShipPlayers
     public static void RemovePlayer(string playerName)
     {
         ShipPlayersList.RemoveAll(x => x.Name == playerName);
+        SaveState(); // Save state after removing a player
     }
 
     public static List<Player> AddPlayer(Player player)
@@ -82,6 +94,7 @@ public class ShipPlayers
         if (!ShipPlayersList.Contains(player))
         {
             ShipPlayersList.Add(player);
+            SaveState(); // Save state after adding a player
         }
 
         return ShipPlayersList;
@@ -125,4 +138,13 @@ public class ShipPlayers
         }
     }
     public static int PlayerCount() { return ShipPlayersList.Count; }
+
+    public static void RestoreState()
+    {
+        if (mementoStack.Count > 0)
+        {
+            var memento = mementoStack.Pop();
+            ShipPlayersList = memento.Players;
+        }
+    }
 }
