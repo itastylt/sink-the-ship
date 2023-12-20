@@ -22,6 +22,8 @@
         {
             GameSettings settings = GameSettings.GetInstance();
             settings.UpdateLandMineCount(2);
+            
+
         }
     }
 }
