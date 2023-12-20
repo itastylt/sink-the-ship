@@ -11,7 +11,7 @@
             this.playerName1 = playerName1;
             this.playerName2 = playerName2;
         }
-        public void SetupGame(string playerName1, string playerName2)
+        public void SetupGame()
         {
             InitializeBoard();
             InitializeIslands();
