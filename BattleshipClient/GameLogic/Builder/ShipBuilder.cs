@@ -18,7 +18,6 @@ public class ShipBuilder
     public void BuildRandomShips()
     {
         List<Ship> shipTypes = Enum.GetValues(typeof(Ship)).OfType<Ship>().ToList();
-        this.board.PlaceLandMines();
 
         foreach (Ship shipType in shipTypes)
         {
