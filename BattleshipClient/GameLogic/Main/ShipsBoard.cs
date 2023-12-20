@@ -19,11 +19,12 @@ public class ShipsBoard
     ShipGroup shipGroup { get; set; }
     List<IShip> allShips { get; set; }
     public int[,] Board { get; set; }
+    private GameSettings Settings;
 
     public ShipsBoard()
     {
-        GameSettings settings = GameSettings.GetInstance();
-        this.Board = new int[settings.BoardSize, settings.BoardSize];
+        Settings = GameSettings.GetInstance();
+        this.Board = new int[Settings.BoardSize, Settings.BoardSize];
         allShips = new List<IShip>();
         shipGroup = new ShipGroup();
     }
@@ -62,8 +63,7 @@ public class ShipsBoard
     }
     public bool isAValidTarget(int x, int y)
     {
-        GameSettings settings = GameSettings.GetInstance();
-        int boardSize = settings.BoardSize;
+        int boardSize = Settings.BoardSize;
 
         if (x >= boardSize || y >= boardSize || x < 0 || y < 0)
         {
@@ -135,8 +135,7 @@ public class ShipsBoard
     }
     public void PlaceLandMines()
     {
-        GameSettings settings = GameSettings.GetInstance();
-        int mineCount = settings.MineCount;
+        int mineCount = Settings.MineCount;
 
         for (int i = 0; i < mineCount; i++)
         {

@@ -4,14 +4,17 @@ using System;
 using System.Collections.Generic;
 using BattleshipClient.GameLogic.Factory;
 using BattleshipClient.GameLogic.Builder;
+using BattleshipClient.GameLogic.Template;
 
 public class ShipBuilder
 {
     private ShipsBoard board;
     private Random random = new Random();
+    private GameSettings Settings;
 
     public ShipBuilder(ShipsBoard board)
     {
+        GameSettings settings = GameSettings.GetInstance();
         this.board = board;
     }
     public void BuildRandomShips()
@@ -44,8 +47,8 @@ public class ShipBuilder
 
         while (!isValidPlacement)
         {
-            int x = random.Next(10);
-            int y = random.Next(10);
+            int x = random.Next(Settings.BoardSize);
+            int y = random.Next(Settings.BoardSize);
 
             if (isAGoodPlace(size, x, y))
             {
@@ -86,7 +89,7 @@ public class ShipBuilder
     }*/
     private bool isAGoodPlace(int sizeOfShip, int x, int y)
     {
-        if (x < 0 || x + sizeOfShip > 10 || y < 0 || y >= 10)
+        if (x < 0 || x + sizeOfShip > Settings.BoardSize || y < 0 || y >= Settings.BoardSize)
             return false; //ship outside the boundary
 
         for (int i = x; i < x + sizeOfShip; i++)
