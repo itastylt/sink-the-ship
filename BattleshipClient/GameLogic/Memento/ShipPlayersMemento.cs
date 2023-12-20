@@ -9,7 +9,7 @@
 
             public ShipPlayersMemento(List<Player> players)
             {
-                Players = new List<Player>((IEnumerable<Player>)players.Select(player => player.Clone())); // Cloning players to create a deep copy
+                Players = new List<Player> (players.Select(player => (Player)player.Clone())); // Cloning players to create a deep copy
             }
         
     }
