@@ -16,6 +16,7 @@
         protected override void InitializeIslands()
         {
             GameSettings settings = GameSettings.GetInstance();
+            settings.UpdateIslandCount(6);
         }
 
         protected override void InitializeSeaMines()
