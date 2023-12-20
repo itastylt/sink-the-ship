@@ -1,6 +1,7 @@
 ﻿using BattleshipClient.GameLogic.Invokers;
 using BattleshipClient.GameLogic.Strategy;
 using BattleshipClient.GameLogic.Strategy.Decorator;
+using BattleshipClient.GameLogic.Template;
 using Microsoft.AspNetCore.SignalR;
 using System.Runtime.InteropServices;
 using System.Text.Json;

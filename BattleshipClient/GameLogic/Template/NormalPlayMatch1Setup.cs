@@ -2,9 +2,16 @@
 {
     public class NormalPlayMatch1Setup : GameSetupTemplate
     {
+        public NormalPlayMatch1Setup(string playerName1, string playerName2) : base(playerName1, playerName2)
+        {
+
+        }
+
         protected override void InitializeBoard()
         {
-            board = new int[10, 10];
+            GameSettings settings = GameSettings.GetInstance();
+            settings.UpdateBoardSize(10);
+            board = new int[settings.BoardSize, settings.BoardSize];
         }
 
         protected override void InitializeIslands()

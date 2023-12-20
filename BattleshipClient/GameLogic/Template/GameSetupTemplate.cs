@@ -3,14 +3,22 @@
     public abstract class GameSetupTemplate
     {
         protected int[,] board;
-        public void SetupGame()
+        protected string playerName1;
+        protected string playerName2;
+
+        public GameSetupTemplate(string playerName1, string playerName2)
+        {
+            this.playerName1 = playerName1;
+            this.playerName2 = playerName2;
+        }
+        public void SetupGame(string playerName1, string playerName2)
         {
             InitializeBoard();
             InitializeIslands();
             InitializeSeaMines();
         }
         protected abstract void InitializeBoard();
-        protected abstract void InitializeIslands();
-        protected abstract void InitializeSeaMines();
+        protected abstract void InitializeIslands(); 
+        protected abstract void InitializeSeaMines(); 
     }
 }
