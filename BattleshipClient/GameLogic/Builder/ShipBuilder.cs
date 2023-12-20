@@ -10,11 +10,9 @@ public class ShipBuilder
 {
     private ShipsBoard board;
     private Random random = new Random();
-    private GameSettings Settings;
 
     public ShipBuilder(ShipsBoard board)
     {
-        GameSettings settings = GameSettings.GetInstance();
         this.board = board;
     }
     public void BuildRandomShips()
@@ -47,8 +45,9 @@ public class ShipBuilder
 
         while (!isValidPlacement)
         {
-            int x = random.Next(Settings.BoardSize);
-            int y = random.Next(Settings.BoardSize);
+            GameSettings settings = GameSettings.GetInstance();
+            int x = random.Next(settings.BoardSize);
+            int y = random.Next(settings.BoardSize);
 
             if (isAGoodPlace(size, x, y))
             {
@@ -89,7 +88,9 @@ public class ShipBuilder
     }*/
     private bool isAGoodPlace(int sizeOfShip, int x, int y)
     {
-        if (x < 0 || x + sizeOfShip > Settings.BoardSize || y < 0 || y >= Settings.BoardSize)
+        GameSettings settings = GameSettings.GetInstance();
+
+        if (x < 0 || x + sizeOfShip > settings.BoardSize || y < 0 || y >= settings.BoardSize)
             return false; //ship outside the boundary
 
         for (int i = x; i < x + sizeOfShip; i++)
