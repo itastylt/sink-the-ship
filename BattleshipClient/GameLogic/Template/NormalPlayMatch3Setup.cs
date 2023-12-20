@@ -8,17 +8,20 @@
 
         protected override void InitializeBoard()
         {
-            board = new int[15, 15];
+            GameSettings settings = GameSettings.GetInstance();
+            settings.UpdateBoardSize(15);
+            board = new int[settings.BoardSize, settings.BoardSize];
         }
 
         protected override void InitializeIslands()
         {
-            throw new NotImplementedException();
+            GameSettings settings = GameSettings.GetInstance();
         }
 
         protected override void InitializeSeaMines()
         {
-            throw new NotImplementedException();
+            GameSettings settings = GameSettings.GetInstance();
+            settings.UpdateLandMineCount(2);
         }
     }
 }

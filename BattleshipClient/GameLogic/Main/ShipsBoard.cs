@@ -1,8 +1,10 @@
 ﻿using BattleshipClient.GameLogic.Composite;
 using BattleshipClient.GameLogic.Factory;
 using BattleshipClient.GameLogic.Main;
+using BattleshipClient.GameLogic.Template;
 using DotLiquid.Util;
 using System;
+using System.Runtime.InteropServices;
 
 public enum Ship
 {
@@ -20,7 +22,8 @@ public class ShipsBoard
 
     public ShipsBoard()
     {
-        this.Board = new int[10, 10];
+        GameSettings settings = GameSettings.GetInstance();
+        this.Board = new int[settings.BoardSize, settings.BoardSize];
         allShips = new List<IShip>();
         shipGroup = new ShipGroup();
     }
@@ -59,7 +62,10 @@ public class ShipsBoard
     }
     public bool isAValidTarget(int x, int y)
     {
-        if (x >= 10 || y >= 10 || x < 0 || y < 0)
+        GameSettings settings = GameSettings.GetInstance();
+        int boardSize = settings.BoardSize;
+
+        if (x >= boardSize || y >= boardSize || x < 0 || y < 0)
         {
             return false;
         }
@@ -126,6 +132,19 @@ public class ShipsBoard
         coordinates[0] = luckyY;
         coordinates[1] = luckyX;
         return coordinates;
+    }
+    public void PlaceLandMines()
+    {
+        GameSettings settings = GameSettings.GetInstance();
+        int mineCount = settings.MineCount;
+
+        for (int i = 0; i < mineCount; i++)
+        {
+            int[] coords = GetAvailableCoordinate();
+            Board[coords[1], coords[0]] = 5;
+        }
+
+        PrintBoard();
     }
 
     public void PlaceShip(IShip ship)

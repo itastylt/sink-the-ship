@@ -16,12 +16,12 @@
 
         protected override void InitializeIslands()
         {
-            throw new NotImplementedException();
+            GameSettings settings = GameSettings.GetInstance();
         }
 
         protected override void InitializeSeaMines()
         {
-            throw new NotImplementedException();
+            GameSettings settings = GameSettings.GetInstance();
         }
     }
 }
