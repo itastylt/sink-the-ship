@@ -1,5 +1,11 @@
 var boardSize = [10, 10];
 var placedShips = [];
+function consoleWrite(message) {
+    var consoleElem = $('.console-content');
+    console.log("testas");
+    var dom = "<div class=\"console-row\">".concat(message, "</div>");
+    consoleElem.append(dom);
+}
 function domReady(cb) {
     if (document.readyState === "complete" || document.readyState === "interactive") {
         cb();
@@ -12,6 +18,7 @@ function domReady(cb) {
 }
 function generateYourBoard() {
     console.log('generating');
+    consoleWrite("generating");
     var boardDOM = document.getElementById('your-board');
     var rowsDom = '';
     for (var i = 0; i < boardSize[0]; i++) {
@@ -108,6 +115,7 @@ function placeShip(x, y) {
         console.log('Nice try :)');
         return;
     }
+    consoleWrite("Placed ship ".concat(selectedShip.type, " on: x = ").concat(x, " y = ").concat(y));
     console.log("Placed ship ".concat(selectedShip.type, " on: x = ").concat(x, " y = ").concat(y));
     if (boardSize[1] > x + selectedShip.size - 1) {
         for (var i = 0; i < selectedShip.size; i++) {
@@ -167,8 +175,6 @@ function printBoards(user, board) {
     var array = eval(board);
     $('.power-up-panel').addClass('show');
     if (name != user) {
-        console.log("zjbala");
-        console.log(array);
         $("#enemy-board .board-tile").css('background-color', '');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
@@ -214,8 +220,6 @@ function printBoards(user, board) {
         }
     }
     else {
-        console.log("veikzasine");
-        console.log(array);
         $("#your-board .board-tile").css('background-color', '');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
@@ -313,10 +317,11 @@ function handleWinningScreen(user) {
     }
     console.log(name, user);
 }
-function handleDamageCount(damageCount) {
-    $('#shotCount').text(damageCount);
-}
-function handleCurrentDamageCount(currentDamageCount) {
-    $('#currentShotCount').text(currentDamageCount);
-}
+$('.console-submit').on("click", function () {
+    let text = $('.console-text');
+    let value = text.val();
+    consoleWrite(value);
+    text.val("");
+    
+});
 //# sourceMappingURL=app.js.map
