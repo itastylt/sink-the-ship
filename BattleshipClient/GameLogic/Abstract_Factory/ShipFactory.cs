@@ -7,4 +7,6 @@
         IShip CreateSubmarine(int x, int y);
         IShip CreateDestroyer(int x, int y);
     }
+
+
 }

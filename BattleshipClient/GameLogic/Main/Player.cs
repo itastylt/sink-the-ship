@@ -4,7 +4,7 @@ using BattleshipClient.GameLogic.Factory;
 /// <summary>
 /// Player's class
 /// </summary>
-public class Player : IObserver
+public class Player : IObserver, ICloneable
 {
     public string Name { get; set; }
     private ShipsBoard ShipsBoard { get; set; }
@@ -124,4 +124,8 @@ public class Player : IObserver
         return this.Name.Equals(name);
     }
 
+    public object Clone()
+    {
+        return this;
+    }
 }
