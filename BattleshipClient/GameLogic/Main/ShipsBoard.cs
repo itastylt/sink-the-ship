@@ -143,8 +143,18 @@ public class ShipsBoard
             int[] coords = GetAvailableCoordinate();
             Board[coords[1], coords[0]] = 5;
         }
+    }
 
-        PrintBoard();
+    public void PlaceIslands()
+    {
+        GameSettings settings = GameSettings.GetInstance();
+        int islandCount = settings.IslandCount;
+
+        for (int i = 0; i < islandCount; i++)
+        {
+            int[] coords = GetAvailableCoordinate();
+            Board[coords[1], coords[0]] = 6;
+        }
     }
 
     public void PlaceShip(IShip ship)
