@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X7LfFH559HdfNgNNPblWbGB2J0P0RFiWWS+sc7GxZh8=",
+  "Hash": "kp9922hNTbem2oXlqbWJqZu2diANEOPBco2zYmbe7dw=",
   "Source": "BattleshipClient",
   "BasePath": "_content/BattleshipClient",
   "Mode": "Default",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\unfire.png"
+    },
+    {
+      "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unpause.png",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\",
+      "BasePath": "_content/BattleshipClient",
+      "RelativePath": "img/unpause.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\unpause.png"
     },
     {
       "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unscope.png",

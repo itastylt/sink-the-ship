@@ -1,4 +1,5 @@
-﻿using BattleshipClient.GameLogic.Memento;
+﻿using BattleshipClient.GameLogic.Invokers;
+using BattleshipClient.GameLogic.Memento;
 using BattleshipClient.GameLogic.State;
 using BattleshipClient.GameLogic.State.State_values;
 using System.Security.AccessControl;
@@ -51,8 +52,7 @@ public class ShipPlayers
 
     public static void ResumeGameState()
     {
-        GameState inGame = new InGameState();
-        gameState.setState(inGame);
+        gameState = new Game();
     }
 
     public static void SetPause()

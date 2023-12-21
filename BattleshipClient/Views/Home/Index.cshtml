@@ -10,17 +10,36 @@
 
     <br />
     <div class="power-up-panel-col">
-        <div class="power-up-icon console-button" onclick="pauseGame();">
+        <div class="power-up-icon console-button pause-button" onclick="pauseGame();">
+            <img src="/img/pause.png" />
+        </div>
+        <div class="power-up-icon console-button pause-current d-none" onclick="unpauseGame();">
             <img src="/img/pause.png" />
         </div>
     </div>
 </div>
+
 <div class="pause-modal d-none">
     <div class="pause-wrapper">
-        <h6>Do you want to pause the game</h6>
-        <div class="d-flex flex-no-wrap w-100 justify-content-center align-items-center">
-            <input type="button" class="btn btn-success mx-2 game-pause" onclick="confirmPause();" value="Yes" />
-            <input type="button" class="btn btn-danger  mx-2 game-nopause" onclick="denyPause();" value="No" />
+        <div class="pause-popup d-none">
+            <h6>Do you want to pause the game</h6>
+            <div class="d-flex flex-no-wrap w-100 justify-content-center align-items-center">
+                <input type="button" class="btn btn-success mx-2 game-pause" onclick="confirmPause();" value="Yes" />
+                <input type="button" class="btn btn-danger  mx-2 game-nopause" onclick="denyPause();" value="No" />
+            </div>
+        </div>
+        <div class="unpause-popup d-none">
+            <h6>Do you want to pause the game</h6>
+            <div class="d-flex flex-no-wrap w-100 justify-content-center align-items-center">
+                <input type="button" class="btn btn-success mx-2 game-pause" onclick="confirmUnpause();" value="Yes" />
+                <input type="button" class="btn btn-danger  mx-2 game-nopause" onclick="denyUnpause();" value="No" />
+            </div>
+        </div>
+        <div class="pause-waiting">
+            <h6>Waiting for other player to accept...</h6>
+        </div>
+        <div class="pause-current d-none">
+            <h6>Game paused</h6>
         </div>
     </div>
 </div>
@@ -34,14 +53,14 @@
         <div class="console-content">&nbsp;</div>
         <div class="console-input">
             <input type="text" class="console-text" name="console-text" placeholder="Enter command" />
-            <input type="button" class="console-submit" value="Submit" name="submit" />
+            <input type="button" class="console-submit" value="Submit" onclick="sendMessage()" name="submit" />
         </div>
     </div>
 </div>
 
 <div class="text-center hide-on-join">
     <div class="row align-items-center justify-content-center">
-        <div class="form-row " style="width: unset !important" >
+        <div class="form-row " style="width: unset !important">
             <input type="text" id="nameText" class="form-input" placeholder="Enter your name" />
             <input type="hidden" id="name" value="" />
         </div>

@@ -100,7 +100,7 @@ function randomizeShips() {
     $('#name').val(user);
     handleSplashScreen(true);
 
-    connection.invoke("SendMessage", user , `randomize;`).catch(function (err) {
+    connection.invoke("SendMessage", user, `randomize;`).catch(function (err) {
         return console.error(err.toString());
     });
 }
@@ -166,27 +166,73 @@ function sinkShip(x, y) {
 
 }
 
+let pauser = false;
 
 function pauseGame() {
     $('.pause-modal').removeClass('d-none');
+    var user = $("#name").val();
+
+    pauser = true;
+    connection.invoke("SendMessage", user, `waitingForPause;1`).catch(function (err) {
+        return console.error(err.toString());
+    });
+
 }
-function denyPause() {
+
+connection.on("WaitingForPause", function (user, message) {
+    console.log(pauser);
+    if (!pauser) {
+        $('.pause-popup').removeClass('d-none');
+        $('.pause-waiting').addClass('d-none');
+        $('.pause-modal').removeClass('d-none');
+    }
+    pauser = false;
+});
+
+connection.on("Pause", function (user, message) {
+    $('.pause-popup').addClass('d-none');
+    $('.pause-waiting').addClass('d-none');
+    $('.pause-current').removeClass('d-none');
+
+});
+connection.on("GameResumed", function (user, message) {
+    $('.pause-popup').addClass('d-none');
+    $('.pause-waiting').removeClass('d-none');
     $('.pause-modal').addClass('d-none');
+});
+
+function denyPause() {
+    var user = $("#name").val();
+    connection.invoke("SendMessage", user, `waitingForPause;3`).catch(function (err) {
+        return console.error(err.toString());
+    });
 }
 
 function confirmPause() {
-    $('.pause-modal').removeClass('d-none');
+    var user = $("#name").val();
+    connection.invoke("SendMessage", user, `waitingForPause;2`).catch(function (err) {
+        return console.error(err.toString());
+    });
 }
 function cloneShip() {
     var user = document.getElementById("nameText").value;
 
     $('#powerUpClone').addClass("d-none");
     $('#powerUpUnclone').removeClass("d-none");
-    connection.invoke("SendMessage", user, 'cloneShip; ').catch (function (err) {
+    connection.invoke("SendMessage", user, 'cloneShip; ').catch(function (err) {
         return console.error(err.toString());
     });
 }
+function sendMessage() {
+    var user = $("#name").val();
 
+    var message = $(".console-text").val();
+    consoleWrite(message);
+    connection.invoke("SendMessage", user, 'interpret;' + message).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+}
 function unCloneShip() {
     var user = document.getElementById("nameText").value;
     $('.power-up-unclone').addClass("disabled");

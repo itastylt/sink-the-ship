@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\img\\unfire.png"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unpause.png",
+      "PackagePath": "staticwebassets\\img\\unpause.png"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unscope.png",
       "PackagePath": "staticwebassets\\img\\unscope.png"
     },

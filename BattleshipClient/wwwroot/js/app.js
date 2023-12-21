@@ -17,6 +17,7 @@ function domReady(cb) {
         });
     }
 }
+
 function generateYourBoard() {
     console.log('generating');
     var boardDOM = document.getElementById('your-board');

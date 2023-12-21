@@ -14,11 +14,7 @@
         {
             foreach (var collegue in collegues)
             {
-                if (sender == collegue)
-                {
-                    continue;
-                }
-                sender.receiveMessage(msg);
+                collegue.receiveMessage(msg);
             }
         }
     }

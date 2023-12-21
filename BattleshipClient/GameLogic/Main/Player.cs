@@ -145,6 +145,6 @@ public class Player : Collegue, IObserver, ICloneable
 
     public override void receiveMessage(string msg)
     {
-        throw new NotImplementedException();
+        return;
     }
 }
