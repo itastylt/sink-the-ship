@@ -1,5 +1,6 @@
 ﻿using BattleshipClient.GameLogic.Memento;
 using BattleshipClient.GameLogic.State;
+using BattleshipClient.GameLogic.State.State_values;
 using System.Security.AccessControl;
 
 /// <summary>
@@ -48,6 +49,11 @@ public class ShipPlayers
         gameState.getState().getNextState(gameState);
     }
 
+    public static void endGameState()
+    {
+        GameState endState = new GameEndedState();
+        gameState.setState(endState);
+    }
 
     public static void UpdatePlayer(string updateName, Player update)
     {

@@ -5,24 +5,22 @@ namespace BattleshipClient.GameLogic.State
     public class StateController
     {
 
-        GameState defaultState = new DefaultState();
         GameState waitingState = new WaitingState();
         GameState inGameState = new InGameState();
-        GameState gameEndedState = new GameEndedState();
         GameState pauseGameState = new PauseState();
+        GameState waitingToUnpause = new UnpauseWaitingState();
 
-        public StateController() 
+        public StateController()
         {
-            defaultState.setNextState(waitingState);
-            waitingState.setNextState(inGameState);
-            inGameState.setNextState(pauseGameState);
-            pauseGameState.setNextState(gameEndedState);
-            gameEndedState.setNextState(defaultState);
+            inGameState.setNextState(waitingState);
+            waitingState.setNextState(pauseGameState);
+            pauseGameState.setNextState(waitingToUnpause);
+            waitingToUnpause.setNextState(inGameState);
         }
 
         public GameState getInitialState()
         {
-            return defaultState;
+            return inGameState;
         }
 
     }

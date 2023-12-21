@@ -21,6 +21,15 @@ public class ShipHub : Hub
         CloneShip cloneShipCommand = new CloneShip(user,this);
         NextRound nextRound = new NextRound(messageArgs, user, this);
 
+        //State commands
+        WaitingForPause waitingForPause = new WaitingForPause(user,messageArgs,this);
+        GameUnpaused gameUnpaused = new GameUnpaused(user,messageArgs,this);
+        GamePaused gamePaused = new GamePaused(user,this);
+        WaitingForUnpause waitingForUnpause = new WaitingForUnpause(user,messageArgs,this);
+
+
+
+
         switch (messageType)
         {
             case "ready":
@@ -53,11 +62,19 @@ public class ShipHub : Hub
             case "unCloneShip":
                 cloneShipCommand.undoAsync();
                 break;
+            // State messages
             case "waitingForPause":
-                ShipPlayers.UpdateState();
+                waitingForPause.execute();
+                break;
+            case "gameWaitingUnpaused":
+                waitingForUnpause.execute();
                 break;
             case "gamePaused":
-                ShipPlayers.UpdateState();
+                gamePaused.execute();
+                break;
+            case "unpausedGame":
+                gameUnpaused.execute();
+                break;
             case "nextRound":
                 nextRound.execute();        
                 break;
