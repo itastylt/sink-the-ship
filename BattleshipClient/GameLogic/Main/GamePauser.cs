@@ -45,10 +45,10 @@ namespace BattleshipClient.GameLogic.Main
                 ShipPlayers.SetPause();
                 await hub.Clients.All.SendAsync("GamePaused");
             } 
-            else if (msg == "UnPauseWaiting")
+            else if (msg == "WaitingForUnPause")
             {
                 ShipPlayers.SetWaiting();
-                await hub.Clients.All.SendAsync("Waiting");
+                await hub.Clients.All.SendAsync("WaitingForUnpause");
             } 
             else if (msg == "UnPause")
             {

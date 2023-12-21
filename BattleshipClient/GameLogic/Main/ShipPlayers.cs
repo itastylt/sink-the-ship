@@ -25,6 +25,8 @@ public class ShipPlayers
     private static Stack<ShipPlayersMemento> mementoStack = new Stack<ShipPlayersMemento>();
 
     private static Game gameState = new Game();
+    private static Game lastGame = gameState;
+
 
     // Method for getting object instance
     public static ShipPlayers Instance
@@ -47,6 +49,7 @@ public class ShipPlayers
 
     public static void UpdateState()
     {
+        lastGame = gameState;
         gameState.getState().getNextState(gameState);
     }
 
@@ -57,8 +60,7 @@ public class ShipPlayers
 
     public static void SetPause()
     {
-        GameState Paused = new PauseState();
-        gameState.setState(Paused);
+        gameState = lastGame;
     }
 
     public static void SetWaiting()

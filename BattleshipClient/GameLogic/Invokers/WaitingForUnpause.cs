@@ -10,10 +10,10 @@ namespace BattleshipClient.GameLogic.Invokers
         int number;
         string user;
 
-        public WaitingForUnpause(string user, string number, ShipHub hub)
+        public WaitingForUnpause(string user, int number, ShipHub hub)
         {
             _hub = hub;
-            number = number;
+            this.number = number;
             this.user = user;
         }
 

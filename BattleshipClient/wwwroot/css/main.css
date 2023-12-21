@@ -329,6 +329,7 @@ div.ship-selector:hover {
     position: fixed;
     top: 7vh;
     left: 3vw;
+    z-index: 99;
 }
 
 .console-wrapper {

@@ -178,6 +178,58 @@ function pauseGame() {
     });
 
 }
+function unpauseGame() {
+    var user = $("#name").val();
+    $('.pause-popup').removeClass('d-none');
+    $('.pause-waiting').removeClass('d-none');
+    $('.pause-popup').addClass('d-none');
+    $('.pause-current').addClass('d-none');
+    $('.pause.button').removeClass('d-none');
+
+    connection.invoke("SendMessage", user, `gameWaitingUnpaused;1`).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    pauser = true;
+}
+
+function confirmUnpause() {
+    var user = $("#name").val();
+    connection.invoke("SendMessage", user, `gameWaitingUnpaused;2`).catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+function denyUnpause() {
+    var user = $("#name").val();
+    connection.invoke("SendMessage", user, `gameWaitingUnpaused;3`).catch(function (err) {
+        return console.error(err.toString());
+    });
+}
+connection.on("InGame", function (user, message) {
+    $('.pause-modal').addClass('d-none');
+    $('.unpause-popup').addClass('d-none');
+    $('.pause-waiting').addClass('d-none');
+    $('.pause-current').addClass('d-none');
+    $('.pause-button').removeClass('d-none');
+});
+
+connection.on("GamePaused", function (user, message) {
+    $('.pause-popup').addClass('d-none');
+    $('.pause-waiting').addClass('d-none');
+    $('.pause-current').removeClass('d-none');
+    $('.pause.button').addClass('d-none');
+    $('.unpause-popup').addClass('d-none');
+});
+
+connection.on("WaitingForUnpause", function (user, message) {
+    if (!pauser) {
+        $('.unpause-popup').removeClass('d-none');
+        $('.pause-waiting').addClass('d-none');
+        $('.pause-current').addClass('d-none');
+        $('.pause-modal').removeClass('d-none');
+    }
+    pauser = false;
+});
 
 connection.on("WaitingForPause", function (user, message) {
     console.log(pauser);
@@ -193,7 +245,7 @@ connection.on("Pause", function (user, message) {
     $('.pause-popup').addClass('d-none');
     $('.pause-waiting').addClass('d-none');
     $('.pause-current').removeClass('d-none');
-
+    $('.pause-button').addClass('d-none');
 });
 connection.on("GameResumed", function (user, message) {
     $('.pause-popup').addClass('d-none');

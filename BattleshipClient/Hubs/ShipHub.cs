@@ -60,7 +60,7 @@ public class ShipHub : Hub
                 waitingForPause.execute();
                 break;
             case "gameWaitingUnpaused":
-                WaitingForUnpause waitingForUnpause = new WaitingForUnpause(user, messageArgs, this);
+                WaitingForUnpause waitingForUnpause = new WaitingForUnpause(user, int.Parse(messageArgs), this);
                 waitingForUnpause.execute();
                 break;
             case "nextRound":
