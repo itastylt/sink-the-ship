@@ -1,4 +1,5 @@
 ﻿using BattleshipClient.GameLogic.Memento;
+using BattleshipClient.GameLogic.State;
 using System.Security.AccessControl;
 
 /// <summary>
@@ -19,6 +20,8 @@ public class ShipPlayers
 
     private static Stack<ShipPlayersMemento> mementoStack = new Stack<ShipPlayersMemento>();
 
+    private static Game gameState = new Game();
+
     // Method for getting object instance
     public static ShipPlayers Instance
     {
@@ -37,6 +40,12 @@ public class ShipPlayers
             return _instance;
         }
     }
+
+    public static void UpdateState()
+    {
+        gameState.getState().getNextState(gameState);
+    }
+
 
     public static void UpdatePlayer(string updateName, Player update)
     {

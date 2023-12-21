@@ -13,8 +13,9 @@
 
         public GameState operate()
         { 
-            currentState.getNextState(this);
             currentState.stateOperation();
+            currentState.getNextState(this);
+            
             return currentState;
         }
 

@@ -99,3 +99,15 @@ C:\Users\arman\OneDrive\Stalinis kompiuteris\oop\sink-the-ship\BattleshipClient\
 C:\Users\arman\OneDrive\Stalinis kompiuteris\oop\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.csproj.CopyComplete
 C:\Users\arman\OneDrive\Stalinis kompiuteris\oop\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.genruntimeconfig.cache
 C:\Users\arman\OneDrive\Stalinis kompiuteris\oop\sink-the-ship\BattleshipClient\obj\Debug\net7.0\ref\BattleshipClient.dll
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.csproj.AssemblyReference.cache
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.AssemblyInfoInputs.cache
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.AssemblyInfo.cs
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.csproj.CoreCompileInputs.cache
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.RazorAssemblyInfo.cache
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.RazorAssemblyInfo.cs
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.sourcelink.json
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.dll
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\refint\BattleshipClient.dll
+C:\Users\Paulius\Source\Repos\sink-the-ship\BattleshipClient\obj\Debug\net7.0\BattleshipClient.pdb

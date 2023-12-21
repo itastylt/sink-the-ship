@@ -53,6 +53,12 @@ public class ShipHub : Hub
             case "unCloneShip":
                 cloneShipCommand.undoAsync();
                 break;
+            case "waitingForPause":
+                ShipPlayers.UpdateState();
+                break;
+            case "gamePaused":
+                ShipPlayers.UpdateState();
+                break;
             default:
                 break;
         }
