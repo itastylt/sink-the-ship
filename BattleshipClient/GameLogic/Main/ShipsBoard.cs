@@ -22,7 +22,7 @@ public class ShipsBoard
     public ShipsBoard()
     {
         GameSettings settings = GameSettings.GetInstance();
-        this.Board = new int[settings.BoardSize, settings.BoardSize];
+        this.Board = new int[GameSettings.BoardSize, GameSettings.BoardSize];
         allShips = new List<IShip>();
         shipGroup = new ShipGroup();
     }
@@ -46,7 +46,7 @@ public class ShipsBoard
     public bool isAValidTarget(int x, int y)
     {
         GameSettings settings = GameSettings.GetInstance();
-        int boardSize = settings.BoardSize;
+        int boardSize = GameSettings.BoardSize;
 
         if (x >= boardSize || y >= boardSize || x < 0 || y < 0)
         {
@@ -119,7 +119,7 @@ public class ShipsBoard
     public void PlaceLandMines()
     {
         GameSettings settings = GameSettings.GetInstance();
-        int mineCount = settings.MineCount;
+        int mineCount = GameSettings.MineCount;
 
         for (int i = 0; i < mineCount; i++)
         {
@@ -131,7 +131,7 @@ public class ShipsBoard
     public void PlaceIslands()
     {
         GameSettings settings = GameSettings.GetInstance();
-        int islandCount = settings.IslandCount;
+        int islandCount = GameSettings.IslandCount;
 
         for (int i = 0; i < islandCount; i++)
         {

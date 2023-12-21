@@ -106,6 +106,9 @@ public class ReadyFacade
             Player luckyPlayer = players.ElementAt(random_number);
             luckyPlayer.SetState(true);
             ShipPlayers.UpdatePlayer(luckyPlayer.Name, luckyPlayer);
+            
+            ShipPlayers.UpdateCurrentRoundChain();
+
             foreach (var online in players)
             {
                 await this.Hub.Clients.All.SendAsync("StartGame", luckyPlayer.Name, online.Name + ";" + online.GetShipsBoard().ToString() + ";" + luckyPlayer.Name);

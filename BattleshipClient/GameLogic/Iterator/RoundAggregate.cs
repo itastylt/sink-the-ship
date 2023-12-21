@@ -17,11 +17,16 @@
 
     public Round GetRound(int index)
     {
-        if (MAX_ROUNDS > index)
+        if (index > MAX_ROUNDS)
         {
             throw new Exception("Invalid round specified");
         }
 
         return this.Rounds[index];
+    }
+
+    public RoundIterator GetRoundIterator()
+    {
+        return new RoundIterator(this);
     }
 }

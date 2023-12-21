@@ -19,7 +19,7 @@ public class ShipHub : Hub
         FireWeapon fireWeaponCommand = new FireWeapon(messageArgs, message, user,this);
         FireGroup fireGroupCommand = new FireGroup(messageArgs, message, user, this);
         CloneShip cloneShipCommand = new CloneShip(user,this);
-
+        NextRound nextRound = new NextRound(messageArgs, user, this);
 
         switch (messageType)
         {
@@ -58,6 +58,8 @@ public class ShipHub : Hub
                 break;
             case "gamePaused":
                 ShipPlayers.UpdateState();
+            case "nextRound":
+                nextRound.execute();        
                 break;
             default:
                 break;

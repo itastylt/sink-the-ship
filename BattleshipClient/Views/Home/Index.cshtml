@@ -1,9 +1,27 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="power-up-panel-col console-container">
-    <div class="power-up-icon console-button" onclick="openConsole();">
-        <img src="/img/console.png" />
+<div class=" console-container show-on-join d-flex flex-wrap">
+    <div class="power-up-panel-col">
+        <div class="power-up-icon console-button" onclick="openConsole();">
+            <img src="/img/console.png" />
+        </div>
+    </div>
+
+    <br />
+    <div class="power-up-panel-col">
+        <div class="power-up-icon console-button" onclick="pauseGame();">
+            <img src="/img/pause.png" />
+        </div>
+    </div>
+</div>
+<div class="pause-modal d-none">
+    <div class="pause-wrapper">
+        <h6>Do you want to pause the game</h6>
+        <div class="d-flex flex-no-wrap w-100 justify-content-center align-items-center">
+            <input type="button" class="btn btn-success mx-2 game-pause" onclick="confirmPause();" value="Yes" />
+            <input type="button" class="btn btn-danger  mx-2 game-nopause" onclick="denyPause();" value="No" />
+        </div>
     </div>
 </div>
 <div class="console-modal d-none">
@@ -49,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="hide-on-join" style="margin-top: 30px;">
+    <div class="hide-on-join  show-on-round" style="margin-top: 30px;">
         <div class="panel-col">
             <div class="panel-title">
                 <h5>Select your ship:</h5>
@@ -60,7 +78,7 @@
 
     </div>
 
-    <div style="margin-top: 30px;" class="hide-on-join">
+    <div style="margin-top: 30px;" class="hide-on-join show-on-round">
         <input type="button" class="button btn-success" id="startButton" onclick="handleSplashScreen(true)" value="Ready!" />
     </div>
 </div>

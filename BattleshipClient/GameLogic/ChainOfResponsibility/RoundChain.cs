@@ -2,5 +2,5 @@
 {
     public abstract void ExecuteRound(string name1, string name2);
 
-    public abstract RoundChain SetNextChain(); 
+    public abstract void SetNextChain(); 
 }

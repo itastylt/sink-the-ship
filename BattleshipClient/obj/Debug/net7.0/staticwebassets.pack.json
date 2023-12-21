@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\BattleshipClient.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\app.js.map",
+      "PackagePath": "staticwebassets\\app.js.map"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
@@ -37,6 +45,10 @@
       "PackagePath": "staticwebassets\\img\\game.png"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\pause.png",
+      "PackagePath": "staticwebassets\\img\\pause.png"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\quick.png",
       "PackagePath": "staticwebassets\\img\\quick.png"
     },
@@ -59,14 +71,6 @@
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unscope.png",
       "PackagePath": "staticwebassets\\img\\unscope.png"
-    },
-    {
-      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\app.js",
-      "PackagePath": "staticwebassets\\js\\app.js"
-    },
-    {
-      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\app.js.map",
-      "PackagePath": "staticwebassets\\js\\app.js.map"
     },
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\js\\connection.js",

@@ -1,5 +1,13 @@
-﻿let boardSize = [8, 8];
+﻿let boardSize = [10, 10];
 let placedShips = [];
+let round = 1;
+
+function consoleWrite(message) {
+    var consoleElem = $('.console-content');
+    console.log("testas");
+    var dom = "<div class=\"console-row\">".concat(message, "</div>");
+    consoleElem.append(dom);
+}
 
 function domReady(cb: Function): void {
     if (document.readyState === "complete" || document.readyState === "interactive") {
@@ -214,14 +222,13 @@ function placedShipsAsString() {
     return string;
 }
 function handleSplashScreen(state: boolean) {
-    console.log(state);
+
     if (state == true) {
-        console.log(state);
         $(".hide-on-join").addClass("d-none");
     } else {
         $(".hide-on-join").removeClass("d-none");
     }
-    console.log($('.hide-on-join'));
+
     $('.ready-screen-wrapper').slideToggle("slow");
 
 }
@@ -253,8 +260,6 @@ function printBoards(user: string, board) {
     $('.power-up-panel').addClass('show');
 
     if (name != user) {
-        console.log("zjbala");
-        console.log(array);
         $(`#enemy-board .board-tile`).css('background-color', '');
         for (let i = 0; i < array.length; i++) {
             for (let j = 0; j < array[0].length; j++) {
@@ -276,6 +281,13 @@ function printBoards(user: string, board) {
                         $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `blue`);
                         break;
                     }
+                    case 5: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `black`);
+                        break;
+                    }
+                    case 6: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `yellow`);
+                    }
                     case -99: {
                         $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `#938F92`);
                         break;
@@ -296,12 +308,15 @@ function printBoards(user: string, board) {
                         $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `#C4F4FF`);
                         break;
                     }
+                    case -6: {
+                        $(`#enemy-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `#ECFDA2`);
+                        break;
+                    }
+
                 }
             }
         }
     } else {
-        console.log("veikzasine");
-        console.log(array);
         $(`#your-board .board-tile`).css('background-color', '');
         for (let i = 0; i < array.length; i++) {
             for (let j = 0; j < array[0].length; j++) {
@@ -323,6 +338,14 @@ function printBoards(user: string, board) {
                         $(`#your-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `blue`);
                         break;
                     }
+                    case 5: {
+                        $(`#your-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `black`);
+                        break;
+                    }
+                    case 6: {
+                        $(`#your-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `yellow`);
+                        break;
+                    }
                     case -99: {
                         $(`#your-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `#938F92`);
                         break;
@@ -341,6 +364,10 @@ function printBoards(user: string, board) {
                     }
                     case -4: {
                         $(`#your-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `#C4F4FF`);
+                        break;
+                    }
+                    case -6: {
+                        $(`#your-board .board-tile[data-x='${j}'][data-y='${i}']`).css(`background-color`, `#ECFDA2`);
                         break;
                     }
                 }
@@ -395,29 +422,41 @@ function handleCannonBoard() {
     $(`#cannon-${selectedCannon}`).addClass('cannon-active');
 }
 
-function handleWinningScreen(user: string) {
+function handleRound() {
+    $('.show-on-join').removeClass('d-none');
+}
+function handleRoundScreen(user: string) {
+    round++;
     let name = $("#name").val();
+    let yourDOM = document.getElementById('your-board');
+    let enemyDOM = document.getElementById('enemy-board');
+    yourDOM.innerHTML = "";
+    enemyDOM.innerHTML = "";
 
-    if (name != user) {
-        $(".turn-screen-title").text(`Enemy (${user}) wins!`);
-        let wrapper = $('.turn-screen-wrapper');
-
-        if (wrapper.is('.turn-hide')) {
-            wrapper.removeClass('turn-hide');
-        }
-        wrapper.toggleClass('turn-show');
-    } else {
-        $(".turn-screen-title").text(`You (${user}) win!`);
-        let wrapper = $('.turn-screen-wrapper');
-
-        if (wrapper.is('.turn-hide')) {
-            wrapper.removeClass('turn-hide');
-        }
-        wrapper.toggleClass('turn-show');
+    if (round == 2) {
+        boardSize = [12, 12];
+    } else if (round == 3) {
+        boardSize = [13, 13];
     }
 
-    console.log(name, user);
+    generateYourBoard();
+    generateEnemyBoard();
+    placedShips = [];
+    $(".round-screen-title").text(`Round ${round}`);
+    let wrapper = $('.round-screen-wrapper');
+    $('.show-on-round').removeClass('d-none');
+    $('.show-on-join').addClass('d-none');
+    $('.ship-selector').attr("style", "");
+    
+
+    if (wrapper.is('.round-hide')) {
+        wrapper.removeClass('round-hide');
+    }
+
+    wrapper.toggleClass('round-show');
+    setTimeout(() => { wrapper.toggleClass('round-show'); }, 2000);
 }
+
 function handleDamageCount(damageCount: string) {
     $('#shotCount').text(damageCount);
 }

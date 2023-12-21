@@ -1,5 +1,12 @@
-var boardSize = [8, 8];
+var boardSize = [10, 10];
 var placedShips = [];
+var round = 1;
+function consoleWrite(message) {
+    var consoleElem = $('.console-content');
+    console.log("testas");
+    var dom = "<div class=\"console-row\">".concat(message, "</div>");
+    consoleElem.append(dom);
+}
 function domReady(cb) {
     if (document.readyState === "complete" || document.readyState === "interactive") {
         cb();
@@ -136,15 +143,12 @@ function placedShipsAsString() {
     return string;
 }
 function handleSplashScreen(state) {
-    console.log(state);
     if (state == true) {
-        console.log(state);
         $(".hide-on-join").addClass("d-none");
     }
     else {
         $(".hide-on-join").removeClass("d-none");
     }
-    console.log($('.hide-on-join'));
     $('.ready-screen-wrapper').slideToggle("slow");
 }
 function handleTurnScreen(player) {
@@ -167,8 +171,6 @@ function printBoards(user, board) {
     var array = eval(board);
     $('.power-up-panel').addClass('show');
     if (name != user) {
-        console.log("zjbala");
-        console.log(array);
         $("#enemy-board .board-tile").css('background-color', '');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
@@ -188,6 +190,13 @@ function printBoards(user, board) {
                     case 4: {
                         $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "blue");
                         break;
+                    }
+                    case 5: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "black");
+                        break;
+                    }
+                    case 6: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "yellow");
                     }
                     case -99: {
                         $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#938F92");
@@ -209,13 +218,15 @@ function printBoards(user, board) {
                         $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#C4F4FF");
                         break;
                     }
+                    case -6: {
+                        $("#enemy-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#ECFDA2");
+                        break;
+                    }
                 }
             }
         }
     }
     else {
-        console.log("veikzasine");
-        console.log(array);
         $("#your-board .board-tile").css('background-color', '');
         for (var i = 0; i < array.length; i++) {
             for (var j = 0; j < array[0].length; j++) {
@@ -237,6 +248,14 @@ function printBoards(user, board) {
                         $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "blue");
                         break;
                     }
+                    case 5: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "black");
+                        break;
+                    }
+                    case 6: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "yellow");
+                        break;
+                    }
                     case -99: {
                         $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#938F92");
                         break;
@@ -255,6 +274,10 @@ function printBoards(user, board) {
                     }
                     case -4: {
                         $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#C4F4FF");
+                        break;
+                    }
+                    case -6: {
+                        $("#your-board .board-tile[data-x='".concat(j, "'][data-y='").concat(i, "']")).css("background-color", "#ECFDA2");
                         break;
                     }
                 }
@@ -293,25 +316,35 @@ function handleCannonBoard() {
     $(".ship-selector").removeClass('cannon-active');
     $("#cannon-".concat(selectedCannon)).addClass('cannon-active');
 }
-function handleWinningScreen(user) {
+function handleRound() {
+    $('.show-on-join').removeClass('d-none');
+}
+function handleRoundScreen(user) {
+    round++;
     var name = $("#name").val();
-    if (name != user) {
-        $(".turn-screen-title").text("Enemy (".concat(user, ") wins!"));
-        var wrapper = $('.turn-screen-wrapper');
-        if (wrapper.is('.turn-hide')) {
-            wrapper.removeClass('turn-hide');
-        }
-        wrapper.toggleClass('turn-show');
+    var yourDOM = document.getElementById('your-board');
+    var enemyDOM = document.getElementById('enemy-board');
+    yourDOM.innerHTML = "";
+    enemyDOM.innerHTML = "";
+    if (round == 2) {
+        boardSize = [12, 12];
     }
-    else {
-        $(".turn-screen-title").text("You (".concat(user, ") win!"));
-        var wrapper = $('.turn-screen-wrapper');
-        if (wrapper.is('.turn-hide')) {
-            wrapper.removeClass('turn-hide');
-        }
-        wrapper.toggleClass('turn-show');
+    else if (round == 3) {
+        boardSize = [13, 13];
     }
-    console.log(name, user);
+    generateYourBoard();
+    generateEnemyBoard();
+    placedShips = [];
+    $(".round-screen-title").text("Round ".concat(round));
+    var wrapper = $('.round-screen-wrapper');
+    $('.show-on-round').removeClass('d-none');
+    $('.show-on-join').addClass('d-none');
+    $('.ship-selector').attr("style", "");
+    if (wrapper.is('.round-hide')) {
+        wrapper.removeClass('round-hide');
+    }
+    wrapper.toggleClass('round-show');
+    setTimeout(function () { wrapper.toggleClass('round-show'); }, 2000);
 }
 function handleDamageCount(damageCount) {
     $('#shotCount').text(damageCount);

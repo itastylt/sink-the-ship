@@ -17,6 +17,8 @@ public class ShipPlayers
     // Define private object instance of singleton and contructor 
     private static ShipPlayers _instance;
     private ShipPlayers() { }
+    private static int Count;
+    public static RoundChain _roundChain;
 
     private static Stack<ShipPlayersMemento> mementoStack = new Stack<ShipPlayersMemento>();
 
@@ -65,6 +67,10 @@ public class ShipPlayers
         SaveState();
     }
 
+    public static List<Player> GetPlayers()
+    {
+        return ShipPlayersList;
+    }
     private static void SaveState()
     {
         var memento = new ShipPlayersMemento(ShipPlayersList);
@@ -94,6 +100,7 @@ public class ShipPlayers
 
     public static void RemovePlayer(string playerName)
     {
+        Count--;
         ShipPlayersList.RemoveAll(x => x.Name == playerName);
         SaveState(); // Save state after removing a player
     }
@@ -155,5 +162,20 @@ public class ShipPlayers
             var memento = mementoStack.Pop();
             ShipPlayersList = memento.Players;
         }
+    }
+
+    public static bool IncreaseRoundState() {
+        Count++;
+        return Count % 2 == 0;
+    }
+    public static void UpdateCurrentRoundChain()
+    {
+        if (_roundChain == null)
+            _roundChain = new FirstRoundChain(new RoundAggregate(ShipPlayersList[0], ShipPlayersList[1]).GetRoundIterator());
+        else
+            _roundChain.SetNextChain();
+        
+        _roundChain.ExecuteRound(ShipPlayersList[0].Name, ShipPlayersList[1].Name);
+        SaveState();
     }
 }

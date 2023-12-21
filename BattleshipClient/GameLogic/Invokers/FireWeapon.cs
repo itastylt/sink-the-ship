@@ -54,7 +54,8 @@ namespace BattleshipClient.GameLogic.Invokers
 
                 if (opponent_player.GetShipsBoard().BoardEnd())
                 {
-                    await _hub.Clients.All.SendAsync("WinnerGame", current_player.Name, current_player.Name + ";");
+                    await _hub.Clients.All.SendAsync("RoundEnd", current_player.Name, current_player.Name + ";");
+                    ShipPlayers.UpdateCurrentRoundChain();
                 }
                 else
                 {

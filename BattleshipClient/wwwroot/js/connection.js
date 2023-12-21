@@ -14,13 +14,10 @@ connection.on("UnScope", function (user, message) {
     }
 });
 
-connection.on("WinnerGame", function (user, message) {
-    console.log("GameEnd", user);
-
-    var player = document.getElementById("nameText").value;
-    handleWinningScreen(user);
-
+connection.on("RoundEnd", function (user, message) {
+    handleRoundScreen(user);
 });
+
 connection.on("UnClonedBoard", function (user, message) {
     console.log(user, message);
 
@@ -60,6 +57,21 @@ connection.on("StartGame", function (user, message) {
     }
 
 });
+
+connection.on("Continue", function (user, message) {
+    let currUser = document.getElementById("name").value;
+    let player = message.split(';')[0];
+    let board = message.split(';')[1];
+    printBoards(player, board);
+    handleShowOnStart();
+    handleRound();
+
+    if (currUser == player) {
+        handleSplashScreen(true);
+    }
+
+});
+
 connection.on("FireShot", function (user, message) {
     console.log(user, message);
     let player = message.split(';')[0];
@@ -105,12 +117,19 @@ document.getElementById("cancelButton").addEventListener("click", function (even
 document.getElementById("startButton").addEventListener("click", function (event) {
     var user = document.getElementById("nameText").value;
     $('#name').val(user);
+    if (round == 1) {
+        var message = `ready;${placedShipsAsString()}`;
 
-    var message = `ready;${placedShipsAsString()}`;
+        connection.invoke("SendMessage", user, message).catch(function (err) {
+            return console.error(err.toString());
+        });
+    } else {
+        var message = `nextRound;${placedShipsAsString()}`;
+        connection.invoke("SendMessage", user, message).catch(function (err) {
+            return console.error(err.toString());
+        });
+    }
 
-    connection.invoke("SendMessage", user, message).catch(function (err) {
-        return console.error(err.toString());
-    });
 
     event.preventDefault();
 });
@@ -148,7 +167,16 @@ function sinkShip(x, y) {
 }
 
 
+function pauseGame() {
+    $('.pause-modal').removeClass('d-none');
+}
+function denyPause() {
+    $('.pause-modal').addClass('d-none');
+}
 
+function confirmPause() {
+    $('.pause-modal').removeClass('d-none');
+}
 function cloneShip() {
     var user = document.getElementById("nameText").value;
 

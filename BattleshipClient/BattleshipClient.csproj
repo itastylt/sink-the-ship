@@ -8,7 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\app.js" />
+    <Content Remove="wwwroot\js\app.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\app.js" />
+    <None Include="wwwroot\app.js.map" />
     <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\js\app.js" />
+    <None Include="wwwroot\js\app.js.map" />
   </ItemGroup>
 
   <ItemGroup>

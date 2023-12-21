@@ -13,20 +13,22 @@ public class SecondRoundChain : RoundChain
 
     public override void ExecuteRound(string name1, string name2)
     {
-        Current.GetPlayer(name1).SetShipsBoard(new ShipsBoard());
-        Current.GetPlayer(name2).SetShipsBoard(new ShipsBoard());
 
         GameSetupTemplate gameSetupTemplate = new NormalPlayMatch2Setup(this.Current.GetPlayer(name1).Name, this.Current.GetPlayer(name2).Name);
-        gameSetupTemplate.SetupGame(this.Current.GetPlayer(name1).Name, this.Current.GetPlayer(name2).Name);
+        gameSetupTemplate.SetupGame();
+        Current.GetPlayer(name1).SetShipsBoard(new ShipsBoard());
+        Current.GetPlayer(name2).SetShipsBoard(new ShipsBoard());
+        ShipPlayers.UpdatePlayer(name1, Current.GetPlayer(name1));
+        ShipPlayers.UpdatePlayer(name2, Current.GetPlayer(name2));
     }
 
-    public override RoundChain SetNextChain()
+    public override void SetNextChain()
     {
         if(this.RoundIterator.HasNext())
         {
             this.RoundIterator.Next();
         }
 
-        return new ThirdRoundChain(this.RoundIterator);
+        ShipPlayers._roundChain = new ThirdRoundChain(this.RoundIterator);
     }
 }
