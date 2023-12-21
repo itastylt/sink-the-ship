@@ -20,7 +20,7 @@ public class ShipHub : Hub
         FireGroup fireGroupCommand = new FireGroup(messageArgs, message, user, this);
         CloneShip cloneShipCommand = new CloneShip(user,this);
         NextRound nextRound = new NextRound(messageArgs, user, this);
-
+        Interpret interpret = new Interpret(messageArgs, user, this);
 
         switch (messageType)
         {
@@ -67,7 +67,7 @@ public class ShipHub : Hub
                 nextRound.execute();        
                 break;
             case "interpret":
-                nextRound.execute();
+                interpret.execute();
                 break;
             default:
                 break;

@@ -1,31 +1,50 @@
 ﻿
 using BattleshipClient.GameLogic.Invokers;
 
-public abstract class Expression
+public class ExpressionParser : AbstractExpression
 {
-    public void Interpret(Context context)
+    public ExpressionParser(ShipHub hub, string name) : base(hub, name)
+    {
+    }
+
+    public override void Interpret(Context context)
     {
         if (context == null) throw new ArgumentNullException("Context cannot be null");
-        else if (context.GetInput().Length == 0) {
+        else if (context.GetInput().Length == 0)
+        {
             return;
         }
-        
-        else if(context.GetInput().StartsWith("Random")) {
 
-            string name = context.GetInput().Split(' ')[1];
-            
-            if(name == null || name == " ")
-            {
-                context.SetOutput("Usage: Random <name>");
-            }
-            else
-            {
-                this.RandomCreate(name);
-                context.SetOutput(string.Format("Created random player {0}", name));
-            }
+        else if (context.GetInput().StartsWith("FireShot"))
+        {
+            FireShotExpression fireShotExpression = new FireShotExpression(this.Hub, this.Name);
+            fireShotExpression.Interpret(context);
         }
-        
+        else if (context.GetInput().StartsWith("Clone"))
+        {
+            CloneExpression cloneExpression = new CloneExpression(this.Hub, this.Name);
+            cloneExpression.Interpret(context);
+        }
+        else if (context.GetInput().StartsWith("SelectShip"))
+        {
+            SelectShipExpression selectShipExpression = new SelectShipExpression(this.Hub, this.Name);
+            selectShipExpression.Interpret(context);
+        }
+        else if (context.GetInput().StartsWith("UnselectShip"))
+        {
+            UnselectShipExpression unselectShipExpression = new UnselectShipExpression(this.Hub, this.Name);
+            unselectShipExpression.Interpret(context);
+        }
+        else
+        {
+            throw new Exception("Invalid Command");
+        }
+
 
     }
-    public abstract void RandomCreate(string name);
- }
+
+    public override string Interpret(Context context, int index)
+    {
+        throw new NotImplementedException();
+    }
+}
