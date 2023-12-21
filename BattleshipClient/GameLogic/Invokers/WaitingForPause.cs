@@ -1,4 +1,6 @@
 ﻿using BattleshipClient.GameLogic.Command;
+using BattleshipClient.GameLogic.Main;
+using BattleshipClient.GameLogic.Mediator;
 
 namespace BattleshipClient.GameLogic.Invokers
 {
@@ -7,25 +9,54 @@ namespace BattleshipClient.GameLogic.Invokers
 
         ShipHub _hub;
         int number;
+        string user;
 
-        public WaitingForPause(string user,string number, ShipHub hub) 
+        public WaitingForPause(string user,int number, ShipHub hub) 
         { 
             _hub = hub;
-            number = number;
+            this.number = number;
+            this.user = user;
         }
 
         public async void execute()
         {
             if (number == 1)
             {
-                ShipPlayers.UpdateState();
+                MediatorImpl m = new MediatorImpl();
+
+                GamePauser gamePauser = new GamePauser(m, "godas", _hub);
+                Player player = ShipPlayers.GetPlayer(user);
+                Player opponent = ShipPlayers.GetPlayerOpponent(user);
+
+                m.addUser(gamePauser);
+                m.addUser(player);
+                m.addUser(opponent);
+                m.broadcast(player, "WaitingForPause");
             }
             else if (number == 2)
             {
-                ShipPlayers.UpdateState();
+                MediatorImpl m = new MediatorImpl();
+
+                GamePauser gamePauser = new GamePauser(m, "godas", _hub);
+                Player player = ShipPlayers.GetPlayer(user);
+                Player opponent = ShipPlayers.GetPlayerOpponent(user);
+
+                m.addUser(gamePauser);
+                m.addUser(player);
+                m.addUser(opponent);
+                m.broadcast(player, "Pause");
             }
-            else { 
-                
+            else if(number == 3) {
+                MediatorImpl m = new MediatorImpl();
+
+                GamePauser gamePauser = new GamePauser(m, "godas", _hub);
+                Player player = ShipPlayers.GetPlayer(user);
+                Player opponent = ShipPlayers.GetPlayerOpponent(user);
+
+                m.addUser(gamePauser);
+                m.addUser(player);
+                m.addUser(opponent);
+                m.broadcast(player, "CancelPause");
             }
             
         }

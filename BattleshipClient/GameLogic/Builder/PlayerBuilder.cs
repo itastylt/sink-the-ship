@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BattleshipClient.GameLogic.Mediator;
+using System;
 using System.Collections.Generic;
 
 public class PlayerBuilder
@@ -14,7 +15,8 @@ public class PlayerBuilder
 
     public Player CreateRandomPlayer(string name)
     {
-        Player player = new Player(name);
+        MediatorImpl m = new MediatorImpl();
+        Player player = new Player(m,name);
         player.SetShipsBoard(shipsBoard);
         return player;
     }

@@ -22,7 +22,7 @@ public class ShipHub : Hub
         NextRound nextRound = new NextRound(messageArgs, user, this);
 
         //State commands
-        WaitingForPause waitingForPause = new WaitingForPause(user,messageArgs,this);
+        WaitingForPause waitingForPause = new WaitingForPause(user,int.Parse(messageArgs),this);
         GameUnpaused gameUnpaused = new GameUnpaused(user,messageArgs,this);
         GamePaused gamePaused = new GamePaused(user,this);
         WaitingForUnpause waitingForUnpause = new WaitingForUnpause(user,messageArgs,this);
@@ -68,12 +68,6 @@ public class ShipHub : Hub
                 break;
             case "gameWaitingUnpaused":
                 waitingForUnpause.execute();
-                break;
-            case "gamePaused":
-                gamePaused.execute();
-                break;
-            case "unpausedGame":
-                gameUnpaused.execute();
                 break;
             case "nextRound":
                 nextRound.execute();        

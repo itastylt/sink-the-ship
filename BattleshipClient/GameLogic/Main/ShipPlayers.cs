@@ -49,6 +49,24 @@ public class ShipPlayers
         gameState.getState().getNextState(gameState);
     }
 
+    public static void ResumeGameState()
+    {
+        GameState inGame = new InGameState();
+        gameState.setState(inGame);
+    }
+
+    public static void SetPause()
+    {
+        GameState Paused = new PauseState();
+        gameState.setState(Paused);
+    }
+
+    public static void SetWaiting()
+    {
+        GameState Waiting = new WaitingState();
+        gameState.setState(Waiting);
+    }
+
     public static void endGameState()
     {
         GameState endState = new GameEndedState();

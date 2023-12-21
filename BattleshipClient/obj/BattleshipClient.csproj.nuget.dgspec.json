@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Paulius\\Source\\Repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {}
+    "C:\\Users\\Paulius\\source\\repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paulius\\Source\\Repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {
+    "C:\\Users\\Paulius\\source\\repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paulius\\Source\\Repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
+        "projectUniqueName": "C:\\Users\\Paulius\\source\\repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
         "projectName": "BattleshipClient",
-        "projectPath": "C:\\Users\\Paulius\\Source\\Repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
+        "projectPath": "C:\\Users\\Paulius\\source\\repos\\sink-the-ship\\BattleshipClient\\BattleshipClient.csproj",
         "packagesPath": "C:\\Users\\Paulius\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paulius\\Source\\Repos\\sink-the-ship\\BattleshipClient\\obj\\",
+        "outputPath": "C:\\Users\\Paulius\\source\\repos\\sink-the-ship\\BattleshipClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Paulius\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -3,6 +3,7 @@ using BattleshipClient.GameLogic.Strategy;
 using Microsoft.AspNetCore.SignalR;
 using BattleshipClient.GameLogic.Factory;
 using System.Collections;
+using BattleshipClient.GameLogic.Mediator;
 
 public class ReadyFacade
 {
@@ -78,7 +79,8 @@ public class ReadyFacade
 
     public List<Player> CreatePlayer(string name)
     {
-        this.Player = new Player(name);
+        MediatorImpl mediator = new MediatorImpl();
+        this.Player = new Player(mediator, name);
         this.Player.SetShipsBoard(this.Board);
 
         List<Player> Players = ShipPlayers.AddPlayer(this.Player);

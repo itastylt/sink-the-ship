@@ -1,10 +1,11 @@
 ﻿
 using BattleshipClient.GameLogic.Adapter;
 using BattleshipClient.GameLogic.Factory;
+using BattleshipClient.GameLogic.Mediator;
 /// <summary>
 /// Player's class
 /// </summary>
-public class Player : IObserver, ICloneable
+public class Player : Collegue, IObserver, ICloneable
 {
     public string Name { get; set; }
     private ShipsBoard ShipsBoard { get; set; }
@@ -24,6 +25,8 @@ public class Player : IObserver, ICloneable
     private int Round = 0;
 
     private bool GameEnded = false;
+
+    protected MediatorImpl m;
 
     public bool GetEnd()
     {
@@ -115,8 +118,9 @@ public class Player : IObserver, ICloneable
         this.ShipsBoard = shipsBoard;
     }
 
-    public Player(string name) { 
-        this.Name = name; 
+    public Player(MediatorImpl m,string name) : base(m, name){ 
+        this.Name = name;
+        this.m = m;
     }
 
     public bool Equals(string name)
@@ -127,5 +131,20 @@ public class Player : IObserver, ICloneable
     public object Clone()
     {
         return this;
+    }
+
+    public override CollegueType getType()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void sendMessage(string msg)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void receiveMessage(string msg)
+    {
+        throw new NotImplementedException();
     }
 }
