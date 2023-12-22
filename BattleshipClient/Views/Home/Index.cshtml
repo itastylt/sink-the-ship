@@ -2,21 +2,27 @@
     ViewData["Title"] = "Home Page";
 }
 <div class=" console-container show-on-join d-flex flex-wrap">
-    <div class="power-up-panel-col">
-        <div class="power-up-icon console-button" onclick="openConsole();">
-            <img src="/img/console.png" />
+    <div class="row w-100 mb-2">
+        <div class="power-up-panel-col">
+            <div class="power-up-icon console-button console-opener" onclick="openConsole();">
+                <img src="/img/console.png" />
+            </div>
+            <div class="power-up-icon console-closer console-button d-none" onclick="closeConsole();">
+                <img src="/img/console_close.png" />
+            </div>
+        </div>
+    </div>
+    <div class="row w-100">
+        <div class="power-up-panel-col">
+            <div class="power-up-icon console-button pause-button" onclick="pauseGame();">
+                <img src="/img/pause.png" />
+            </div>
+            <div class="power-up-icon console-button pause-current d-none" onclick="unpauseGame();">
+                <img src="/img/unpause.png" />
+            </div>
         </div>
     </div>
 
-    <br />
-    <div class="power-up-panel-col">
-        <div class="power-up-icon console-button pause-button" onclick="pauseGame();">
-            <img src="/img/pause.png" />
-        </div>
-        <div class="power-up-icon console-button pause-current d-none" onclick="unpauseGame();">
-            <img src="/img/unpause.png" />
-        </div>
-    </div>
 </div>
 
 <div class="pause-modal d-none">
@@ -44,11 +50,6 @@
     </div>
 </div>
 <div class="console-modal d-none">
-    <div class="power-up-panel-col console-container">
-        <div class="power-up-icon console-close" onclick="closeConsole();">
-            <img src="/img/console_close.png" />
-        </div>
-    </div>
     <div class="console-wrapper">
         <div class="console-content">&nbsp;</div>
         <div class="console-input">

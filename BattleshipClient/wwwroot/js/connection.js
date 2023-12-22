@@ -341,6 +341,9 @@ function unDemolish() {
 
 function openConsole() {
     let modal = $('.console-modal');
+    $('.console-opener').addClass('d-none');
+    $('.console-closer').removeClass('d-none');
+
     if (modal.is('.d-none')) {
         modal.removeClass('d-none');
     }
@@ -348,6 +351,8 @@ function openConsole() {
 
 function closeConsole() {
     let modal = $('.console-modal');
+    $('.console-opener').removeClass('d-none');
+    $('.console-closer').addClass('d-none');
     if (!modal.is('d-none')) {
         modal.addClass('d-none');
     }
