@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kp9922hNTbem2oXlqbWJqZu2diANEOPBco2zYmbe7dw=",
+  "Hash": "JoRwQn6pJFxoh+mWsq6jZ9moYRQT1CMtJ8b8eiy5TX4=",
   "Source": "BattleshipClient",
   "BasePath": "_content/BattleshipClient",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\boat.png",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\",
+      "BasePath": "_content/BattleshipClient",
+      "RelativePath": "img/boat.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\boat.png"
+    },
+    {
       "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\clone.png",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
@@ -204,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\img\\demolish.jpg"
     },
     {
+      "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\destroyer.png",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\",
+      "BasePath": "_content/BattleshipClient",
+      "RelativePath": "img/destroyer.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\destroyer.png"
+    },
+    {
       "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\game.png",
       "SourceId": "BattleshipClient",
       "SourceType": "Discovered",
@@ -219,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\game.png"
+    },
+    {
+      "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\lavantier.png",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\",
+      "BasePath": "_content/BattleshipClient",
+      "RelativePath": "img/lavantier.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\lavantier.png"
     },
     {
       "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\pause.png",
@@ -270,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\randomize.png"
+    },
+    {
+      "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\submarine.png",
+      "SourceId": "BattleshipClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\",
+      "BasePath": "_content/BattleshipClient",
+      "RelativePath": "img/submarine.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\submarine.png"
     },
     {
       "Identity": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unclone.png",

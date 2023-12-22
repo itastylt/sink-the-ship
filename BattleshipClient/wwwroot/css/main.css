@@ -17,6 +17,8 @@ div.board-tile {
     outline: 1px solid black;
     max-width: 10px;
     cursor: pointer;
+    background-position: center !important;
+    background-size: contain !important;
     transition: all 0.1s ease-in-out;
 }
 

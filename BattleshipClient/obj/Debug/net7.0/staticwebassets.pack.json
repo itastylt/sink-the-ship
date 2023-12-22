@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\boat.png",
+      "PackagePath": "staticwebassets\\img\\boat.png"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\clone.png",
       "PackagePath": "staticwebassets\\img\\clone.png"
     },
@@ -41,8 +45,16 @@
       "PackagePath": "staticwebassets\\img\\demolish.jpg"
     },
     {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\destroyer.png",
+      "PackagePath": "staticwebassets\\img\\destroyer.png"
+    },
+    {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\game.png",
       "PackagePath": "staticwebassets\\img\\game.png"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\lavantier.png",
+      "PackagePath": "staticwebassets\\img\\lavantier.png"
     },
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\pause.png",
@@ -55,6 +67,10 @@
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\randomize.png",
       "PackagePath": "staticwebassets\\img\\randomize.png"
+    },
+    {
+      "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\submarine.png",
+      "PackagePath": "staticwebassets\\img\\submarine.png"
     },
     {
       "Id": "C:\\Users\\andri\\OneDrive - Kaunas University of Technology\\Dokumentai\\GitHub\\Battleship69\\Battleship\\BattleshipClient\\wwwroot\\img\\unclone.png",

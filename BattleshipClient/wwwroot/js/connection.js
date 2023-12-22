@@ -2,7 +2,7 @@
 var connection = new signalR.HubConnectionBuilder().withUrl("/shiphub").build();
 
 let group = false;
-
+let debug_mode = false;
 document.getElementById("startButton").disabled = true;
 
 connection.on("UnScope", function (user, message) {
@@ -24,7 +24,7 @@ connection.on("UnClonedBoard", function (user, message) {
     let player = message.split(';')[0];
     let board = message.split(';')[1];
     let turn = message.split(';')[2];
-    printBoards(player, board);
+    printBoards(player, board, debug_mode);
     handleTurnScreen(turn);
     handleUnClonePowerUp(player);
 });
@@ -36,7 +36,7 @@ connection.on("ClonedBoard", function (user, message) {
     let player = message.split(';')[0];
     let board = message.split(';')[1];
     let turn = message.split(';')[2];
-    printBoards(player, board);
+    printBoards(player, board, debug_mode);
     handleTurnScreen(turn);
     handleClonePowerUp(player);
 });
@@ -48,7 +48,7 @@ connection.on("StartGame", function (user, message) {
     let player = message.split(';')[0];
     let board = message.split(';')[1];
     let turn = message.split(';')[2];
-    printBoards(player, board);
+    printBoards(player, board, debug_mode);
     handleTurnScreen(turn);
     handleShowOnStart();
 
@@ -62,7 +62,7 @@ connection.on("Continue", function (user, message) {
     let currUser = document.getElementById("name").value;
     let player = message.split(';')[0];
     let board = message.split(';')[1];
-    printBoards(player, board);
+    printBoards(player, board, debug_mode);
     handleShowOnStart();
     handleRound();
 
@@ -79,7 +79,7 @@ connection.on("FireShot", function (user, message) {
     let turn = message.split(';')[2];
     handleTurnScreen(turn);
     if (board != null) {
-        printBoards(player, board);
+        printBoards(player, board, debug_mode);
     } else {
         console.log("Nice try :)");
     }
@@ -275,14 +275,24 @@ function cloneShip() {
         return console.error(err.toString());
     });
 }
+
+
 function sendMessage() {
     var user = $("#name").val();
 
     var message = $(".console-text").val();
     consoleWrite(message);
-    connection.invoke("SendMessage", user, 'interpret;' + message).catch(function (err) {
-        return console.error(err.toString());
-    });
+
+    if (message == "Debug 1") {
+        debug_mode = true;
+    } else if (message == "Debug 0") {
+        debug_mode = false;
+    } else {
+        connection.invoke("SendMessage", user, 'interpret;' + message).catch(function (err) {
+            return console.error(err.toString());
+        });
+    }
+
 
 }
 function unCloneShip() {
