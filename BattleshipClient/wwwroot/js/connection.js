@@ -3,6 +3,9 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/shiphub").build();
 
 let group = false;
 let debug_mode = false;
+
+let currPlayerWins = 0;
+let opponentPlayerWins = 0;
 document.getElementById("startButton").disabled = true;
 
 connection.on("UnScope", function (user, message) {
@@ -15,7 +18,26 @@ connection.on("UnScope", function (user, message) {
 });
 
 connection.on("RoundEnd", function (user, message) {
-    handleRoundScreen(user);
+    let player = message.split(';')[0];
+    let userName = $("#name").val();
+
+    if (player == userName) currPlayerWins++; else opponentPlayerWins++;
+    let nextTurn = message.split(';')[1];
+    $('.round-screen-counter').text(`${currPlayerWins} - ${opponentPlayerWins}`);
+    if (round < 3) {
+        handleRoundScreen(user);
+        handleTurnScreen(nextTurn);
+    } else {
+        if (currPlayerWins > opponentPlayerWins) {
+            $('.turn-screen-title').text("Congratulations! You win!");
+        } else {
+            $('.turn-screen-title').text("Better luck next time!");
+        }
+
+        $('.turn-screen-wrapper').removeClass('turn-hide');
+        $('.turn-screen-wrapper').addClass('turn-show');
+    }
+
 });
 
 connection.on("UnClonedBoard", function (user, message) {
