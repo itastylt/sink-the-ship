@@ -94,7 +94,7 @@ connection.on("Continue", function (user, message) {
 
 });
 
-connection.on("FireShot", function (user, message) {
+/*connection.on("FireShot", function (user, message) {
     console.log(user, message);
     let player = message.split(';')[0];
     let board = message.split(';')[1];
@@ -102,6 +102,32 @@ connection.on("FireShot", function (user, message) {
     handleTurnScreen(turn);
     if (board != null) {
         printBoards(player, board, debug_mode);
+    } else {
+        console.log("Nice try :)");
+    }
+
+});*/
+connection.on("FireShot", function (user, message) {
+    var playerUser = document.getElementById("nameText").value;
+
+    /*let player = message.split(';')[0];
+    let board = message.split(';')[1];
+    let turn = message.split(';')[2];*/
+    let arr = message.split(';');
+
+    let player = arr[0];
+    let board = arr[1];
+    let turn = arr[2];
+    let damageCount = arr[3];
+
+    handleTurnScreen(turn);
+
+    if (playerUser == user) {
+        handleDamageCount(damageCount);
+    }
+    if (board != null) {
+        printBoards(player, board, debug_mode);
+
     } else {
         console.log("Nice try :)");
     }
